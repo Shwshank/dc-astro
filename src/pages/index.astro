@@ -1,14 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Navbar from "../components/Navbar.astro";
+
+import Hero from "../components/Hero.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ExperiencesSection from "../components/ExperiencesSection.astro";
+import WhoSection from "../components/WhoSection.astro";
+import ContactSection from "../components/ContactSection.astro";
 ---
 
-<BaseLayout title="Delhi Concierge">
+<BaseLayout title="Delhi Concierge | Personal Arrival Orientation & Cultural Companion in Delhi">
 
-<Navbar />
-
-<h1>Delhi Concierge</h1>
-
-<p>Premium assistance for travelers and expats in Delhi.</p>
+<Hero />
+<AboutSection />
+<ExperiencesSection />
+<WhoSection />
+<ContactSection />
 
 </BaseLayout>

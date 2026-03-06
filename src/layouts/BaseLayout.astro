@@ -1,25 +1,92 @@
 ---
+import "../styles/style.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import SuccessModal from "../components/SuccessModal.astro";
+
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+        <title>{title}</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta
+            name="description"
+            content="Personal help for travellers and expats arriving in Delhi. Orientation sessions, safe exploration and settling-in support across Delhi NCR."
+        />
 
-<title>{title}</title>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://delhiconcierge.in/" />
 
-<link rel="stylesheet" href="/styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-</head>
+        <link rel="preload" as="image" href="/images/delhi_hero.webp" />
 
-<body>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
-<slot />
+        <!-- Firebase -->
+        <script
+            src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"
+            is:inline></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"
+            is:inline></script>
 
-</body>
+        <script is:inline>
+            const firebaseConfig = {
+                apiKey: "AIzaSyARgNCysirTHx2XBbUhSBjzllMQPApZA6U",
+                authDomain: "delhi-concierge.firebaseapp.com",
+                projectId: "delhi-concierge",
+                storageBucket: "delhi-concierge.firebasestorage.app",
+                messagingSenderId: "721833285362",
+                appId: "1:721833285362:web:34d5fb881bf5738cf8e26b",
+                measurementId: "G-3Y3QV7PBBN",
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
 
+        <!-- Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-3Y3QV7PBBN"
+        ></script>
+
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-3Y3QV7PBBN");
+        </script>
+    </head>
+
+    <body>
+        <Navbar />
+
+        <div class="app-shell">
+            <div class="page">
+                <slot />
+
+                <Footer />
+            </div>
+        </div>
+
+        <a href="https://wa.me/918929748506" class="whatsapp" target="_blank">
+            WhatsApp
+        </a>
+
+        <SuccessModal />
+
+        <script type="module" src="/scripts/script.js"></script>
+    </body>
 </html>

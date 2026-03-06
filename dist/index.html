@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Concierge | Personal Arrival Orientation &amp; Cultural Companion in Delhi</title>
+    <meta name="description"
+        content="Personal help for travellers and expats arriving in Delhi. Orientation sessions, safe exploration and settling-in support across Delhi NCR.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://delhiconcierge.in/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="/images/delhi_hero.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyARgNCysirTHx2XBbUhSBjzllMQPApZA6U",
+            authDomain: "delhi-concierge.firebaseapp.com",
+            projectId: "delhi-concierge",
+            storageBucket: "delhi-concierge.firebasestorage.app",
+            messagingSenderId: "721833285362",
+            appId: "1:721833285362:web:34d5fb881bf5738cf8e26b",
+            measurementId: "G-3Y3QV7PBBN",
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script><!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y3QV7PBBN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-3Y3QV7PBBN");
+    </script>
+    <link rel="stylesheet" href="/_astro/about.Db5FIXT8.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-inner"> <a href="/" class="logo">
+                Delhi<span>Concierge</span> </a>
+            <nav class="nav-links"> <a href="/arrival">Arrival</a> <a href="/first-48-hours">First 48 Hours</a> <a
+                    href="/safety">Safety</a> <a href="/about">About</a> </nav>
+            <div class="nav-actions"> <button id="themeToggle" class="theme-toggle">
+                    🌙
+                </button>
+                <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            </div>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu"> <a href="/arrival">Arrival</a> <a href="/first-48-hours">First 48
+                Hours</a> <a href="/safety">Safety</a> <a href="/about">About</a> </nav>
+    </header>
+    <div class="app-shell">
+        <div class="page">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-wrapper">
+                        <div class="hero-image"> <img src="/images/driver_2.png"
+                                alt="Delhi city orientation walk with a local companion" loading="eager"
+                                decoding="async"> </div>
+                        <div class="hero-text">
+                            <h1>Arriving in India for the first time?</h1>
+                            <p>
+                                Delhi Concierge helps you understand how daily life works in Delhi —
+                                from payments and transport to social etiquette —
+                                so you can navigate the city comfortably.
+                            </p> <a class="btn"
+                                href="https://wa.me/918929748506?text=Hi%20I%20am%20planning%20to%20visit%20India%20and%20would%20like%20guidance"
+                                target="_blank">
+                                Message Before Arrival
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2>About Delhi Concierge</h2>
+                    <p>
+                        Delhi Concierge is a personal orientation and support service for people visiting or relocating
+                        to India.
+                    </p>
+                    <p>
+                        Instead of tours, the focus is clarity — understanding how systems work and navigating Delhi
+                        comfortably.
+                    </p>
+                </div>
+            </section>
+            <section class="section section-light">
+                <div class="container">
+                    <h2>Ways We Can Work Together</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Arrival Orientation Session</h3>
+                            <p>
+                                2–3 hour meeting covering payments, transport apps,
+                                safety and daily etiquette.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Accompanied Exploration</h3>
+                            <p>
+                                Visit markets and neighbourhoods with a local companion
+                                who explains context and culture.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Settling-in Assistance</h3>
+                            <p>
+                                Support for expats — SIM cards, groceries
+                                and adapting to daily life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2>Who This Is For</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Ideal For</h3>
+                            <p>
+                                First-time visitors, solo travellers,
+                                students, remote workers and expats.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Not For</h3>
+                            <p>
+                                Fast tourism, monument checklists
+                                or budget tour groups.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2>Get in Touch</h2>
+                    <p>Tell us what kind of experience you're looking for.</p>
+                    <form id="contactForm" class="contact-form"> <input id="name" type="text" placeholder="Your Name"
+                            required> <input id="email" type="email" placeholder="Your Email" required> <textarea
+                            id="message" rows="4" placeholder="What experience are you looking for?"
+                            required></textarea> <button type="submit">Send Message</button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </div>
+            </section>
+            <footer>
+                <p>© 2026 Delhi Concierge · Curated with intention</p>
+            </footer>
+        </div>
+    </div> <a href="https://wa.me/918929748506" class="whatsapp" target="_blank">
+        WhatsApp
+    </a>
+    <div id="contactSuccess" class="success-modal">
+        <div class="success-box"> <span class="success-close" id="successClose">&times;</span>
+            <div class="success-header">
+                <div class="success-icon"> <svg viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="32"></circle>
+                        <path d="M26 41 L36 52 L55 30"></path>
+                    </svg> </div>
+                <div class="success-text">
+                    <h3>Your message reached me</h3>
+                    <p class="success-sub">Thanks for contacting.</p>
+                </div>
+            </div>
+            <p class="success-body">
+                You’ll receive a reply soon — usually within a few hours.
+            </p> <svg class="success-art" viewBox="0 0 300 220" fill="none">
+                <g stroke="currentColor" stroke-width="0.9" stroke-linecap="round">
+                    <path d="M40 170 Q150 60 260 170"></path>
+                    <path d="M80 170 Q150 95 220 170"></path>
+                    <path d="M115 170 Q150 120 185 170"></path>
+                    <line x1="60" y1="170" x2="240" y2="170"></line>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <script type="module" src="/scripts/script.js"></script>
+</body>
+
+</html>
