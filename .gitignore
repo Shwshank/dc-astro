@@ -1,0 +1,36 @@
+# Node
+node_modules/
+
+# Astro build
+dist/
+.astro/
+
+# Env files
+.env
+.env.local
+.env.production
+
+# Firebase logs
+firebase-debug.log
+firebase-debug.*.log
+
+# Service account keys
+serviceAccountKey.json
+*.service-account.json
+
+# Firebase emulator data
+.firebase/
+
+# Functions
+functions/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
