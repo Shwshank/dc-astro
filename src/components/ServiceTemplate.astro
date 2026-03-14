@@ -1,0 +1,295 @@
+---
+import CTA from "../components/CTA.astro";
+const {
+    title,
+    subtitle,
+    heroImage,
+    shortDescription,
+    bullets = [],
+    aboutText,
+    ctaText = "Book Service",
+    ctaLink = "#",
+} = Astro.props;
+---
+
+<!-- HERO -->
+<section class="section service-hero-section">
+    <div class="container hero-container">
+        <!-- ambient accent background -->
+
+        <div class="service-accent"></div>
+
+        <!-- watermark -->
+
+        <div class="service-watermark">
+            <svg viewBox="0 0 200 200">
+                <circle
+                    cx="100"
+                    cy="100"
+                    r="90"
+                    fill="none"
+                    stroke="rgba(0,0,0,.05)"
+                    stroke-width="2"></circle>
+                <text
+                    x="50%"
+                    y="50%"
+                    text-anchor="middle"
+                    dy=".35em"
+                    font-size="22"
+                    fill="rgba(0,0,0,.05)"
+                >
+                    DELHI
+                </text>
+            </svg>
+        </div>
+
+        <div class="hero-wrapper">
+            <div class="hero-text">
+                <h1 class="service-title">{title}</h1>
+
+                <p class="service-subtitle">{subtitle}</p>
+
+                <p class="service-description">{shortDescription}</p>
+
+                <ul class="service-bullets">
+                    {bullets.map((item: any) => <li>{item}</li>)}
+                </ul>
+
+                <p class="service-note">
+                    Please book at least <strong>48 hours in advance</strong>.
+                </p>
+
+                <a href={ctaLink} class="btn">
+                    {ctaText}
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src={heroImage.src ?? heroImage} alt={title} />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section service-about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>About this service</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <p class="about-text">{aboutText}</p>
+    </div>
+</section>
+
+<!-- SERVICE INCLUDES -->
+
+<section class="section service-includes-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>What the service includes</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Personal Concierge</h3>
+                <p>
+                    Every service includes direct concierge coordination to help
+                    you move comfortably through Delhi and reduce uncertainty.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Understanding the City</h3>
+                <p>
+                    Receive guidance that helps you understand Delhi’s patterns,
+                    interactions and everyday logistics.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Premium Transportation</h3>
+                <p>
+                    Transportation arranged through trusted drivers in a
+                    comfortable SUV or van depending on your needs.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE SPECIFIC CONTENT -->
+
+<slot />
+
+<!-- EXPLORE OTHER SERVICES -->
+
+<section class="section service-explore-section">
+  <div class="cta-wide">
+    <CTA
+      title="Explore Other Concierge Services"
+      description="Instead of struggling through the city alone, receive practical guidance that helps you navigate Delhi with confidence and comfort."
+      buttonText="View All Services"
+      buttonLink="/services"
+    />
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+
+<!-- <section class="section service-cta-section">
+<div class="container">
+
+<div class="cta-block">
+
+<h2>Plan your arrival smoothly</h2>
+
+<p>
+This service is designed to reduce confusion and help you transition
+into Delhi comfortably.
+</p>
+
+<a href={ctaLink} class="btn">
+{ctaText}
+</a>
+
+</div>
+
+</div>
+</section> -->
+
+<style>
+    /* HERO */
+
+    .service-hero-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        position: relative;
+    }
+
+    /* warm accent glow */
+
+    .service-accent {
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 420px;
+        height: 420px;
+
+        background: radial-gradient(
+            circle at center,
+            rgba(238, 142, 67, 0.18),
+            transparent 65%
+        );
+
+        filter: blur(10px);
+        pointer-events: none;
+    }
+
+    /* watermark */
+
+    .service-watermark {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        width: 180px;
+        opacity: 0.35;
+        pointer-events: none;
+    }
+
+    /* HERO TEXT HIERARCHY */
+
+    .service-title {
+        font-size: 44px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .service-subtitle {
+        font-size: 18px;
+        color: var(--text-secondary);
+        margin-bottom: 14px;
+    }
+
+    .service-description {
+        font-size: 16px;
+        color: var(--text-secondary);
+        max-width: 520px;
+        margin-bottom: 12px;
+    }
+
+    /* bullets */
+
+    .service-bullets {
+        margin: 10px 0 18px 18px;
+    }
+
+    .service-bullets li {
+        margin-bottom: 6px;
+    }
+
+    /* note */
+
+    .service-note {
+        margin-top: 8px;
+        color: var(--text-muted);
+        font-size: 14px;
+    }
+
+    /* section header */
+
+    .section-header {
+        margin-bottom: 18px;
+    }
+
+    .section-line {
+        width: 60px;
+        height: 2px;
+        background: var(--accent-blue);
+        margin-top: 6px;
+    }
+
+    /* about */
+
+    .about-text {
+        max-width: 680px;
+        color: var(--text-secondary);
+    }
+
+    /* spacing */
+
+    .service-about-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .service-includes-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* CTA */
+
+    .cta-block {
+        text-align: center;
+        max-width: 520px;
+        margin: auto;
+    }
+    .cta-wide{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+    .service-explore-section {
+        padding-top:60px;
+padding-bottom:30px;
+    }
+</style>

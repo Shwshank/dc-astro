@@ -1,0 +1,83 @@
+---
+const { 
+  title = "Experience Delhi With Clarity",
+  text = "Instead of struggling through the city alone, receive practical guidance that helps you navigate Delhi with confidence and comfort.",
+  buttonText = "View Concierge Services",
+  buttonLink = "/services"
+} = Astro.props;
+---
+
+<section class="cta-section">
+
+  <div class="container">
+
+    <h2>{title}</h2>
+
+    <p>{text}</p>
+
+    <a href={buttonLink} class="btn">
+      {buttonText}
+    </a>
+
+  </div>
+
+</section>
+
+<style>
+
+/* CTA component */
+
+.cta-section{
+position:relative;
+
+background:
+linear-gradient(135deg,#0f0f0f,#1b1b1b);
+
+color:#fff;
+
+border-radius:36px;
+padding:70px 24px;
+margin:40px 20px;
+
+text-align:center;
+overflow:hidden;
+}
+
+/* subtle glow */
+
+.cta-section::after{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(circle at 25% 20%, rgba(92,204,251,.18), transparent 45%),
+radial-gradient(circle at 85% 80%, rgba(238,142,67,.16), transparent 45%);
+
+pointer-events:none;
+}
+
+/* text */
+
+.cta-section h2{
+color:#fff;
+margin-bottom:10px;
+}
+
+.cta-section p{
+opacity:.85;
+max-width:560px;
+margin:auto;
+margin-bottom:24px;
+}
+
+/* button override */
+
+.cta-section .btn{
+margin-top:10px;
+background:#fff;
+color:#000;
+border:none;
+}
+
+</style>

@@ -1,0 +1,204 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/driver_2.png";
+---
+
+<BaseLayout title="Arrival & Onboarding">
+
+<ServiceTemplate
+  title="Arrival & Onboarding"
+  subtitle="A smooth first step into Delhi"
+  heroImage={heroImg}
+  shortDescription="A concierge-style arrival service designed to make your first hours in Delhi calm, comfortable and well prepared."
+  bullets={[
+    "Hassle-free airport pickup",
+    "SIM card setup and connectivity help",
+    "Currency exchange guidance",
+    "Local buddy orientation"
+  ]}
+  aboutText="Your first few hours in Delhi shape your entire experience of the city. This service helps travellers and expats transition smoothly from arrival to settling in. Instead of navigating unfamiliar systems immediately, you are guided through the essential steps needed to feel comfortable in the city."
+  ctaText="Book Arrival Service"
+  ctaLink="/contact"
+>
+
+<!-- WHAT THIS SERVICE HELPS WITH -->
+
+<section class="section arrival-highlight">
+<div class="container">
+
+<h2>Your first hours in Delhi</h2>
+
+<ul class="arrival-pointers">
+<li>✔ Airport pickup arranged in advance</li>
+<li>✔ Assistance getting a local SIM card</li>
+<li>✔ Help exchanging currency safely</li>
+<li>✔ Guidance on navigating your neighbourhood</li>
+<li>✔ Local orientation to help you settle in quickly</li>
+</ul>
+
+</div>
+</section>
+
+
+
+<!-- ARRIVAL SUPPORT -->
+
+<section class="section">
+<div class="container">
+
+<h2>Arrival support</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Hassle-Free Pickup</h3>
+<p>
+A trusted driver meets you at the airport and takes you to your
+hotel or residence. This removes the confusion of negotiating
+transport immediately after landing.
+</p>
+</div>
+
+<div class="card">
+<h3>SIM Setup</h3>
+<p>
+Staying connected is essential. We help you obtain a local SIM
+card and ensure your phone works properly for navigation and
+ride apps.
+</p>
+</div>
+
+<div class="card">
+<h3>Currency Exchange</h3>
+<p>
+Instead of exchanging money at expensive airport counters,
+we guide you to safe and reliable options in the city.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- LOCAL ORIENTATION -->
+
+<section class="section">
+<div class="container">
+
+<h2>Local orientation</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Your Local Buddy</h3>
+<p>
+A friendly local guide helps you understand the basics of
+daily life in Delhi — transport, neighbourhoods and simple
+city habits that make life easier.
+</p>
+</div>
+
+<div class="card">
+<h3>Neighbourhood Familiarisation</h3>
+<p>
+You learn where to find essential services such as grocery
+stores, pharmacies, cafés and transport access points.
+</p>
+</div>
+
+<div class="card">
+<h3>First-Day Guidance</h3>
+<p>
+Simple tips about safety, transport and daily routines
+help you feel comfortable navigating the city.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- FIRST DAY CHECKLIST -->
+
+<section class="section">
+<div class="container">
+
+<h2>Your first-day checklist</h2>
+
+<div class="arrival-checklist">
+
+<span class="check-item">SIM card working</span>
+<span class="check-item">Currency exchanged</span>
+<span class="check-item">Ride apps installed</span>
+<span class="check-item">Neighbourhood basics understood</span>
+<span class="check-item">Local contacts available</span>
+
+</div>
+
+<p class="arrival-note">
+By the end of the onboarding, you are ready to explore the city
+comfortably instead of spending your first days figuring out
+how things work.
+</p>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* pointer section */
+
+.arrival-pointers{
+list-style:none;
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+font-size:15px;
+}
+
+/* checklist */
+
+.arrival-checklist{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
+
+.check-item{
+padding:8px 14px;
+border-radius:20px;
+background:rgba(185,212,23,.18);
+font-size:14px;
+}
+
+/* highlight background */
+
+.arrival-highlight{
+background:radial-gradient(
+circle at 15% 10%,
+rgba(92,204,251,.12),
+transparent 60%
+);
+}
+
+.arrival-note{
+margin-top:10px;
+color:var(--text-secondary);
+}
+
+</style>

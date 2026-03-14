@@ -1,0 +1,308 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/driver_2.png";
+---
+
+<BaseLayout title="Intercity Exploration">
+
+<ServiceTemplate
+  title="Intercity Exploration"
+  subtitle="Explore North India beyond Delhi"
+  heroImage={heroImg}
+  shortDescription="Curated travel experiences connecting Delhi with nearby historic cities, nature destinations and cultural regions."
+  bullets={[
+    "Private transportation and travel coordination",
+    "Flexible travel routes from Delhi",
+    "Cultural and heritage destinations",
+    "Concierge planning based on your interests"
+  ]}
+  aboutText="Delhi is often the gateway to many remarkable destinations across North India. This service helps travellers explore beyond the city with thoughtful planning, reliable transportation and guidance on how to structure meaningful journeys."
+  ctaText="Plan Your Journey"
+  ctaLink="/contact"
+>
+
+<!-- DESTINATION ROUTES -->
+
+<section class="section routes-section">
+<div class="container">
+
+<h2>Popular routes from Delhi</h2>
+
+<div class="route-grid">
+
+<div class="route">
+<h3>Delhi → Agra</h3>
+<p>
+Visit the Taj Mahal and explore Mughal architecture in a
+historic city just a few hours from Delhi.
+</p>
+</div>
+
+<div class="route">
+<h3>Delhi → Jaipur</h3>
+<p>
+Travel to the Pink City to experience forts, palaces and
+traditional markets of Rajasthan.
+</p>
+</div>
+
+<div class="route">
+<h3>Delhi → Rishikesh</h3>
+<p>
+A journey to the Himalayan foothills known for yoga,
+nature and the Ganges river.
+</p>
+</div>
+
+<div class="route">
+<h3>Delhi → Neemrana</h3>
+<p>
+A relaxed escape to a historic palace fort perfect for
+a short cultural retreat.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- TRAVEL THEMES -->
+
+<section class="section travel-themes">
+<div class="container">
+
+<h2>Trips shaped around your interests</h2>
+
+<div class="themes">
+
+<div class="theme">
+<h4>Heritage Journeys</h4>
+<p>
+Explore forts, palaces and historic districts that reveal
+the layered history of North India.
+</p>
+</div>
+
+<div class="theme">
+<h4>Nature Escapes</h4>
+<p>
+Travel to Himalayan foothill towns and landscapes that
+offer calm beyond the intensity of the city.
+</p>
+</div>
+
+<div class="theme">
+<h4>Cultural Exploration</h4>
+<p>
+Visit places where architecture, food and local traditions
+create distinct regional identities.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- SAMPLE ITINERARY IDEAS -->
+
+<section class="section journey-section">
+<div class="container">
+
+<h2>Curated journeys from Delhi</h2>
+
+<div class="journey-cards">
+
+<div class="journey-card">
+
+<div class="journey-route">
+Delhi → Agra → Jaipur
+</div>
+
+<h3>Golden Triangle Introduction</h3>
+
+<p>
+Explore three iconic cities that reveal the architectural
+and cultural history of North India.
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="journey-route">
+Delhi → Rishikesh
+</div>
+
+<h3>Himalayan Retreat</h3>
+
+<p>
+Travel to the Himalayan foothills for yoga, nature and
+a slower experience along the Ganges river.
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="journey-route">
+Delhi → Jaipur
+</div>
+
+<h3>Royal Rajasthan Experience</h3>
+
+<p>
+Discover forts, palaces and vibrant markets that
+reflect Rajasthan’s royal heritage.
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="journey-route">
+Delhi → Agra → Fatehpur Sikri
+</div>
+
+<h3>Mughal Heritage Trail</h3>
+
+<p>
+A cultural journey exploring the architectural legacy
+of the Mughal empire.
+</p>
+
+</div>
+
+</div>
+
+<p class="journey-note">
+Every journey can be adjusted depending on your interests,
+travel pace and available time.
+</p>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* ROUTE GRID */
+
+.route-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top:24px;
+}
+
+.route{
+padding:16px;
+border-radius:var(--radius-md);
+background:var(--bg-surface);
+box-shadow:
+0 10px 24px rgba(0,0,0,.05),
+inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+
+
+/* THEMES */
+
+.themes{
+display:flex;
+flex-direction:column;
+gap:20px;
+margin-top:24px;
+}
+
+.theme{
+padding-left:14px;
+border-left:3px solid var(--accent-blue);
+}
+
+
+
+/* ITINERARY */
+
+.itinerary-list{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin:20px 0;
+}
+
+.itinerary{
+display:flex;
+gap:14px;
+align-items:center;
+padding:12px 16px;
+border-radius:var(--radius-sm);
+background:rgba(92,204,251,.1);
+}
+
+.duration{
+font-weight:600;
+font-size:14px;
+color:var(--accent-blue);
+}
+
+.itinerary-note{
+margin-top:6px;
+color:var(--text-secondary);
+}
+
+.journey-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:26px;
+}
+
+.journey-card{
+padding:20px;
+border-radius:var(--radius-md);
+background:var(--bg-surface);
+box-shadow:
+0 10px 26px rgba(0,0,0,.05),
+inset 0 1px 0 rgba(255,255,255,.4);
+transition:.25s;
+}
+
+.journey-card:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.journey-route{
+font-size:13px;
+letter-spacing:.05em;
+color:var(--accent-orange);
+margin-bottom:6px;
+font-weight:600;
+}
+
+.journey-card h3{
+margin-bottom:6px;
+}
+
+.journey-note{
+margin-top:16px;
+color:var(--text-secondary);
+max-width:600px;
+}
+
+</style>

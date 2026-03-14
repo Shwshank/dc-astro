@@ -1,0 +1,228 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/driver_2.png";
+---
+
+<BaseLayout title="Full Day City Orientation">
+
+<ServiceTemplate
+  title="Full-Day City Orientation"
+  subtitle="Experience Delhi with context and confidence"
+  heroImage={heroImg}
+  shortDescription="A full-day curated orientation designed to help travellers understand the city's structure, rhythm and neighbourhood culture."
+  bullets={[
+    "Explore key neighbourhoods across Delhi",
+    "Understand transport, markets and city rhythm",
+    "Personal concierge guidance",
+    "Curated stops based on your interests"
+  ]}
+  aboutText="A full day in Delhi allows you to go beyond surface impressions. Instead of just seeing landmarks, this orientation helps you understand how the city actually works — its districts, social patterns, transport habits and neighbourhood character."
+  ctaText="Book Full-Day Orientation"
+  ctaLink="/contact"
+>
+
+<!-- THE DAY FLOW -->
+
+<section class="section journey-section">
+<div class="container">
+
+<h2>How the day unfolds</h2>
+
+<div class="journey-map">
+
+<div class="journey-block">
+<span class="journey-time">Morning</span>
+<h3>Central Delhi Orientation</h3>
+<p>
+Begin the day exploring Delhi's central districts and boulevards.
+This helps you understand the city's historical and administrative
+structure.
+</p>
+</div>
+
+<div class="journey-block">
+<span class="journey-time">Midday</span>
+<h3>Neighbourhood Exploration</h3>
+<p>
+Visit areas where everyday life unfolds — cafés, markets and
+local districts that show how residents experience the city.
+</p>
+</div>
+
+<div class="journey-block">
+<span class="journey-time">Afternoon</span>
+<h3>Markets & Culture</h3>
+<p>
+Discover local markets and cultural spaces while learning how
+different neighbourhoods develop their unique identity.
+</p>
+</div>
+
+<div class="journey-block">
+<span class="journey-time">Late Afternoon</span>
+<h3>Understanding the City</h3>
+<p>
+Your concierge explains how transportation, neighbourhood
+networks and everyday logistics work across Delhi.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- WHAT MAKES THIS DIFFERENT -->
+
+<section class="section orientation-insights">
+<div class="container">
+
+<h2>Why a full-day orientation helps</h2>
+
+<div class="insight-grid">
+
+<div class="insight">
+<h4>City Context</h4>
+<p>
+You begin to see how different parts of Delhi connect —
+from historic districts to modern neighbourhoods.
+</p>
+</div>
+
+<div class="insight">
+<h4>Comfort & Confidence</h4>
+<p>
+Understanding how transport, neighbourhoods and markets
+work removes much of the uncertainty travellers feel.
+</p>
+</div>
+
+<div class="insight">
+<h4>Personalised Exploration</h4>
+<p>
+Stops can be adapted depending on your interests —
+food, architecture, culture or everyday city life.
+</p>
+</div>
+
+<div class="insight">
+<h4>Local Perspective</h4>
+<p>
+Instead of navigating alone, you experience the city
+with guidance from someone familiar with its patterns.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- WHAT YOU LEAVE WITH -->
+
+<section class="section outcomes-section">
+<div class="container">
+
+<h2>What you leave the day with</h2>
+
+<div class="outcome-points">
+
+<span class="outcome">A mental map of the city</span>
+<span class="outcome">Confidence navigating neighbourhoods</span>
+<span class="outcome">Suggestions for restaurants and cafés</span>
+<span class="outcome">Ideas for exploring the city further</span>
+<span class="outcome">A clearer understanding of Delhi's rhythm</span>
+
+</div>
+
+<p class="outcome-note">
+By the end of the day, the city feels far less overwhelming
+and much more approachable.
+</p>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* JOURNEY MAP */
+
+.journey-map{
+display:flex;
+flex-direction:column;
+gap:28px;
+margin-top:30px;
+}
+
+.journey-block{
+padding:18px;
+border-radius:var(--radius-md);
+background:var(--bg-surface);
+box-shadow:
+0 10px 24px rgba(0,0,0,.05),
+inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+.journey-time{
+font-size:13px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--accent-blue);
+display:block;
+margin-bottom:6px;
+}
+
+
+
+/* INSIGHTS */
+
+.insight-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top:24px;
+}
+
+.insight{
+padding:16px;
+background:var(--bg-surface);
+border-radius:var(--radius-md);
+box-shadow:
+0 8px 20px rgba(0,0,0,.05);
+}
+
+
+
+/* OUTCOMES */
+
+.outcome-points{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
+
+.outcome{
+padding:8px 14px;
+border-radius:20px;
+background:rgba(238,142,67,.15);
+font-size:14px;
+}
+
+.outcome-note{
+color:var(--text-secondary);
+margin-top:6px;
+}
+
+</style>

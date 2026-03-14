@@ -258,7 +258,8 @@ body.dark .mobile-menu a{color:#e6eaf2}
   position:absolute;
   inset:0;
   background:radial-gradient(circle at 70% 30%,rgba(92,204,251,.12),transparent 45%);
-}
+  pointer-events:none;
+ }
 
 .hero-wrapper{
   display:flex;
@@ -307,6 +308,7 @@ body.dark .mobile-menu a{color:#e6eaf2}
   font-weight:500;
   letter-spacing:.25px;
   text-decoration:none;
+  margin-top:1.5rem;
 
   color:var(--text-primary);
 
@@ -756,6 +758,7 @@ body.dark .success-body{
 @media(max-width:768px){
 
   .hero::after{
+    pointer-events:none;
     background:
       radial-gradient(
         circle at 50% 60%,

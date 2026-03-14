@@ -1,0 +1,275 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<BaseLayout title="Contact | DelhiConcierge">
+
+<section class="section contact-hero">
+<div class="container hero-grid">
+
+<div class="hero-text">
+
+<h1 class="contact-title">
+  Contact <span class="brand-delhi">Delhi</span><span class="brand-concierge">Concierge</span>
+</h1>
+
+<p class="hero-lead">
+Planning your visit to Delhi or already here and need guidance?
+</p>
+
+<p class="hero-muted">
+DelhiConcierge helps travellers navigate the city with clarity —
+from airport arrival to daily logistics and cultural orientation.
+</p>
+
+</div>
+
+<div class="hero-card glass-card">
+
+<h3>Direct Contact</h3>
+
+<div class="contact-details">
+
+<div>
+<strong>Email</strong>
+<p>hello@delhiconcierge.com</p>
+</div>
+
+<div>
+<strong>Location</strong>
+<p>New Delhi, India</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section class="section contact-form-section">
+
+<div class="container form-container">
+
+<div class="blue-accent"></div>
+
+<div class="form-card">
+<ContactSection />
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* HERO */
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 420px;
+gap:60px;
+align-items:center;
+}
+
+.hero-lead{
+font-size:18px;
+margin-bottom:12px;
+}
+
+.hero-muted{
+color:var(--text-secondary);
+}
+
+
+
+/* GLASS CARDS */
+
+.glass-card,
+.form-card{
+
+background:rgba(255,255,255,.5);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid var(--border-soft);
+border-radius:16px;
+
+}
+
+.glass-card{ padding:28px; }
+.form-card{ padding:36px; position:relative; z-index:2; }
+
+
+
+/* CONTACT DETAILS */
+
+.contact-details{
+margin-top:16px;
+display:grid;
+gap:16px;
+}
+
+.hero-card strong{
+display:block;
+font-size:14px;
+color:var(--text-secondary);
+margin-bottom:4px;
+}
+
+
+
+/* FORM */
+
+.form-card input,
+.form-card textarea{
+
+width:100%;
+padding:14px;
+
+border-radius:10px;
+border:1px solid var(--border-soft);
+
+background:var(--bg-surface);
+font-size:15px;
+
+margin-bottom:14px;
+
+}
+
+.form-card textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.form-card button{
+
+width:100%;
+margin-top:10px;
+
+background:linear-gradient(135deg,#ff8c40,#ff6a2a);
+
+border:none;
+border-radius:10px;
+
+padding:14px;
+
+color:white;
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+
+
+/* BLUE GLOW */
+
+.contact-form-section{
+position:relative;
+overflow:visible;
+}
+
+.form-container{
+position:relative;
+padding-top:20px;
+}
+
+.blue-accent{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:900px;
+height:900px;
+
+background:
+radial-gradient(circle,
+rgba(90,160,255,.28),
+rgba(90,160,255,.12) 40%,
+transparent 70%);
+
+filter:blur(120px);
+
+z-index:0;
+pointer-events:none;
+
+}
+
+
+
+/* DARK MODE */
+
+body.dark .glass-card,
+body.dark .form-card{
+
+background:rgba(18,22,32,.6);
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.4),
+inset 0 1px 0 rgba(255,255,255,.04);
+
+}
+
+body.dark .blue-accent{
+
+background:
+radial-gradient(circle,
+rgba(70,140,255,.35),
+rgba(70,140,255,.15) 45%,
+transparent 70%);
+
+filter:blur(140px);
+
+}
+
+
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.form-card{ padding:22px; }
+
+.blue-accent{ display:none; }
+
+}
+
+@media (max-width:520px){
+
+.form-card{ padding:18px; }
+
+.form-card input,
+.form-card textarea{
+padding:12px;
+}
+
+}
+.brand-delhi{
+color:var(--text-primary);
+font-weight:700;
+}
+
+.brand-concierge{
+color:var(--text-primary);
+opacity:.6;
+font-weight:500;
+}
+</style>
+
+</BaseLayout>

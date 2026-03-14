@@ -1,47 +1,336 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { Image } from "astro:assets";
+import ServiceCard from "../components/ServiceCard.astro";
+import serviceImage1 from "../assets/images/1.png";
+import serviceImage2 from "../assets/images/2.png";
+import serviceImage3 from "../assets/images/3.png";
+import serviceImage4 from "../assets/images/4.png";
+import serviceImage5 from "../assets/images/5.png";
+import serviceImage6 from "../assets/images/6.png";
+import serviceImage7 from "../assets/images/7.png";
+import serviceImage8 from "../assets/images/8.png";
+import serviceImage9 from "../assets/images/9.png";
+import serviceImage10 from "../assets/images/10.png";
+import serviceImage11 from "../assets/images/11.png";
+import serviceImage12 from "../assets/images/12.png";
+import serviceImage13 from "../assets/images/13.png";
 ---
 
 <BaseLayout title="Services | Delhi Concierge">
+    <section class="hero section">
+        <div class="container">
+            <h1>Understanding Delhi, With Clarity</h1>
 
-<section class="services">
+            <p style="max-width:640px;">
+                Delhi can feel overwhelming at first — different rhythms,
+                transport systems, social expectations and daily habits. Delhi
+                Concierge helps visitors understand how the city actually works
+                so they can move through it comfortably.
+            </p>
+        </div>
 
-<h1>Services</h1>
+        <!-- background svg decoration -->
 
-<div class="service-grid">
+        <svg class="hero-pattern" viewBox="0 0 200 200">
+            <circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="rgba(92,204,251,.25)"
+                stroke-width="1"></circle>
 
-<div class="service-card">
+            <circle
+                cx="100"
+                cy="100"
+                r="60"
+                fill="none"
+                stroke="rgba(92,204,251,.18)"
+                stroke-width="1"></circle>
 
-<h3>Airport Assistance</h3>
+            <circle
+                cx="100"
+                cy="100"
+                r="40"
+                fill="none"
+                stroke="rgba(92,204,251,.14)"
+                stroke-width="1"></circle>
+        </svg>
+    </section>
 
-<p>
-Personal pickup and guidance from arrival to your hotel.
-</p>
+    <section class="section">
+        <div class="container">
 
-</div>
+            <div class="services-header">
+                <div class="services-text">
+                    <h2>Services</h2>
 
-<div class="service-card">
+                    <p class="services-intro">
+                        Each service helps reduce sensory overload and gives you
+                        a clearer mental map of the city.
+                    </p>
+                </div>
 
-<h3>City Navigation</h3>
+                <a href="/pricing" class="btn"> View Pricing </a>
+            </div>
 
-<p>
-Help navigating transportation, locations, and logistics.
-</p>
+            <!-- service connector -->
 
-</div>
+            <div class="services-flow">
+                <svg viewBox="0 0 1000 120" preserveAspectRatio="none">
+                    <path
+                        d="M0 60 C200 0 400 120 600 60 S1000 60 1000 60"
+                        stroke-width="2"
+                        fill="none"></path>
+                </svg>
+            </div>
 
-<div class="service-card">
+            <div class="services-grid">
+                <ServiceCard
+                    image={serviceImage1}
+                    alt="Online consultation about Delhi"
+                    title="Online Consultation",
+                    href="/services/online-consultation",
+                    points={[
+                        "Neighbourhood guidance",
+                        "Transport & payments",
+                        "Daily life in Delhi",
+                    ]}
+                    meta="Ideal before arriving in India"
+                />
 
-<h3>Local Coordination</h3>
+                <ServiceCard
+                    image={serviceImage2}
+                    alt="Arrival support Delhi airport"
+                    title="Arrival & Onboarding Support"
+                    href="/services/arrival"
+                    points={[
+                        "SIM cards & payments",
+                        "Transport basics",
+                        "Neighbourhood orientation",
+                    ]}
+                    meta="Your first days in Delhi made easier"
+                />
 
-<p>
-Reservations, appointments, and local arrangements.
-</p>
+                <ServiceCard
+                    image={serviceImage5}
+                    alt="Half day Delhi orientation"
+                    title="Half-Day Orientation"
+                    href="/services/half-day-orientation"
+                    points={[
+                        "Neighbourhood exploration",
+                        "Metro & transport guidance",
+                        "Practical city insights",
+                    ]}
+                    meta="The fastest way to understand Delhi"
+                    featured
+                />
 
-</div>
+                <ServiceCard
+                    image={serviceImage9}
+                    alt="Full day Delhi orientation"
+                    title="Full-Day Orientation"
+                    href="/services/city-orientation"
+                    points={[
+                        "Major districts",
+                        "Food & culture areas",
+                        "How the city flows",
+                    ]}
+                    meta="A deeper introduction to Delhi"
+                />
 
-</div>
+                <ServiceCard
+                    image={serviceImage8}
+                    alt="Taj Mahal exploration"
+                    title="Intercity Exploration"
+                    href="/services/inter-city-day-tour"
+                    points={["Agra", "Jaipur", "Rishikesh"]}
+                    meta="Explore destinations near Delhi"
+                />
 
-</section>
+                <ServiceCard
+                    image={serviceImage11}
+                    alt="Exclusive shopping Delhi markets"
+                    title="Exclusive Shopping"
+                    href="services/exclusive-shopping"
+                    points={[
+                        "Curated boutiques",
+                        "Artisan markets",
+                        "Hidden local stores",
+                    ]}
+                    meta="Discover places most visitors never find"
+                />
 
+                <ServiceCard
+                    image={serviceImage13}
+                    alt="Delhi lifestyle integration"
+                    title="Lifestyle Integration"
+                    href="/services/lifestyle-integration"
+                    points={[
+                        "Cafés & creative spaces",
+                        "Fitness & wellness spots",
+                        "Neighbourhood hangouts",
+                    ]}
+                    meta="Feel comfortable living in Delhi"
+                />
+
+                <ServiceCard
+                    image={serviceImage10}
+                    alt="Delhi social events and gatherings"
+                    title="Socialising Events"
+                    href="services/socializing-events"
+                    points={[
+                        "Local gatherings",
+                        "Cultural evenings",
+                        "Interesting people in the city",
+                    ]}
+                    meta="Experience the social energy of Delhi"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- soft section divider -->
+
+    <svg class="section-divider" viewBox="0 0 100 10">
+        <path d="M0 5 Q50 10 100 5"></path>
+    </svg>
+
+    <section class="section">
+        <div class="container">
+            <h2>What Clients Often Say</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <p>
+                        "Delhi felt overwhelming when I arrived. The orientation
+                        helped me understand how to navigate the city in just a
+                        day."
+                    </p>
+
+                    <p><strong>— Researcher from London</strong></p>
+                </div>
+
+                <div class="card">
+                    <p>
+                        "The biggest value was understanding how daily life
+                        works here."
+                    </p>
+
+                    <p><strong>— Startup founder</strong></p>
+                </div>
+
+                <div class="card">
+                    <p>
+                        "A thoughtful introduction that made Delhi far easier to
+                        experience."
+                    </p>
+
+                    <p><strong>— Visitors from Europe</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CTA
+        title="Ready to Explore Delhi With Confidence?"
+        text="Receive thoughtful guidance that helps you navigate the city comfortably."
+        buttonText="Contact Delhi Concierge"
+        buttonLink="/contact"
+    />
+
+    <style>
+        /* hero decoration */
+
+        .hero-pattern {
+            position: absolute;
+            right: -140px;
+            top: -100px;
+            width: 420px;
+            opacity: 0.35;
+            pointer-events: none;
+
+            stroke: var(--accent-blue);
+            fill: none;
+        }
+
+        /* intro text */
+
+        .services-intro {
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+        }
+
+        /* service connector */
+
+        .services-flow {
+            margin: 30px 0 40px;
+            opacity: 0.3;
+        }
+
+        .services-flow path {
+            stroke: var(--accent-blue);
+        }
+
+        /* services grid layout */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        /* section divider */
+
+        .section-divider {
+            width: 100%;
+            margin: 60px 0;
+
+            stroke: rgba(0, 0, 0, 0.15);
+            fill: none;
+        }
+
+        /* desktop layout */
+
+        @media (min-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        /* services header layout */
+
+.services-header{
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+
+    gap:24px;
+    margin-bottom:10px;
+
+    flex-wrap:wrap;
+}
+
+.services-text{
+    max-width:600px;
+}
+
+/* mobile */
+
+@media (max-width:720px){
+
+.services-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.pricing-button{
+    margin-top:10px;
+}
+
+}
+    </style>
 </BaseLayout>

@@ -1,0 +1,228 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/shaw_headshot_1.png";
+---
+
+<BaseLayout title="Online Consultation">
+
+<ServiceTemplate
+  title="Online Consultation"
+  subtitle="Prepare for Delhi before you arrive"
+  heroImage={heroImg}
+  shortDescription="A private consultation designed to help travellers and expats understand Delhi before arriving."
+  bullets={[
+    "Practical guidance about Delhi",
+    "Personalized travel planning",
+    "Advice based on your interests",
+    "Travel ideas across North India"
+  ]}
+  aboutText="Delhi works differently from many cities. A short consultation helps you understand the rhythm of the city — transport, neighbourhoods, culture and practical everyday details that make your stay smoother."
+  ctaText="Book Consultation"
+  ctaLink="/contact"
+>
+
+<!-- WHAT YOU'LL LEARN -->
+
+<section class="section consultation-highlight">
+<div class="container">
+
+<h2>What you'll learn in this consultation</h2>
+
+<ul class="consultation-pointers">
+<li>✔ How to move around Delhi comfortably</li>
+<li>✔ Which neighbourhoods suit travellers and expats</li>
+<li>✔ How markets, shops and local interactions work</li>
+<li>✔ Simple habits that make navigating Delhi easier</li>
+<li>✔ Where to explore depending on your interests</li>
+</ul>
+
+</div>
+</section>
+
+
+
+<!-- COMMON QUESTIONS -->
+
+<section class="section">
+<div class="container">
+
+<h2>Common questions travellers ask</h2>
+
+<div class="consultation-faq">
+
+<details>
+<summary>How do people usually get around Delhi?</summary>
+<p>
+Delhi Metro is often the fastest way across the city, while ride apps
+like Uber or Ola work well for shorter neighbourhood travel. The
+consultation explains when each option works best.
+</p>
+</details>
+
+<details>
+<summary>Which areas are comfortable for travellers?</summary>
+<p>
+Neighbourhoods like Khan Market, Lodhi Colony and parts of South Delhi
+are often good bases for visitors depending on your plans.
+</p>
+</details>
+
+<details>
+<summary>Is Delhi overwhelming for first-time visitors?</summary>
+<p>
+The city can feel intense initially. Understanding its rhythm,
+transport patterns and neighbourhood layout makes it much easier
+to navigate.
+</p>
+</details>
+
+<details>
+<summary>Can the consultation help plan activities?</summary>
+<p>
+Yes. We discuss your hobbies, interests and travel goals so that
+your itinerary reflects what you actually enjoy.
+</p>
+</details>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- INTEREST BASED PLANNING -->
+
+<section class="section">
+<div class="container">
+
+<h2>Planning around your interests</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Food & Culture</h3>
+<p>
+Discover neighbourhood food areas, heritage districts and places
+where travellers can experience Delhi's culinary diversity.
+</p>
+</div>
+
+<div class="card">
+<h3>Shopping</h3>
+<p>
+Suggestions ranging from traditional craft markets to modern
+design stores depending on what you are looking for.
+</p>
+</div>
+
+<div class="card">
+<h3>Activities</h3>
+<p>
+Photography walks, architecture exploration, yoga experiences
+or quiet neighbourhood cafés.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- TRAVEL IDEAS -->
+
+<section class="section travel-suggestions">
+<div class="container">
+
+<h2>Travel ideas from Delhi</h2>
+
+<div class="travel-chips">
+
+<span class="chip">Agra – Taj Mahal</span>
+<span class="chip">Jaipur – Pink City</span>
+<span class="chip">Rishikesh – Yoga & Nature</span>
+<span class="chip">Old Delhi Food Walk</span>
+<span class="chip">Delhi Heritage Walk</span>
+
+</div>
+
+<p class="travel-note">
+During the consultation we help shape realistic travel routes
+depending on how long you plan to stay in India.
+</p>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* pointers */
+
+.consultation-pointers{
+list-style:none;
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+font-size:15px;
+}
+
+
+/* dropdown faq */
+
+.consultation-faq details{
+background:var(--bg-surface);
+border-radius:var(--radius-md);
+padding:16px;
+margin-top:12px;
+cursor:pointer;
+}
+
+.consultation-faq summary{
+font-weight:600;
+cursor:pointer;
+}
+
+.consultation-faq p{
+margin-top:10px;
+color:var(--text-secondary);
+}
+
+
+/* travel chips */
+
+.travel-chips{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
+
+.chip{
+padding:8px 14px;
+border-radius:20px;
+background:rgba(92,204,251,.15);
+font-size:14px;
+}
+
+
+/* highlight background */
+
+.consultation-highlight{
+background:radial-gradient(
+circle at 20% 10%,
+rgba(92,204,251,.1),
+transparent 60%
+);
+}
+
+</style>

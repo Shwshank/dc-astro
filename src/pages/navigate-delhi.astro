@@ -1,0 +1,301 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout title="Navigating Delhi | Delhi Concierge">
+    <style>
+        /* HERO VECTOR BACKGROUND */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            top: -120px;
+            right: -120px;
+            background: radial-gradient(circle, #ffd8a6 0%, transparent 60%);
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            bottom: -140px;
+            left: -120px;
+            background: radial-gradient(circle, #cbd5f5 0%, transparent 60%);
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* IMAGE */
+
+        .main-img {
+            width: 100%;
+            border-radius: 22px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+            transform: rotate(-2deg);
+            transition: all 0.35s ease;
+        }
+
+        .main-img:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+        .card svg {
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+
+        @media (max-width: 1024px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .hero-wrapper div:first-child {
+                order: 2;
+            }
+
+            .hero-wrapper div:last-child {
+                order: 1;
+            }
+
+            .main-img {
+                max-width: 600px;
+                margin: auto;
+                display: block;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+        }
+
+        /* SMALL MOBILE */
+
+        @media (max-width: 480px) {
+            .hero-wrapper {
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-img {
+                border-radius: 16px;
+            }
+
+        }
+    </style>
+
+    <!-- HERO -->
+
+    <section class="hero section">
+        <div class="container hero-wrapper">
+            <div>
+                <span
+                    style="text-transform:uppercase;letter-spacing:2px;font-size:.8rem;color:#777;font-weight:600"
+                >
+                    Welcome to the capital
+                </span>
+
+                <h1>Navigating Delhi Without the Chaos</h1>
+
+                <p>
+                    Delhi can feel intense at first. Traffic, crowds, different
+                    social norms, and endless choices can create
+                    <strong>sensory overload</strong> for newcomers.
+                </p>
+
+                <p>
+                    But with the right perspective and local insight, the city
+                    begins to make sense. What once felt overwhelming becomes
+                    surprisingly enjoyable.
+                </p>
+
+                <a href="/services" class="btn" style="margin-top:1.5rem">
+                    Explore Practical Guides
+                </a>
+            </div>
+
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80&w=800"
+                    class="main-img"
+                    alt="Delhi city architecture"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- CITY RHYTHM -->
+
+    <section class="section">
+        <div class="container">
+            <h2>Understanding the Rhythm of Delhi</h2>
+
+            <div
+                style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem"
+            >
+                <p>
+                    Delhi does not operate like most Western cities. Things are
+                    more fluid, more social, and often more spontaneous.
+                    Understanding this rhythm removes frustration and replaces
+                    it with clarity.
+                </p>
+
+                <p>
+                    Once you understand how the city moves — from traffic
+                    patterns to social etiquette — daily life becomes
+                    significantly smoother.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="section">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                    >
+                        <circle cx="20" cy="20" r="18"></circle>
+                        <path d="M12 20h16M20 12v16"></path>
+                    </svg>
+
+                    <h3>A City of Layers</h3>
+
+                    <p>
+                        Ancient forts, Mughal architecture, colonial districts
+                        and modern business hubs coexist in the same city.
+                        Understanding these layers helps you experience Delhi
+                        beyond tourist routes.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                    >
+                        <rect x="6" y="12" width="28" height="16" rx="4"></rect>
+                        <circle cx="12" cy="30" r="2"></circle>
+                        <circle cx="28" cy="30" r="2"></circle>
+                    </svg>
+
+                    <h3>Movement & Timing</h3>
+
+                    <p>
+                        Traffic, metro routes, and neighborhood rhythms matter.
+                        Knowing when and how to move around the city saves time
+                        and removes unnecessary stress.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                    >
+                        <path d="M6 20h28M20 6v28"></path>
+                    </svg>
+
+                    <h3>People & Connections</h3>
+
+                    <p>
+                        Delhi runs strongly on relationships. Local
+                        recommendations often lead to places you would never
+                        discover on your own.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM CTA -->
+    <CTA />
+</BaseLayout>

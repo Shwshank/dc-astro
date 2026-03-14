@@ -1,25 +1,466 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import shawImg from "../assets/images/shaw_headshot_1.png";
 ---
 
-<BaseLayout title="About | Delhi Concierge">
+<BaseLayout title="About Shaw | Delhi Concierge">
 
-<section class="about">
+<!-- HERO -->
 
-<h1>About Delhi Concierge</h1>
+<section class="section about-hero">
+<div class="container hero-container">
+<h4 class="about-title">
+Helping travellers understand Delhi with clarity
+</h4>
+<div class="hero-wrapper">
 
-<img src="/images/shaw_headshot_1.png" alt="Founder">
+<div class="hero-text">
 
-<p>
-Delhi Concierge was founded to help travelers navigate the city
-without sensory overload.
+
+
+
+
+<p class="about-intro">
+Delhi can feel overwhelming at first. But once you understand
+its rhythm, neighbourhoods and everyday patterns,
+the city becomes far more enjoyable to explore.
 </p>
 
-<p>
-Our goal is to provide cognitive relief by assisting with logistics,
-transportation, and trusted local connections.
-</p>
+</div>
 
+<div class="hero-image">
+<img src={shawImg.src ?? shawImg} alt="Shaw – Founder of Delhi Concierge">
+</div>
+
+</div>
+
+<!-- visual accents -->
+
+<div class="hero-accent"></div>
+<!-- <div class="delhi-watermark">DELHI</div> -->
+
+</div>
 </section>
+
+
+
+<!-- PERSONAL STORY -->
+
+<section class="section">
+<div class="container">
+
+<h2>Why Delhi Concierge</h2>
+
+<div class="about-story">
+
+<p>
+While travelling across Asia and Europe, I noticed something
+interesting. The best travel experiences usually happened when
+someone local helped interpret the city — not just showing places,
+but explaining how the city actually works.
+</p>
+
+<p>
+Transport systems, neighbourhood cultures, everyday habits —
+these small details often determine whether a traveller feels
+confident or completely lost.
+</p>
+
+<p>
+When international travellers arrive in Delhi, the opposite often
+happens. Airports, traffic, unfamiliar systems and language
+differences all appear at once.
+</p>
+
+<p>
+Delhi Concierge started with a simple idea: help travellers
+understand the city before it overwhelms them.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- PHILOSOPHY -->
+
+<section class="section philosophy-section">
+<div class="container">
+
+<div class="philosophy-card">
+
+<p class="philosophy-text">
+“Cities become far less chaotic when you understand their rhythm.”
+</p>
+
+<p class="philosophy-author">
+— Shaw
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- MINDFUL EXPLORATION -->
+
+<section class="section">
+<div class="container">
+
+<h2>Mindful Exploration</h2>
+
+<p class="mindful-intro">
+Instead of rushing between landmarks, I encourage travellers
+to understand the deeper patterns of the city.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Observe the Rhythm</h3>
+<p>
+Delhi moves differently from most Western cities.
+Once you understand neighbourhood rhythms and local timing,
+the city becomes easier to navigate.
+</p>
+</div>
+
+<div class="card">
+<h3>Understand the Context</h3>
+<p>
+Markets, monuments and neighbourhoods carry stories.
+Understanding their context transforms visits
+into meaningful experiences.
+</p>
+</div>
+
+<div class="card">
+<h3>Explore Comfortably</h3>
+<p>
+When travellers know what to expect,
+they move through the city confidently
+instead of feeling uncertain.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- HOW TRAVELLERS BENEFIT -->
+
+<section class="section helpful-section">
+<div class="container">
+
+<h2>What I help travellers with</h2>
+
+<div class="help-grid">
+
+<div class="help-item">
+🌍 Understanding neighbourhood culture
+</div>
+
+<div class="help-item">
+🚕 Navigating transport and mobility
+</div>
+
+<div class="help-item">
+🛍️ Discovering interesting local areas
+</div>
+
+<div class="help-item">
+☕ Experiencing everyday city life
+</div>
+
+<div class="help-item">
+📍 Planning realistic itineraries
+</div>
+
+<div class="help-item">
+🧭 Feeling confident exploring Delhi
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- TRUST STRIP -->
+
+<section class="section trust-strip">
+<div class="container">
+
+<h2>Why travellers appreciate this approach</h2>
+
+<div class="cards trust-cards">
+
+<div class="card">
+<h3>Personal Perspective</h3>
+<p>
+This service is shaped by real travel experience across
+different continents. The goal is to help travellers
+understand Delhi in a way that feels intuitive rather
+than overwhelming.
+</p>
+</div>
+
+<div class="card">
+<h3>Local Understanding</h3>
+<p>
+Instead of generic sightseeing advice, travellers gain
+context about neighbourhood culture, everyday logistics
+and how the city actually functions.
+</p>
+</div>
+
+<div class="card">
+<h3>Mindful Exploration</h3>
+<p>
+The focus is not just visiting places but experiencing
+Delhi with awareness — understanding its rhythm,
+history and everyday life.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="section about-cta">
+  <div class="cta-wide">
+
+    <CTA
+      title="Navigate Delhi with confidence"
+      description="Explore concierge services designed to help you understand and experience the city comfortably."
+      buttonText="Navigate Delhi"
+      buttonLink="/navigate-delhi"
+    />
+
+  </div>
+</section>
+
+
+
+<style>
+
+/* HERO */
+
+.about-hero{
+position:relative;
+padding-top:60px;
+padding-bottom:60px;
+overflow:hidden;
+}
+
+.hero-container{
+position:relative;
+}
+
+.about-title{
+font-size:48px;
+line-height:1.15;
+letter-spacing:-0.3px;
+margin-bottom:16px;
+}
+
+.about-lead{
+font-size:20px;
+font-weight:500;
+margin-bottom:14px;
+color:var(--text-primary);
+max-width:560px;
+}
+
+.about-intro{
+font-size:16px;
+color:var(--text-secondary);
+max-width:520px;
+}
+
+
+/* hero accent */
+
+.hero-accent{
+position:absolute;
+right:-120px;
+top:-120px;
+
+width:420px;
+height:420px;
+
+background:
+radial-gradient(
+circle,
+rgba(238,142,67,.25),
+transparent 70%
+);
+
+filter:blur(10px);
+pointer-events:none;
+}
+
+
+/* watermark */
+
+.delhi-watermark{
+position:absolute;
+right:60px;
+top:40px;
+
+font-size:120px;
+font-weight:600;
+
+color:rgba(0,0,0,.04);
+pointer-events:none;
+}
+
+
+
+/* STORY */
+
+.about-story{
+max-width:720px;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+
+
+/* PHILOSOPHY */
+
+.philosophy-section{
+background:
+radial-gradient(
+circle at 20% 30%,
+rgba(92,204,251,.12),
+transparent 60%
+);
+}
+
+.philosophy-card{
+padding:40px;
+border-radius:var(--radius-lg);
+
+background:linear-gradient(
+160deg,
+rgba(255,255,255,.85),
+rgba(255,255,255,.25)
+);
+
+border:1px solid var(--border-soft);
+text-align:center;
+}
+
+.philosophy-text{
+font-size:22px;
+font-weight:500;
+margin-bottom:10px;
+}
+
+.philosophy-author{
+color:var(--text-muted);
+}
+
+
+
+/* MINDFUL */
+
+.mindful-intro{
+margin-bottom:20px;
+max-width:620px;
+}
+
+
+
+/* HELPFUL GRID */
+
+.help-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
+margin-top:20px;
+}
+
+.help-item{
+background:var(--bg-surface);
+padding:16px 18px;
+border-radius:var(--radius-md);
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.06);
+
+font-size:15px;
+}
+
+
+
+/* TRUST STRIP */
+
+.trust-strip{
+background:
+radial-gradient(
+circle at 80% 10%,
+rgba(92,204,251,.12),
+transparent 60%
+);
+}
+
+.trust-items{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
+margin-top:20px;
+}
+
+.trust-item{
+background:var(--bg-surface);
+padding:16px 18px;
+border-radius:var(--radius-md);
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.05);
+
+font-size:15px;
+}
+
+.trust-cards{
+margin-top:20px;
+}
+
+.trust-cards .card{
+min-height:160px;
+}
+
+/* CTA wider container */
+
+.about-cta{
+padding-top:40px;
+padding-bottom:60px;
+}
+
+.cta-wide{
+max-width:1200px;
+margin:0 auto;
+padding:0 10px;
+}
+.cta-wide .cta-card{
+padding:60px 80px;
+}
+</style>
 
 </BaseLayout>

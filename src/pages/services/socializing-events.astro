@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/driver_2.png";
+---
+
+<BaseLayout title="Socializing Events">
+
+<ServiceTemplate
+  title="Socializing & Community Events"
+  subtitle="Meet people and experience Delhi socially"
+  heroImage={heroImg}
+  shortDescription="Curated small-group events designed to help travellers, expats and curious visitors experience Delhi through shared activities."
+  bullets={[
+    "Small group social experiences",
+    "Art, culture and community events",
+    "Food walks and café meetups",
+    "Creative and co-working gatherings"
+  ]}
+  aboutText="Cities become more enjoyable when experienced with people. These curated social gatherings help travellers and expats meet others while exploring Delhi through art, food, culture and creative communities."
+  ctaText="Join an Event"
+  ctaLink="/contact"
+>
+
+<!-- SOCIAL EXPERIENCES -->
+<section class="section social-experiences">
+<div class="container">
+
+<h2>Experiences you may join</h2>
+
+<div class="event-grid">
+
+<div class="event">
+<h3>🎨 Art Museum Walk</h3>
+<p>
+Explore galleries and museums with a small group while
+discussing art, architecture and history.
+</p>
+</div>
+
+<div class="event">
+<h3>🍜 Food Walks</h3>
+<p>
+Discover neighbourhood food scenes through guided
+tastings and street food exploration.
+</p>
+</div>
+
+<div class="event">
+<h3>🎤 Karaoke Nights</h3>
+<p>
+Relaxed evenings where travellers and locals gather
+for music, conversation and fun.
+</p>
+</div>
+
+<div class="event">
+<h3>☕ Café Hangouts</h3>
+<p>
+Casual meetups in neighbourhood cafés where
+conversations and connections happen naturally.
+</p>
+</div>
+
+<div class="event">
+<h3>💻 Co-Working Meetups</h3>
+<p>
+Creative work sessions and networking opportunities
+for remote workers and entrepreneurs.
+</p>
+</div>
+
+<div class="event">
+<h3>🎶 Cultural Evenings</h3>
+<p>
+Small gatherings around music, storytelling
+and cultural experiences.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- COMMUNITY VIBE -->
+
+<section class="section social-community">
+<div class="container">
+
+<h2>The social side of the city</h2>
+
+<div class="community-list">
+
+<div class="community-item">
+<span class="community-tag">Conversations</span>
+<p>
+Meet people from different backgrounds while sharing
+experiences across the city.
+</p>
+</div>
+
+<div class="community-item">
+<span class="community-tag">Exploration</span>
+<p>
+Experience neighbourhood culture through art,
+food and creative communities.
+</p>
+</div>
+
+<div class="community-item">
+<span class="community-tag">Connection</span>
+<p>
+Build connections that turn a visit into a
+shared experience rather than a solo trip.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- HOW EVENTS WORK -->
+
+<section class="section event-flow">
+<div class="container">
+
+<h2>How participation works</h2>
+
+<div class="flow">
+
+<div class="flow-step">
+<span class="step-label">Discover</span>
+<p>
+Choose an event that matches your interests —
+art, food, music or social gatherings.
+</p>
+</div>
+
+<div class="flow-step">
+<span class="step-label">Join</span>
+<p>
+Events are designed for small groups to
+encourage interaction and conversation.
+</p>
+</div>
+
+<div class="flow-step">
+<span class="step-label">Experience</span>
+<p>
+Enjoy the activity while meeting people
+who are exploring the city just like you.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* EVENT GRID */
+
+.event-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:24px;
+}
+
+.event{
+padding:18px;
+border-radius:var(--radius-md);
+background:var(--bg-surface);
+box-shadow:
+0 10px 24px rgba(0,0,0,.05),
+inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+
+
+/* COMMUNITY SECTION */
+
+.community-list{
+display:flex;
+flex-direction:column;
+gap:16px;
+margin-top:22px;
+}
+
+.community-item{
+padding:14px 16px;
+border-radius:var(--radius-sm);
+background:rgba(131, 247, 54, 0.12);
+}
+
+.community-tag{
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--accent-orange);
+display:block;
+margin-bottom:4px;
+}
+
+
+
+/* EVENT FLOW */
+
+.flow{
+display:flex;
+flex-direction:column;
+gap:16px;
+margin-top:20px;
+}
+
+.flow-step{
+padding-left:14px;
+border-left:3px solid var(--accent-blue);
+}
+
+.step-label{
+font-size:13px;
+letter-spacing:.06em;
+text-transform:uppercase;
+color:var(--accent-blue);
+display:block;
+margin-bottom:4px;
+}
+
+</style>

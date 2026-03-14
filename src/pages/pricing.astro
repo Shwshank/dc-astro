@@ -1,0 +1,260 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout title="Pricing | Delhi Concierge">
+
+    <!-- HERO -->
+
+    <section class="hero section">
+        <div class="container">
+
+            <h1>Simple, Transparent Pricing</h1>
+
+            <p style="max-width:640px;">
+                Every service is designed to reduce sensory overload and give
+                you a clearer mental map of Delhi. Pricing reflects the time,
+                planning and personal attention required to guide you through
+                the city comfortably.
+            </p>
+
+        </div>
+
+        <svg class="hero-pattern" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(92,204,251,.25)" stroke-width="1"></circle>
+            <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(92,204,251,.18)" stroke-width="1"></circle>
+            <circle cx="100" cy="100" r="40" fill="none" stroke="rgba(92,204,251,.14)" stroke-width="1"></circle>
+        </svg>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section class="section">
+        <div class="container">
+
+            <h2>Service Pricing</h2>
+
+            <p class="pricing-intro">
+                Most experiences are private and personalised. The goal is not
+                just logistics — but helping you feel mentally comfortable in a
+                complex city.
+            </p>
+
+            <div class="pricing-grid">
+
+                <div class="card pricing-card">
+                    <h3>Online Consultation</h3>
+
+                    <p class="price">$20</p>
+
+                    <ul>
+                        <li>Neighbourhood guidance</li>
+                        <li>Transport & payments</li>
+                        <li>Daily life in Delhi</li>
+                        <li>Travel planning advice</li>
+                    </ul>
+
+                    <p class="meta">60 minute session</p>
+                </div>
+
+
+                <div class="card pricing-card featured">
+                    <h3>Half-Day Orientation</h3>
+
+                    <p class="price">$70</p>
+
+                    <ul>
+                        <li>Neighbourhood exploration</li>
+                        <li>Metro & transport guidance</li>
+                        <li>Local culture insights</li>
+                        <li>Practical city navigation</li>
+                    </ul>
+
+                    <p class="meta">4 hours</p>
+                </div>
+
+
+                <div class="card pricing-card">
+                    <h3>Full-Day Orientation</h3>
+
+                    <p class="price">$150</p>
+
+                    <ul>
+                        <li>Major districts overview</li>
+                        <li>Food & cultural areas</li>
+                        <li>Transport systems</li>
+                        <li>Understanding Delhi's rhythm</li>
+                    </ul>
+
+                    <p class="meta">8 hours</p>
+                </div>
+
+
+                <div class="card pricing-card">
+                    <h3>Intercity Exploration</h3>
+
+                    <p class="price">Custom</p>
+
+                    <ul>
+                        <li>Agra</li>
+                        <li>Jaipur</li>
+                        <li>Rishikesh</li>
+                        <li>Private planning</li>
+                    </ul>
+
+                    <p class="meta">Pricing depends on destination</p>
+                </div>
+
+
+                <div class="card pricing-card">
+                    <h3>Exclusive Shopping</h3>
+
+                    <p class="price">$70</p>
+
+                    <ul>
+                        <li>Curated boutiques</li>
+                        <li>Artisan markets</li>
+                        <li>Hidden local stores</li>
+                        <li>Personal assistance</li>
+                    </ul>
+
+                    <p class="meta">3–4 hours</p>
+                </div>
+
+
+                <div class="card pricing-card">
+                    <h3>Lifestyle Integration</h3>
+
+                    <p class="price">$100</p>
+
+                    <ul>
+                        <li>Cafés & creative spaces</li>
+                        <li>Fitness & wellness spots</li>
+                        <li>Neighbourhood hangouts</li>
+                        <li>Local lifestyle guidance</li>
+                    </ul>
+
+                    <p class="meta">Half day experience</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION DIVIDER -->
+
+    <svg class="section-divider" viewBox="0 0 100 10">
+        <path d="M0 5 Q50 10 100 5"></path>
+    </svg>
+
+
+    <!-- NOTES -->
+
+    <section class="section">
+        <div class="container">
+
+            <h2>Notes</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <p>
+                        Prices do not include transport, entry tickets or
+                        external bookings.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p>
+                        All experiences are private unless stated otherwise.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p>
+                        Custom itineraries and multi-day experiences can be
+                        arranged on request.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <CTA
+        title="Plan Your Time in Delhi"
+        text="Start with a conversation and we will design the right experience for you."
+        buttonText="Contact Delhi Concierge"
+        buttonLink="/contact"
+    />
+
+
+<style>
+
+.hero-pattern{
+    position:absolute;
+    right:-140px;
+    top:-100px;
+    width:420px;
+    opacity:.35;
+    pointer-events:none;
+    stroke:var(--accent-blue);
+}
+
+.pricing-intro{
+    max-width:600px;
+    margin-bottom:30px;
+    color:var(--text-secondary);
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+}
+
+.price{
+    font-size:28px;
+    font-weight:600;
+    margin:10px 0 14px;
+}
+
+.pricing-card ul{
+    padding-left:18px;
+    margin-bottom:16px;
+}
+
+.pricing-card li{
+    margin-bottom:6px;
+}
+
+.meta{
+    font-size:14px;
+    color:var(--text-secondary);
+}
+
+.section-divider{
+    width:100%;
+    margin:60px 0;
+    stroke:rgba(0,0,0,.15);
+    fill:none;
+}
+
+@media (min-width:900px){
+
+.pricing-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+</style>
+
+</BaseLayout>

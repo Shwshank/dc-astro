@@ -1,0 +1,227 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/driver_2.png";
+---
+
+<BaseLayout title="Exclusive Shopping Experience">
+
+<ServiceTemplate
+  title="Exclusive Shopping Experience"
+  subtitle="Discover Delhi through curated shopping"
+  heroImage={heroImg}
+  shortDescription="A guided shopping experience designed to help travellers discover authentic markets, boutique stores and local craftsmanship."
+  bullets={[
+    "Curated shopping districts across Delhi",
+    "Guidance on authentic crafts and textiles",
+    "Assistance navigating markets",
+    "Personal concierge throughout the experience"
+  ]}
+  aboutText="Delhi offers one of the most diverse shopping landscapes in India — from historic bazaars to modern design boutiques. This experience helps travellers navigate that variety with context, guidance and access to places that reflect the city's craftsmanship and culture."
+  ctaText="Plan Your Shopping Experience"
+  ctaLink="/contact"
+>
+
+<!-- SHOPPING DISTRICTS -->
+
+<section class="section shopping-districts">
+<div class="container">
+
+<h2>Shopping districts you may explore</h2>
+
+<div class="district-grid">
+
+<div class="district">
+<h3>Khan Market</h3>
+<p>
+A refined district known for boutique fashion, bookstores,
+artisan products and cafés.
+</p>
+</div>
+
+<div class="district">
+<h3>Dilli Haat</h3>
+<p>
+A curated craft market representing artisans from across India,
+offering textiles, handicrafts and regional food.
+</p>
+</div>
+
+<div class="district">
+<h3>Chandni Chowk</h3>
+<p>
+Historic bazaars filled with traditional fabrics, jewellery
+and specialty markets.
+</p>
+</div>
+
+<div class="district">
+<h3>Mehrauli & South Delhi</h3>
+<p>
+Design studios and contemporary boutiques showcasing
+modern Indian fashion and craft.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- WHAT YOU CAN SHOP FOR -->
+
+<section class="section shopping-categories">
+<div class="container">
+
+<h2>What you can discover</h2>
+
+<div class="category-list">
+
+<div class="category">
+<h4>Textiles & Fabrics</h4>
+<p>
+Silk scarves, embroidered fabrics and traditional
+Indian textiles from specialised markets.
+</p>
+</div>
+
+<div class="category">
+<h4>Jewellery</h4>
+<p>
+Handcrafted silver jewellery and traditional designs
+found in historic districts.
+</p>
+</div>
+
+<div class="category">
+<h4>Craft & Home Decor</h4>
+<p>
+Handmade ceramics, woodwork and decorative objects
+created by artisans across India.
+</p>
+</div>
+
+<div class="category">
+<h4>Fashion & Design</h4>
+<p>
+Contemporary Indian designers blending traditional
+craft with modern aesthetics.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- SHOPPING EXPERIENCE -->
+
+<section class="section shopping-experience">
+<div class="container">
+
+<h2>How the experience works</h2>
+
+<div class="experience-flow">
+
+<div class="experience-step">
+<span class="step-tag">Consultation</span>
+<p>
+Discuss your interests and preferences so the shopping
+experience reflects your personal style.
+</p>
+</div>
+
+<div class="experience-step">
+<span class="step-tag">Curated Visits</span>
+<p>
+Visit selected markets and boutiques that match
+what you are looking for.
+</p>
+</div>
+
+<div class="experience-step">
+<span class="step-tag">Local Insights</span>
+<p>
+Understand the stories behind textiles, craft traditions
+and the neighbourhoods where they originate.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* DISTRICTS */
+
+.district-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:24px;
+}
+
+.district{
+padding:18px;
+border-radius:var(--radius-md);
+background:var(--bg-surface);
+box-shadow:
+0 10px 24px rgba(0,0,0,.05),
+inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+
+
+/* SHOPPING CATEGORIES */
+
+.category-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:24px;
+}
+
+.category{
+padding:16px;
+border-left:3px solid var(--accent-orange);
+}
+
+
+
+/* EXPERIENCE FLOW */
+
+.experience-flow{
+display:flex;
+flex-direction:column;
+gap:16px;
+margin-top:20px;
+}
+
+.experience-step{
+padding:14px 16px;
+border-radius:var(--radius-sm);
+background:rgba(169, 236, 44, 0.12);
+}
+
+.step-tag{
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--accent-orange);
+display:block;
+margin-bottom:6px;
+}
+
+</style>

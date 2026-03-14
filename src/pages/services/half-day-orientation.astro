@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceTemplate from "../../components/ServiceTemplate.astro";
+import heroImg from "../../assets/images/driver_2.png";
+---
+
+<BaseLayout title="Half Day Orientation">
+
+<ServiceTemplate
+  title="Half-Day City Orientation"
+  subtitle="Understand Delhi before exploring it"
+  heroImage={heroImg}
+  shortDescription="A guided half-day experience designed to help you understand how Delhi works — its neighbourhoods, transport patterns and everyday rhythm."
+  bullets={[
+    "Orientation to key neighbourhoods",
+    "Understanding how the city moves",
+    "Local insights and cultural context",
+    "Personal concierge guidance"
+  ]}
+  aboutText="Delhi can feel chaotic at first. This orientation experience is designed to introduce you to the city's structure, rhythm and everyday patterns so that exploring the city later becomes easier and more comfortable."
+  ctaText="Book Orientation"
+  ctaLink="/contact"
+>
+
+<!-- ORIENTATION EXPERIENCE -->
+
+<section class="section orientation-experience">
+<div class="container">
+
+<h2>What the orientation experience looks like</h2>
+
+<div class="orientation-steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h3>Meet Your Concierge</h3>
+<p>
+Your orientation begins with a short introduction to the city —
+how Delhi is structured and how neighbourhoods connect.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h3>Understanding the City</h3>
+<p>
+Drive or walk through important areas while learning how
+transport, markets and daily life work in the city.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h3>Local Insights</h3>
+<p>
+Your concierge explains practical details travellers often
+discover only after spending days in the city.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- AREAS YOU MAY VISIT -->
+
+<section class="section orientation-areas">
+<div class="container">
+
+<h2>Areas you may explore</h2>
+
+<div class="area-list">
+
+<div class="area">
+<h4>Khan Market</h4>
+<p>A compact district known for cafés, bookstores and boutique shops.</p>
+</div>
+
+<div class="area">
+<h4>Lodhi Colony</h4>
+<p>A calm neighbourhood famous for its street art and architecture.</p>
+</div>
+
+<div class="area">
+<h4>India Gate District</h4>
+<p>Wide boulevards and historic landmarks in central Delhi.</p>
+</div>
+
+<div class="area">
+<h4>Local Markets</h4>
+<p>Experience how neighbourhood markets function in daily life.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- WHAT YOU LEARN -->
+
+<section class="section orientation-learn">
+<div class="container">
+
+<h2>What you learn during the orientation</h2>
+
+<ul class="orientation-points">
+<li>How to navigate the city confidently</li>
+<li>When to use metro, taxis or ride apps</li>
+<li>Which neighbourhoods suit different interests</li>
+<li>Where to eat, shop and relax locally</li>
+<li>How everyday interactions typically work</li>
+</ul>
+
+</div>
+</section>
+
+</ServiceTemplate>
+
+</BaseLayout>
+
+
+
+<style>
+
+/* orientation timeline */
+
+.orientation-steps{
+display:flex;
+flex-direction:column;
+gap:28px;
+margin-top:30px;
+}
+
+.step{
+display:flex;
+gap:18px;
+align-items:flex-start;
+}
+
+.step-number{
+width:36px;
+height:36px;
+border-radius:50%;
+background:rgba(92,204,251,.18);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+}
+
+.step-content h3{
+margin-bottom:6px;
+}
+
+/* areas grid */
+
+.area-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;
+margin-top:24px;
+}
+
+.area{
+background:var(--bg-surface);
+padding:16px;
+border-radius:var(--radius-md);
+box-shadow:
+0 10px 24px rgba(0,0,0,.05),
+inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+/* learning points */
+
+.orientation-points{
+margin-top:18px;
+padding-left:20px;
+}
+
+.orientation-points li{
+margin-bottom:8px;
+}
+
+</style>
