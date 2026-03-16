@@ -69,41 +69,50 @@
 
   const toggleBtn = document.getElementById("themeToggle");
 
+  function setTheme(theme) {
+    document.body.classList.remove("dark", "solarized");
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      if (toggleBtn) toggleBtn.textContent = "☀️";
+    } else if (theme === "solarized") {
+      document.body.classList.add("solarized");
+      localStorage.setItem("theme", "solarized");
+      if (toggleBtn) toggleBtn.textContent = "🌅";
+    } else {
+      localStorage.setItem("theme", "light");
+      if (toggleBtn) toggleBtn.textContent = "🌙";
+    }
+  }
+
   if (toggleBtn) {
-
     const savedTheme = localStorage.getItem("theme");
-
     if (savedTheme === "dark") {
       document.body.classList.add("dark");
       toggleBtn.textContent = "☀️";
+    } else if (savedTheme === "solarized") {
+      document.body.classList.add("solarized");
+      toggleBtn.textContent = "🌅";
     } else {
       toggleBtn.textContent = "🌙";
     }
-
     toggleBtn.addEventListener("click", () => {
-
-      /* IMPORTANT PART:
-         temporarily disable blur repaint while theme changes */
-
       const modalOpen = document.body.classList.contains("modal-open");
-
       if (modalOpen) {
         document.body.classList.add("theme-switching");
       }
-
-      document.body.classList.toggle("dark");
-
-      const isDark = document.body.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      toggleBtn.textContent = isDark ? "☀️" : "🌙";
-
-      // allow repaint after theme applied
+      if (document.body.classList.contains("dark")) {
+        setTheme("solarized");
+      } else if (document.body.classList.contains("solarized")) {
+        setTheme("light");
+      } else {
+        setTheme("dark");
+      }
       if (modalOpen) {
         setTimeout(() => {
           document.body.classList.remove("theme-switching");
         }, 120);
       }
-
     });
   }
 
