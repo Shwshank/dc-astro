@@ -3,162 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 ---
 
-<BaseLayout title="Navigating Delhi | Delhi Concierge">
-    <style>
-        /* HERO VECTOR BACKGROUND */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            top: -120px;
-            right: -120px;
-            background: radial-gradient(circle, #ffd8a6 0%, transparent 60%);
-            opacity: 0.35;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            bottom: -140px;
-            left: -120px;
-            background: radial-gradient(circle, #cbd5f5 0%, transparent 60%);
-            opacity: 0.35;
-            z-index: 0;
-        }
-
-        .hero-wrapper {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* IMAGE */
-
-        .main-img {
-            width: 100%;
-            border-radius: 22px;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
-            transform: rotate(-2deg);
-            transition: all 0.35s ease;
-        }
-
-        .main-img:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-
-        /* CARDS */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 18px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            transition: 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-    transform: translateY(-6px);
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-        .card svg {
-            margin-bottom: 12px;
-            opacity: 0.9;
-        }
-
-
-        @media (max-width: 1024px) {
-            .hero-wrapper {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .hero-wrapper div:first-child {
-                order: 2;
-            }
-
-            .hero-wrapper div:last-child {
-                order: 1;
-            }
-
-            .main-img {
-                max-width: 600px;
-                margin: auto;
-                display: block;
-            }
-
-            .cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 768px) {
-            .hero {
-                padding-top: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 0.95rem;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 3rem 0;
-            }
-
-        }
-
-        /* SMALL MOBILE */
-
-        @media (max-width: 480px) {
-            .hero-wrapper {
-                gap: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .main-img {
-                border-radius: 16px;
-            }
-
-        }
-    </style>
-
+<BaseLayout title="Navigate Delhi | Delhi Concierge">
     <!-- HERO -->
 
     <section class="hero section">
@@ -184,7 +29,7 @@ import CTA from "../components/CTA.astro";
                     surprisingly enjoyable.
                 </p>
 
-                <a href="/services" class="btn" style="margin-top:1.5rem">
+                <a href="/blog" class="btn" style="margin-top:1.5rem">
                     Explore Practical Guides
                 </a>
             </div>
@@ -199,103 +44,381 @@ import CTA from "../components/CTA.astro";
         </div>
     </section>
 
-    <!-- CITY RHYTHM -->
+    <!-- KNOWLEDGE SECTION -->
 
-    <section class="section">
-        <div class="container">
-            <h2>Understanding the Rhythm of Delhi</h2>
+    <section class="section guide-section">
+        <div class="container guide-container">
+            <h2 class="guide-title">Understanding How Delhi Moves</h2>
 
-            <div
-                style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem"
-            >
+            <p class="guide-intro">
+                Delhi begins to make sense once you understand its rhythms.
+                Transport, neighbourhood culture and daily logistics follow
+                patterns that locals intuitively know. Learning these patterns
+                removes a lot of the friction that newcomers often experience.
+            </p>
+
+            <!-- TRANSPORT PANEL -->
+
+            <div class="guide-panel">
+                <div class="panel-header">
+                    <svg class="panel-icon" viewBox="0 0 64 64">
+                        <circle cx="32" cy="32" r="26"></circle>
+                        <path d="M18 34h28M24 24h16"></path>
+                    </svg>
+
+                    <div>
+                        <h3>Transportation in Delhi</h3>
+                        <p>
+                            Choosing the right transport depends on distance,
+                            timing and comfort.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <details open>
+                        <summary>Delhi Metro</summary>
+
+                        <p>
+                            If you want the most predictable way to move across
+                            Delhi, the Metro is it. It bypasses traffic entirely
+                            and connects most major parts of the city — South
+                            Delhi, Connaught Place, Old Delhi, Gurgaon and
+                            Noida.
+                        </p>
+
+                        <p>
+                            Stations are clean, announcements are in English,
+                            and trains run frequently. For many expats the Metro
+                            becomes the easiest option for longer journeys
+                            across the city.
+                        </p>
+
+                        <p>
+                            Rush hours can be crowded, especially around 9am and
+                            6pm. Outside those times it’s surprisingly
+                            comfortable and often faster than driving.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Uber & Ride Apps</summary>
+
+                        <p>
+                            Ride-hailing apps like Uber and Ola are the simplest
+                            option for most newcomers. They remove the need to
+                            negotiate fares and navigation works reliably across
+                            most parts of the city.
+                        </p>
+
+                        <p>
+                            Cars are widely available, especially in South Delhi
+                            and central districts. Travel times can vary
+                            depending on traffic, so short distances may take
+                            longer during peak hours.
+                        </p>
+
+                        <p>
+                            Many expats use ride apps for everyday movement
+                            until they become familiar enough with the city to
+                            combine Metro, autos and other options.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Auto-Rickshaws</summary>
+
+                        <p>
+                            Autos are one of the defining features of Delhi’s
+                            streets. These three-wheelers are ideal for short
+                            neighbourhood trips and quick distances where cars
+                            would get stuck in traffic.
+                        </p>
+
+                        <p>
+                            In busy markets or dense areas, autos can often move
+                            faster than cars because they navigate small streets
+                            more easily.
+                        </p>
+
+                        <p>
+                            Drivers usually prefer agreeing on a fare before the
+                            ride instead of using the meter. Once you learn the
+                            typical pricing patterns, autos become a very
+                            practical way to move around locally.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Private Drivers</summary>
+
+                        <p>
+                            Many long-term expats eventually hire a driver. It
+                            might seem unusual at first, but in Delhi it can
+                            remove a surprising amount of daily stress.
+                        </p>
+
+                        <p>
+                            Traffic patterns are unpredictable and parking is
+                            rarely simple. Having someone who understands the
+                            city allows you to focus on where you're going
+                            instead of how to get there.
+                        </p>
+
+                        <p>
+                            Drivers are especially useful for commuting, airport
+                            transfers or days when you need to visit multiple
+                            places across the city.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- SAFETY PANEL -->
+
+            <div class="guide-panel">
+                <div class="panel-header">
+                    <svg class="panel-icon" viewBox="0 0 64 64">
+                        <circle cx="32" cy="32" r="26"></circle>
+                        <path d="M32 18v28M20 32h24"></path>
+                    </svg>
+
+                    <div>
+                        <h3>Safety Awareness</h3>
+                        <p>
+                            Understanding a few local dynamics helps avoid
+                            common issues.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <details>
+                        <summary>Common Tourist Scams</summary>
+
+                        <p>
+                            Delhi is generally safe, but like any large city
+                            there are a few situations that catch newcomers off
+                            guard.
+                        </p>
+
+                        <p>
+                            One common example is drivers claiming a monument or
+                            market is closed and suggesting an alternative
+                            location. These places are often shops or travel
+                            offices that pay commissions.
+                        </p>
+
+                        <p>
+                            The easiest way to avoid this is simple: rely on
+                            your own navigation and verify information
+                            independently.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Night Travel</summary>
+
+                        <p>
+                            Delhi remains active late into the evening,
+                            particularly in areas like Khan Market, Hauz Khas,
+                            Connaught Place and parts of South Delhi.
+                        </p>
+
+                        <p>
+                            Ride-hailing apps are usually the most comfortable
+                            option for late travel. They provide route tracking
+                            and remove the need to arrange transport in
+                            unfamiliar areas.
+                        </p>
+
+                        <p>
+                            Like most major cities, it’s best to stick to
+                            well-lit streets and busy areas when exploring
+                            somewhere new at night.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Digital Payments</summary>
+
+                        <p>
+                            India has moved rapidly toward digital payments and
+                            Delhi reflects that change everywhere.
+                        </p>
+
+                        <p>
+                            UPI payments — through apps like Google Pay, PhonePe
+                            or Paytm — are accepted in cafés, taxis, markets and
+                            even small neighbourhood shops.
+                        </p>
+
+                        <p>
+                            For newcomers this quickly becomes the easiest way
+                            to handle everyday transactions without worrying
+                            about cash.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- LEAD GENERATION -->
+
+            <div class="lead-panel">
+                <h3>Learning Delhi Alone Takes Time</h3>
+
                 <p>
-                    Delhi does not operate like most Western cities. Things are
-                    more fluid, more social, and often more spontaneous.
-                    Understanding this rhythm removes frustration and replaces
-                    it with clarity.
+                    Most newcomers spend months figuring out transport patterns,
+                    local etiquette and neighbourhood logistics.
                 </p>
 
                 <p>
-                    Once you understand how the city moves — from traffic
-                    patterns to social etiquette — daily life becomes
-                    significantly smoother.
+                    A local concierge can shorten that learning curve
+                    dramatically and help you move through the city with
+                    confidence from the start.
                 </p>
+
+                <a href="/services" class="btn"> Book a Local Consultation </a>
             </div>
         </div>
     </section>
 
-    <!-- CARDS -->
+    <!-- CTA -->
 
-    <section class="section">
-        <div class="container">
-            <div class="cards">
-                <div class="card">
-                    <svg
-                        width="40"
-                        height="40"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                    >
-                        <circle cx="20" cy="20" r="18"></circle>
-                        <path d="M12 20h16M20 12v16"></path>
-                    </svg>
-
-                    <h3>A City of Layers</h3>
-
-                    <p>
-                        Ancient forts, Mughal architecture, colonial districts
-                        and modern business hubs coexist in the same city.
-                        Understanding these layers helps you experience Delhi
-                        beyond tourist routes.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <svg
-                        width="40"
-                        height="40"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                    >
-                        <rect x="6" y="12" width="28" height="16" rx="4"></rect>
-                        <circle cx="12" cy="30" r="2"></circle>
-                        <circle cx="28" cy="30" r="2"></circle>
-                    </svg>
-
-                    <h3>Movement & Timing</h3>
-
-                    <p>
-                        Traffic, metro routes, and neighborhood rhythms matter.
-                        Knowing when and how to move around the city saves time
-                        and removes unnecessary stress.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <svg
-                        width="40"
-                        height="40"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                    >
-                        <path d="M6 20h28M20 6v28"></path>
-                    </svg>
-
-                    <h3>People & Connections</h3>
-
-                    <p>
-                        Delhi runs strongly on relationships. Local
-                        recommendations often lead to places you would never
-                        discover on your own.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PREMIUM CTA -->
     <CTA />
+
+    <style>
+        ================= HERO ================= */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        } /* decorative ambient glow */
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            top: -180px;
+            right: -160px;
+            background: radial-gradient(
+                circle,
+                rgba(238, 142, 67, 0.25) 0%,
+                transparent 65%
+            );
+            filter: blur(40px);
+            z-index: 0;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            bottom: -200px;
+            left: -160px;
+            background: radial-gradient(
+                circle,
+                rgba(92, 204, 251, 0.25) 0%,
+                transparent 65%
+            );
+            filter: blur(40px);
+            z-index: 0;
+        } /* hero layout */
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        } /* hero image */
+        .main-img {
+            width: 100%;
+            border-radius: 22px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+            transform: rotate(-2deg);
+            transition: 0.35s ease;
+        }
+        .main-img:hover {
+            transform: rotate(0deg) scale(1.02);
+        } /* responsive hero */
+        @media (max-width: 1024px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .main-img {
+                max-width: 600px;
+                margin: auto;
+                display: block;
+            }
+        } /* ================= GUIDE SECTION ================= */
+        .guide-container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .guide-title {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .guide-intro {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        } /* ================= PANELS ================= */
+        .guide-panel {
+            margin-bottom: 40px;
+            padding: 28px;
+            border-radius: 20px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-soft);
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transition: 0.25s;
+        }
+        .guide-panel:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+        } /* ================= PANEL HEADER ================= */
+        .panel-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .panel-icon {
+            width: 38px;
+            height: 38px;
+            stroke: var(--accent-blue);
+            stroke-width: 2;
+            fill: none;
+            opacity: 0.8;
+        } /* ================= ACCORDION ================= */
+        .accordion details {
+            border-bottom: 1px solid var(--border-soft);
+            padding: 16px 0;
+        }
+        .accordion summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .accordion p {
+            margin-top: 8px;
+            color: var(--text-secondary);
+            max-width: 640px;
+        } /* ================= LEAD PANEL ================= */
+        .lead-panel {
+            margin-top: 60px;
+            padding: 36px;
+            border-radius: 22px;
+            text-align: center;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-soft);
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+        .lead-panel p {
+            margin-bottom: 12px;
+        }
+    </style>
 </BaseLayout>
