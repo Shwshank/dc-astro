@@ -70,40 +70,28 @@
   const toggleBtn = document.getElementById("themeToggle");
 
   if (toggleBtn) {
-
     const savedTheme = localStorage.getItem("theme");
-
     if (savedTheme === "dark") {
       document.body.classList.add("dark");
       toggleBtn.textContent = "☀️";
     } else {
+      document.body.classList.remove("dark");
       toggleBtn.textContent = "🌙";
     }
-
     toggleBtn.addEventListener("click", () => {
-
-      /* IMPORTANT PART:
-         temporarily disable blur repaint while theme changes */
-
       const modalOpen = document.body.classList.contains("modal-open");
-
       if (modalOpen) {
         document.body.classList.add("theme-switching");
       }
-
       document.body.classList.toggle("dark");
-
       const isDark = document.body.classList.contains("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
       toggleBtn.textContent = isDark ? "☀️" : "🌙";
-
-      // allow repaint after theme applied
       if (modalOpen) {
         setTimeout(() => {
           document.body.classList.remove("theme-switching");
         }, 120);
       }
-
     });
   }
 
