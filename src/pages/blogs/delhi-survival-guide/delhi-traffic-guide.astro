@@ -1,0 +1,30 @@
+---
+import BlogTemplate from "../../../components/BlogTemplate.astro";
+import hero from "../../../assets/images/delhi_hero.webp";
+import img1 from "../../../assets/images/1.png";
+import img2 from "../../../assets/images/2.png";
+---
+
+<BlogTemplate
+  title="How to Navigate Delhi Like a Local"
+  description="Avoid scams, move smarter, and experience Delhi properly."
+  heroImage={hero}
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+    { label: "Navigate Delhi", href: "#" }
+  ]}
+  content={`<p>Your HTML content here...</p>`}
+  gallery={[img1, img2]}
+  moreContent={`<p>More content here...</p>`}
+  prevPost={{
+    href: "/blog/previous",
+    title: "Delhi Safety Guide",
+    desc: "Stay safe without paranoia."
+  }}
+  nextPost={{
+    href: "/blog/next",
+    title: "Best Cafes in Delhi",
+    desc: "Curated for premium experiences."
+  }}
+/>

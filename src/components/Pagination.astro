@@ -1,0 +1,79 @@
+---
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+const getPageUrl = (page:any) => {
+    return page === 1 ? baseUrl : `${baseUrl}/page/${page}`;
+};
+---
+
+<div class="pagination-container">
+
+    <!-- PREV -->
+    {currentPage > 1 && (
+        <a href={getPageUrl(currentPage - 1)} class="nav-btn glass">
+            ←
+        </a>
+    )}
+
+    <!-- NUMBERS -->
+    <div class="page-numbers">
+        {Array.from({ length: totalPages }).map((_, i) => {
+            const page = i + 1;
+
+            return (
+                <a 
+                    href={getPageUrl(page)} 
+                    class={`page-number glass ${page === currentPage ? "active" : ""}`}
+                >
+                    {page}
+                </a>
+            );
+        })}
+    </div>
+
+    <!-- NEXT -->
+    {currentPage < totalPages && (
+        <a href={getPageUrl(currentPage + 1)} class="nav-btn glass">
+            →
+        </a>
+    )}
+
+</div>
+
+<style>
+.pagination-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* BUTTONS */
+.page-number,
+.nav-btn {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+/* ACTIVE */
+.page-number.active {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* HOVER */
+.page-number:hover,
+.nav-btn:hover {
+    transform: translateY(-2px);
+}
+</style>

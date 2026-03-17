@@ -1,0 +1,85 @@
+---
+import CTA from "./CTA.astro";
+import { Image } from "astro:assets";
+
+const {
+  title,
+  description,
+  heroImage,
+  breadcrumbs = [],
+  content,
+  gallery = [],
+  moreContent,
+  nextPost,
+  prevPost
+} = Astro.props;
+---
+
+<div class="page">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    {breadcrumbs.map((item:any, i:any) => (
+      <>
+        <a href={item.href}>{item.label}</a>
+        {i < breadcrumbs.length - 1 && <span>/</span>}
+      </>
+    ))}
+  </div>
+
+  <!-- HERO -->
+  <section class="hero glass">
+    <Image src={heroImage} alt={title} class="hero-img" />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <article class="content glass" set:html={content} />
+
+  <!-- GALLERY -->
+  {gallery.length > 0 && (
+    <section class="gallery">
+      {gallery.map((img:any) => (
+        <div class="gallery-item glass">
+          <Image src={img} alt="gallery image" />
+        </div>
+      ))}
+    </section>
+  )}
+
+  <!-- MORE CONTENT -->
+  {moreContent && (
+    <article class="content glass" set:html={moreContent} />
+  )}
+
+  <!-- NAV -->
+  <div class="blog-nav">
+    {prevPost && (
+      <a href={prevPost.href} class="nav-card glass">
+        <span>← Previous</span>
+        <h3>{prevPost.title}</h3>
+        <p>{prevPost.desc}</p>
+      </a>
+    )}
+
+    {nextPost && (
+      <a href={nextPost.href} class="nav-card glass">
+        <span>Next →</span>
+        <h3>{nextPost.title}</h3>
+        <p>{nextPost.desc}</p>
+      </a>
+    )}
+  </div>
+
+  <CTA />
+
+</div>
+
+<style>
+/* (keep same premium CSS from previous message) */
+</style>
