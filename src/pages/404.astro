@@ -26,11 +26,11 @@ You can continue exploring Delhi using the links below.
 
 <div class="error-actions">
 
-<a href="/" class="btn-primary">Go Home</a>
+<a href="/" class="btn-primary">  Home</a>
 
-<a href="/navigate-delhi" class="btn-secondary">
-Navigate Delhi
-</a>
+<button onclick="history.back()" class="btn-primary">
+ ◀️ Back
+</button>
 
 </div>
 
@@ -43,6 +43,10 @@ Navigate Delhi
 
 
 <style>
+
+.back-btn:hover {
+  transform: translateY(-2px);
+}
 
 /* SECTION */
 
@@ -125,18 +129,25 @@ justify-content:center;
 flex-wrap:wrap;
 }
 
-.btn-primary{
+.btn-primary {
+  display: inline-block;
 
-padding:12px 22px;
+  padding: 12px 22px;
+  border-radius: 10px;
 
-border-radius:10px;
-background:linear-gradient(135deg,#ff8c40,#ff6a2a);
+  background: linear-gradient(135deg, #ff8c40, #ff6a2a);
+  color: white;
 
-color:white;
-text-decoration:none;
+  text-decoration: none;
+  font-weight: 600;
 
-font-weight:600;
+  border: none;
+  cursor: pointer;
 
+  font-family: inherit;
+
+  font-size: inherit;   /* 🔥 THIS FIXES IT */
+  line-height: inherit; /* keeps vertical alignment same */
 }
 
 .btn-secondary{

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-IN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Delhi Concierge | Personal Arrival Orientation &amp; Cultural Companion in Delhi</title><meta name="description" content="Personal help for travellers and expats arriving in Delhi. Orientation sessions, safe exploration and settling-in support across Delhi NCR."><meta name="robots" content="index, follow"><link rel="canonical" href="https://delhiconcierge.in/"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="image" href="/images/delhi_hero.webp"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"><!-- Firebase --><script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script><script>
+<!DOCTYPE html><html lang="en-IN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Delhi Concierge | Personal Arrival Orientation &amp; Cultural Companion in Delhi</title><meta name="description" content="Personal help for travellers and expats arriving in Delhi. Orientation sessions, safe exploration and settling-in support across Delhi NCR."><meta name="robots" content="index, follow"><link rel="canonical" href="https://delhiconcierge.in/"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="image" href="/_astro/delhi_hero.DXCU3FdX.webp"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"><!-- Firebase --><script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script><script>
             const firebaseConfig = {
                 apiKey: "AIzaSyARgNCysirTHx2XBbUhSBjzllMQPApZA6U",
                 authDomain: "delhi-concierge.firebaseapp.com",
@@ -10,14 +10,25 @@
             };
             firebase.initializeApp(firebaseConfig);
         </script><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y3QV7PBBN"></script><script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
+            const isLocal =
+                location.hostname === "localhost" ||
+                location.hostname === "127.0.0.1" ||
+                location.hostname === "0.0.0.0" ||
+                location.hostname.endsWith(".local") ||
+                location.hostname.startsWith("192.168.");
+
+            if (!isLocal) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag("js", new Date());
+                gtag("config", "G-3Y3QV7PBBN");
+            } else {
+                console.log("GA4 tracking disabled for local development.");
             }
-            gtag("js", new Date());
-            gtag("config", "G-3Y3QV7PBBN");
-        </script><link rel="stylesheet" href="/_astro/about.8KUb1LQm.css"></head> <body> <header class="navbar"> <div class="nav-inner"> <a href="/" class="logo">
-Delhi<span>Concierge</span> </a> <nav class="nav-links"> <a href="/blog">Delhi Guide</a> <a href="/navigate-delhi">Navigate Delhi</a> <a href="/safety">Safety</a> <a href="/about">About</a> </nav> <div class="nav-actions"> <button id="themeToggle" class="theme-toggle"> 🌙 </button> <div class="menu-btn" onclick="toggleMenu()">☰</div> </div> </div> <nav class="mobile-menu" id="mobileMenu"> <a href="/blog">Delhi Guide</a> <a href="/navigate-delhi">Navigate Delhi</a> <a href="/safety">Safety</a> <a href="/about">About</a> </nav> </header> <div class="app-shell"> <div class="page">  <section class="hero"> <div class="container"> <div class="hero-wrapper"> <div class="hero-image"> <img src="/_astro/driver_2.CNFHmmuB_2lUOxh.webp" alt="Delhi city orientation walk with a local companion" loading="eager" decoding="async" fetchpriority="auto" width="409" height="230"> </div> <div class="hero-text"> <h1>Arriving in India for the first time?</h1> <p>
+        </script><link rel="stylesheet" href="/_astro/index.CSjqPl_O.css"></head> <body> <header class="navbar"> <div class="nav-inner"> <a href="/" class="logo">
+Delhi<span>Concierge</span> </a> <nav class="nav-links"> <a href="/blogs">Delhi Guide</a> <a href="/navigate-delhi">Navigate Delhi</a> <a href="/safety">Safety</a> <a href="/about">About</a> </nav> <div class="nav-actions"> <button id="themeToggle" class="theme-toggle"> 🌙 </button> <div class="menu-btn" onclick="toggleMenu()">☰</div> </div> </div> <nav class="mobile-menu" id="mobileMenu"> <a href="/blogs">Delhi Guide</a> <a href="/navigate-delhi">Navigate Delhi</a> <a href="/safety">Safety</a> <a href="/about">About</a> </nav> </header> <div class="app-shell"> <div class="page">  <section class="hero"> <div class="container"> <div class="hero-wrapper"> <div class="hero-image"> <img src="/_astro/delhi_hero.DXCU3FdX_Z1yVicg.webp" alt="Delhi city orientation walk with a local companion" loading="eager" decoding="async" fetchpriority="auto" width="409" height="230"> </div> <div class="hero-text"> <h1>Arriving in India for the first time?</h1> <p>
 Delhi Concierge helps you understand how daily life works in Delhi —
           from payments and transport to social etiquette — so you can navigate
           the city comfortably.

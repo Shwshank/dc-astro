@@ -1,30 +1,335 @@
 ---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 import BlogTemplate from "../../../components/BlogTemplate.astro";
-import hero from "../../../assets/images/delhi_hero.webp";
-import img1 from "../../../assets/images/1.png";
-import img2 from "../../../assets/images/2.png";
+
+// IMAGES (from your existing assets)
+import hero from "../../../assets/images/traffic.jpg";
+import metro from "../../../assets/images/metro.png";
+import auto from "../../../assets/images/3.png";
+import night from "../../../assets/images/nighttraffic.jpg";
+import CTA from "../../../components/CTA.astro";
 ---
 
-<BlogTemplate
-  title="How to Navigate Delhi Like a Local"
-  description="Avoid scams, move smarter, and experience Delhi properly."
-  heroImage={hero}
-  breadcrumbs={[
-    { label: "Home", href: "/" },
-    { label: "Blog", href: "/blog" },
-    { label: "Navigate Delhi", href: "#" }
-  ]}
-  content={`<p>Your HTML content here...</p>`}
-  gallery={[img1, img2]}
-  moreContent={`<p>More content here...</p>`}
-  prevPost={{
-    href: "/blog/previous",
-    title: "Delhi Safety Guide",
-    desc: "Stay safe without paranoia."
-  }}
-  nextPost={{
-    href: "/blog/next",
-    title: "Best Cafes in Delhi",
-    desc: "Curated for premium experiences."
-  }}
-/>
+<BaseLayout title="Delhi Traffic Guide | Delhi Concierge">
+  <BlogTemplate
+    title="Delhi Traffic Guide: How to Move Without Losing Hours (or Your Sanity)"
+    heroImage={hero}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Blog", href: "/blogs" },
+      { label: "Delhi Survival Guide", href: "/blogs/delhi-survival-guide" },
+      { label: "Delhi Traffic Guide" },
+    ]}
+    gallery={[metro, auto, night]}
+    cta={{
+      title: "Skip the confusion. Move with clarity.",
+      description:
+        "Delhi Concierge helps you navigate the city without trial-and-error.",
+      buttonText: "Plan My Movement",
+      link: "/contact",
+    }}
+    finalThought={{
+      title: "Final Thought",
+      unbiased_opinion:
+        "Delhi doesn’t get easier — you just get better at navigating it.",
+
+      }}
+    date="March 18, 2026"
+    author="Shaw"
+    readTimeInMinutes={5}
+    nextBlog={{
+      title1: "How to Navigate Delhi Without Losing Your Mind",
+      description1:
+        "A complete system for stress-free movement across the city.",
+      link1: "/blog/navigation-in-delhi",
+      image1: metro,
+      category1: "Transport",
+      title2: "Is Delhi Safe at Night? What Actually Matters",
+      description2:
+        "Forget myths. Here’s what truly affects your safety.",
+      link2: "/blog/delhi-night-safety",
+      image2: night,
+      category2: "Safety",
+    }}
+  >
+    <!-- BLOG CONTENT -->
+<article class="content">
+  <div class="content-body">
+
+    <h2>Understanding Delhi Traffic — My Perspective</h2>
+
+    <p>
+      Delhi is one of the most densely populated urban regions in India, with
+      over 20 million people across NCR. Even though a large portion of the
+      population relies on public transport, the absolute number of private
+      vehicles is still extremely high — putting continuous pressure on the road network.
+    </p>
+
+    <p>
+      What I’ve observed is that traffic stress in Delhi isn’t just about numbers —
+      it’s about diversity of driving behavior.
+    </p>
+
+    <p>
+      The city sees constant migration from different parts of India. Many drivers
+      come from smaller towns or rural areas where traffic conditions are very different.
+      When they enter Delhi’s high-density environment, the <strong>sensory overload</strong>
+      — noise, signals, lane pressure, and constant movement — can lead to confusion
+      or impulsive decisions.
+    </p>
+
+    <p>
+      This is where things start to feel chaotic. Impatience, sudden lane changes,
+      and unnecessary honking create a chain reaction — which is why, at times,
+      traffic can feel completely unstructured.
+    </p>
+
+    <p>
+      But underneath that surface, there is a pattern.
+    </p>
+
+    <p>
+      Another important layer to understand is that <strong>Delhi is not uniform</strong>.
+      Different parts of the city operate very differently.
+    </p>
+
+    <p>
+      For example, roads in Old Delhi — especially areas like Chandni Chowk —
+      are dense, narrow, and highly chaotic, with mixed movement of pedestrians,
+      cycles, rickshaws, and vehicles all sharing limited space.
+    </p>
+
+    <p>
+      In contrast, Central Delhi and Lutyens’ zones have wider roads, better planning,
+      and more controlled traffic flow. The experience there feels significantly calmer
+      and more structured.
+    </p>
+
+    <p>
+      Understanding this contrast helps set expectations — the same city can feel
+      completely different depending on where you are.
+    </p>
+
+    <p>
+      There’s also a noticeable gap in traffic discipline and etiquette. People operate
+      with different mental models of what “correct driving” looks like. Because of this,
+      you can’t rely on everyone following rules — but you can control your own behavior.
+    </p>
+
+    <p>From my experience, a few mindset rules make a huge difference:</p>
+
+    <ul>
+      <li>Stay consistent with your lane and direction</li>
+      <li>Don’t react to every honk — most of it is noise, not urgency</li>
+      <li>Maintain a steady, predictable speed instead of aggressive bursts</li>
+    </ul>
+
+    <p>
+      These small shifts reduce friction and give you a sense of control,
+      even in dense traffic.
+    </p>
+
+    <h2>Public Transport vs Private Travel</h2>
+
+    <p>
+      Public transport in Delhi can sometimes feel slower compared to cars or cabs —
+      especially when you factor in waiting time and last-mile connectivity.
+    </p>
+
+    <p>
+      But there’s one major exception: <strong>the Metro</strong>.
+    </p>
+
+    <p>
+      The Delhi Metro is one of the most efficient and reliable systems in the city.
+      In many cases, it’s faster, cheaper, and more predictable than road travel.
+    </p>
+
+    <p>
+      However, timing matters here as well. During peak office hours, metros can get
+      extremely crowded. While they remain punctual, the experience itself can become
+      physically exhausting.
+    </p>
+
+    <p>
+      If possible, try to avoid peak windows even when using the Metro.
+    </p>
+
+    <h2>Time Buffer Strategy</h2>
+
+    <p>
+      One rule I always follow:
+    </p>
+
+    <p>
+      <em>I never plan travel based on ideal time — I plan for reality.</em>
+    </p>
+
+    <p>
+      Depending on the distance and time of day, I usually keep a
+      <strong>15–30 minute buffer</strong>. This absorbs unpredictability —
+      whether it’s traffic buildup, signal delays, or unexpected roadblocks.
+    </p>
+
+    <h2>Real-World Traffic Obstacles</h2>
+
+    <p>
+      Beyond standard congestion, Delhi traffic is shaped by a range of real-world
+      interruptions that aren’t always visible on maps.
+    </p>
+
+    <ul>
+      <li><strong>Overloaded infrastructure:</strong> Road capacity is often stretched beyond its intended limits, especially on major corridors like Ring Road and NH-48.</li>
+      <li><strong>Rain and waterlogging:</strong> Even moderate rainfall can slow traffic significantly due to drainage limitations and reduced visibility.</li>
+      <li><strong>Road closures and diversions:</strong> VIP movement, construction work, or sudden restrictions can reroute traffic without much warning.</li>
+    </ul>
+
+    <p>
+      There are also uniquely local elements that first-time visitors often don’t expect.
+    </p>
+
+    <p>
+      It’s not uncommon to see cows resting or standing in the middle of the road.
+      Due to cultural and religious respect for cows, drivers usually navigate around
+      them rather than forcing them to move.
+    </p>
+
+    <p>
+      While this might seem unusual at first, it becomes part of the driving rhythm
+      in the city. Over time, you adapt — and it stops feeling like an obstacle and
+      more like just another variable in the system.
+    </p>
+
+    <h2>Autos, Cabs & Local Interaction</h2>
+
+    <p>
+      Auto-rickshaws and private drivers are extremely useful in Delhi —
+      especially for short distances or last-mile travel.
+    </p>
+
+    <p>
+      But clarity is important before the ride starts:
+    </p>
+
+    <ul>
+      <li>Always confirm or negotiate the fare upfront</li>
+      <li>Prefer fixed pricing over open-ended discussions</li>
+      <li>If something feels off, it’s better to walk away</li>
+    </ul>
+
+    <p>
+      If approached with the right mindset, negotiation can actually be a
+      light and engaging local interaction.
+    </p>
+
+    <p>
+      In rare cases where someone becomes overly pushy, it’s important to stay firm.
+      Delhi Police is generally responsive and helpful, especially towards travelers
+      and newcomers. If a situation escalates, seeking help is the right step.
+    </p>
+
+    <h2>Buses — Affordable but Variable</h2>
+
+    <p>
+      Delhi’s bus network is one of the most affordable transport options in the city.
+    </p>
+
+    <p>
+      Many government buses are now air-conditioned, which improves comfort.
+      However:
+    </p>
+
+    <ul>
+      <li>They can get very crowded during peak hours</li>
+      <li>Travel time is less predictable compared to the Metro</li>
+    </ul>
+
+    <p>
+      For budget-friendly travel, buses work well — but they require patience and flexibility.
+    </p>
+
+  </div>
+</article>
+    <style>
+      /* ========================= */
+      /* BLOG CONTENT SYSTEM */
+      /* ========================= */
+
+      .content-body {
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--text-primary);
+      }
+
+      /* ========================= */
+      /* FLOW SPACING (clean + tight) */
+      /* ========================= */
+
+      .content-body > * + * {
+        margin-top: 10px;
+      }
+
+      /* tighter after headings */
+      .content-body h2 + p,
+      .content-body h3 + p {
+        margin-top: 4px;
+      }
+
+      /* ========================= */
+      /* HEADINGS */
+      /* ========================= */
+
+      .content-body h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 18px;
+        margin-bottom: 2px;
+      }
+
+      .content-body h3 {
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 12px;
+        margin-bottom: 2px;
+      }
+
+      /* ========================= */
+      /* PARAGRAPHS */
+      /* ========================= */
+
+      .content-body p {
+        margin: 0;
+        color: var(--text-secondary);
+      }
+
+      /* ========================= */
+      /* LISTS */
+      /* ========================= */
+
+      .content-body ul {
+        padding-left: 16px;
+        margin: 4px 0;
+      }
+
+      .content-body li {
+        margin-bottom: 3px;
+        color: var(--text-secondary);
+      }
+
+      /* ========================= */
+      /* STRONG */
+      /* ========================= */
+
+      .content-body strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+    </style>
+  </BlogTemplate>
+  <CTA
+    title="Ready to navigate Delhi with ease?"
+    text="Our concierge services are designed to help you tackle the city's challenges head-on."
+    buttonText="Explore Services"
+    buttonLink="/services"
+  />
+</BaseLayout>
