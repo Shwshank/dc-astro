@@ -1,0 +1,79 @@
+---
+import BlogCategoryTemplate from "../../components/BlogCategoryTemplate.astro";
+import heroImage from "../../assets/images/4.png";
+import metro from "../../assets/images/metro.png";
+import traffic from "../../assets/images/traffic.jpg";
+import nighttraffic from "../../assets/images/nighttraffic.jpg";
+import market from "../../assets/images/market.jpg";
+import market2 from "../../assets/images/market-2.webp";
+import six from "../../assets/images/6.png";
+
+/* CATEGORY META */
+const category = "Delhi Survival";
+const description = "Navigate Delhi without overwhelm. Practical, ground-level insights to help you move smarter, stay safe, and feel in control.";
+
+/* MOCK BLOG DATA (replace with your CMS or content collection) */
+const allPosts = [
+    {
+        title: "How to Avoid Getting Overcharged in Delhi",
+        excerpt: "A practical guide to auto fares, taxi traps, and when to walk away.",
+        href: "/blog/delhi-traffic-guide",
+        image: market
+    },
+    {
+        title: "Why Delhi Traffic Feels Chaotic (And How to Navigate It)",
+        excerpt: "Decode chaos, signals, and unspoken rules of the road.",
+        href: "/blog/delhi-traffic-guide",
+        image: traffic
+    },
+    {
+        title: "Is Delhi Safe at Night? What Actually Matters",
+        excerpt: "Forget myths. Here’s what truly affects your safety.",
+        href: "/blog/delhi-traffic-guide",
+        image: nighttraffic
+    },
+    {
+        title: "Metro vs Cab vs Auto: What to Use When",
+        excerpt: "Make the right call based on time, comfort, and cost.",
+        href: "/blog/delhi-traffic-guide",
+        image: metro
+    },
+    {
+        title: "Tourist Scams in Delhi (And How to Avoid Them)",
+        excerpt: "The most common traps and how to spot them instantly.",
+        href: "/blog/delhi-traffic-guide",
+        image: market2
+    },
+    {
+        title: "How to Talk to Drivers Without Getting Confused",
+        excerpt: "Language hacks and confidence tricks that work.",
+        href: "/blog/delhi-traffic-guide",
+        image: six
+    }
+];
+
+/* PAGINATION LOGIC */
+const postsPerPage = 6;
+const currentPage = 1;
+
+const totalPages = Math.ceil(allPosts.length / postsPerPage);
+
+const posts = allPosts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage
+);
+---
+
+<BlogCategoryTemplate
+    heroImage={heroImage}
+    category="Delhi Survival"
+    description="Navigate Delhi without overwhelm. Practical, ground-level insights to help you move smarter."
+    posts={posts}
+    currentPage={1}
+    totalPages={3}
+    breadcrumb={[
+        { label: "Home", href: "/" },
+        { label: "Blog", href: "/blog" },
+        { label: "Delhi Survival" }
+    ]}
+/>

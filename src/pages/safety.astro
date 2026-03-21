@@ -2,647 +2,678 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import safetyImg from "../assets/images/india_gate.png";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Traveller Safety | Delhi Concierge">
-
-<section class="section safety-hero">
-
-<div class="container hero-grid">
-
-<div class="hero-text">
-
-<h1>Traveller Safety in Delhi</h1>
-
-<p class="hero-lead">
-Delhi is a vibrant and energetic city. With a little
-understanding of how the city works, travellers can
-move through it comfortably and confidently.
-</p>
-
-<p class="hero-muted">
-Knowing local patterns — transport systems, landmarks
-and communication styles — often makes the biggest difference.
-</p>
-
-</div>
-
-<div class="hero-image">
-
-<div class="hero-image-wrapper">
-
-<div class="hero-glow"></div>
-
-<img src={safetyImg.src ?? safetyImg} alt="India Gate Delhi">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROFESSIONAL SAFETY ASSURANCE -->
-
-<section class="section safety-assurance">
-
-<div class="container">
-
-<div class="assurance-card">
-
-<div class="assurance-label">Safety Commitment</div>
-
-<h2 class="assurance-title">
-Professional Safety Assurance
-</h2>
-
-<p>
-Delhi Concierge operates with a strong emphasis on traveller
-well-being and situational awareness. We are trained to respond
-calmly and effectively in unexpected or adverse situations related
-to health, safety or logistics.
-</p>
-
-<p>
-Every interaction is approached with precision, confidence and a
-commitment to providing a world-class level of assistance so that
-travellers feel supported throughout their time in the city.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EMERGENCY -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="glass-card emergency-card">
-
-<h2>Emergency Services</h2>
-
-<p>
-India uses centralized emergency numbers. Operators
-usually ask for three things:
-</p>
-
-<div class="emergency-points">
-
-<div>City (Delhi)</div>
-<div>Your area</div>
-<div>Nearby landmark</div>
-
-</div>
-
-<div class="emergency-numbers">
-
-<div class="number">
-<span>112</span>
-<p>National Emergency</p>
-</div>
-
-<div class="number">
-<span>100</span>
-<p>Police</p>
-</div>
-
-<div class="number">
-<span>102</span>
-<p>Ambulance</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- POLICE -->
-
-<section class="section">
-
-<div class="container police-grid">
-
-<div class="glass-card">
-
-<h2>Police Assistance for Travellers</h2>
-
-<p>
-In India there is a cultural belief that guests deserve
-care and respect. The phrase <em>“Atithi Devo Bhava”</em>
-means guests are treated with honour.
-</p>
-
-<p>
-Because of this, authorities and locals often assist
-international visitors when help is needed.
-</p>
-
-<p>
-If you ever feel unsure, approaching a police officer
-is usually a reliable step.
-</p>
-
-</div>
-
-<div class="svg-accent">
-
-<svg viewBox="0 0 500 200">
-
-<path d="M0 100 Q250 20 500 100"
-stroke="currentColor"
-opacity=".08"
-stroke-width="2"
-fill="none"/>
-
-<path d="M0 140 Q250 50 500 140"
-stroke="currentColor"
-opacity=".05"
-stroke-width="2"
-fill="none"/>
-
-</svg>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- LANGUAGE -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="glass-card">
-
-<h2>Language & Communication</h2>
-
-<p>
-English is widely understood in hotels, restaurants
-and metro stations. However accents can sometimes
-create small misunderstandings.
-</p>
-
-<p>
-Mentioning a nearby landmark greatly improves
-communication with drivers or locals.
-</p>
-
-<div class="landmark-grid">
-
-<div>Hotel Name</div>
-<div>Metro Station</div>
-<div>Nearby Market</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- PRACTICAL -->
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">Practical Safety Insights</h2>
-
-<div class="safety-grid">
-
-<div class="safety-card">
-<h3>Metro is the Backbone</h3>
-<p>Delhi Metro is one of the safest and most reliable ways to travel across the city.</p>
-</div>
-
-<div class="safety-card">
-<h3>Save Hotel Location</h3>
-<p>Keep your hotel location saved on your phone or as a screenshot.</p>
-</div>
-
-<div class="safety-card">
-<h3>Landmarks Matter</h3>
-<p>Directions are often given relative to famous landmarks rather than street names.</p>
-</div>
-
-<div class="safety-card">
-<h3>Ride Apps</h3>
-<p>Uber and Ola provide trip tracking and clear pricing.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- CITY RHYTHM -->
-
-<section class="section city-rhythm">
-
-<div class="container rhythm-card">
-
-<h2>Understanding the City's Rhythm</h2>
-
-<p>
-Delhi may appear chaotic at first, but daily life
-follows predictable patterns. Markets become busy
-in evenings, traffic peaks during office hours,
-and metro travel remains consistent throughout the day.
-</p>
-
-<p>
-Once travellers recognise these rhythms,
-navigating the city becomes far easier.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="section about-cta">
-  <div class="cta-wide">
-
-    <CTA
-      title="Navigate Delhi with confidence"
-      description="Explore concierge services designed to help you understand and experience the city comfortably."
-      buttonText="Navigate Delhi"
-      buttonLink="/navigate-delhi"
-    />
+  <section class="section safety-hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Traveller Safety in Delhi</h1>
+
+        <p class="hero-lead">
+          Delhi is a vibrant and energetic city. With a little understanding of
+          how the city works, travellers can move through it comfortably and
+          confidently.
+        </p>
+
+        <p class="hero-muted">
+          Knowing local patterns — transport systems, landmarks and
+          communication styles — often makes the biggest difference.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <div class="hero-glow"></div>
+
+          <Image src={safetyImg} alt="India Gate Delhi" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL SAFETY ASSURANCE -->
+
+  <section class="section safety-assurance">
+    <div class="container">
+      <div class="assurance-card">
+        <div class="assurance-label">Safety Commitment</div>
+
+        <h2 class="assurance-title">Professional Safety Assurance</h2>
+
+        <p>
+          Delhi Concierge operates with a strong emphasis on traveller
+          well-being and situational awareness. We are trained to respond calmly
+          and effectively in unexpected or adverse situations related to health,
+          safety or logistics.
+        </p>
+
+        <p>
+          Every interaction is approached with precision, confidence and a
+          commitment to providing a world-class level of assistance so that
+          travellers feel supported throughout their time in the city.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+
+  <section class="section">
+    <div class="container">
+      <div class="glass-card emergency-card">
+        <h2>Emergency Services</h2>
+
+        <p>
+          India uses centralized emergency numbers. Operators usually ask for
+          three things:
+        </p>
+
+        <div class="emergency-points">
+          <div>City (Delhi)</div>
+          <div>Your area</div>
+          <div>Nearby landmark</div>
+        </div>
+
+        <div class="emergency-numbers">
+          <div class="number">
+            <span>112</span>
+            <p>National Emergency</p>
+          </div>
+
+          <div class="number">
+            <span>100</span>
+            <p>Police</p>
+          </div>
+
+          <div class="number">
+            <span>102</span>
+            <p>Ambulance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICE -->
+
+<section class="section police-section">
+  <div class="container police-wrapper">
+
+    <div class="police-card">
+      <h2>Police Assistance for Travellers</h2>
+
+      <p>
+        In India there is a cultural belief that guests deserve care and
+        respect. The phrase <em>“Atithi Devo Bhava”</em>
+        reflects this mindset.
+      </p>
+
+      <p>
+        Because of this, authorities and locals often assist international
+        visitors when help is needed.
+      </p>
+
+      <p>
+        If you ever feel unsure, approaching a police officer is usually a
+        reliable step.
+      </p>
+    </div>
 
   </div>
 </section>
 
+  <!-- LANGUAGE -->
 
+  <section class="section">
+    <div class="container">
+      <div class="glass-card">
+        <h2>Language & Communication</h2>
 
-<style>
+        <p>
+          English is widely understood in hotels, restaurants and metro
+          stations. However accents can sometimes create small
+          misunderstandings.
+        </p>
 
-/* HERO */
+        <p>
+          Mentioning a nearby landmark greatly improves communication with
+          drivers or locals.
+        </p>
 
-.hero-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:60px;
-align-items:center;
+        <div class="landmark-grid">
+          <div>Hotel Name</div>
+          <div>Metro Station</div>
+          <div>Nearby Market</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICAL -->
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Practical Safety Insights</h2>
+
+      <div class="safety-grid">
+        <div class="safety-card">
+          <h3>Metro is the Backbone</h3>
+          <p>
+            Delhi Metro is one of the safest and most reliable ways to travel
+            across the city.
+          </p>
+        </div>
+
+        <div class="safety-card">
+          <h3>Save Hotel Location</h3>
+          <p>
+            Keep your hotel location saved on your phone or as a screenshot.
+          </p>
+        </div>
+
+        <div class="safety-card">
+          <h3>Landmarks Matter</h3>
+          <p>
+            Directions are often given relative to famous landmarks rather than
+            street names.
+          </p>
+        </div>
+
+        <div class="safety-card">
+          <h3>Ride Apps</h3>
+          <p>Uber and Ola provide trip tracking and clear pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITY RHYTHM -->
+
+  <section class="section city-rhythm">
+    <div class="container rhythm-card">
+      <h2>Understanding the City's Rhythm</h2>
+
+      <p>
+        Delhi may appear chaotic at first, but daily life follows predictable
+        patterns. Markets become busy in evenings, traffic peaks during office
+        hours, and metro travel remains consistent throughout the day.
+      </p>
+
+      <p>
+        Once travellers recognise these rhythms, navigating the city becomes far
+        easier.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section about-cta">
+    <div class="cta-wide">
+      <CTA
+        title="Navigate Delhi with confidence"
+        description="Explore concierge services designed to help you understand and experience the city comfortably."
+        buttonText="Navigate Delhi"
+        buttonLink="/navigate-delhi"
+      />
+    </div>
+  </section>
+
+  <style>
+    /* HERO */
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 540px;
+    }
+
+    .hero-lead {
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .hero-muted {
+      color: var(--text-secondary);
+    }
+
+    /* IMAGE */
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      max-width: 320px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* GLOW (fixed positioning problem) */
+
+    .hero-glow {
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(
+        circle,
+        rgba(255, 140, 60, 0.25),
+        transparent 70%
+      );
+      filter: blur(35px);
+      z-index: 1;
+    }
+
+    /* GLASS */
+
+    .glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 36px;
+    }
+
+    /* EMERGENCY */
+
+    .emergency-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .emergency-points div {
+      background: var(--bg-surface);
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .emergency-numbers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      margin-top: 22px;
+    }
+
+    .number {
+      background: var(--bg-surface);
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .number span {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .number p {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* POLICE */
+
+    .police-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .svg-accent svg {
+      width: 100%;
+      color: var(--text-primary);
+    }
+
+    /* LANDMARK */
+
+    .landmark-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .landmark-grid div {
+      padding: 14px;
+      border-radius: 10px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+    }
+
+    /* SAFETY */
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .safety-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      padding: 22px;
+      border-radius: 14px;
+    }
+
+    /* RHYTHM */
+
+    .city-rhythm {
+      background: radial-gradient(
+        circle at 70% 10%,
+        rgba(120, 160, 255, 0.08),
+        transparent 60%
+      );
+    }
+
+    .rhythm-card {
+      max-width: 720px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .police-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-image-wrapper {
+        max-width: 280px;
+      }
+    }
+    /* GLASS CARD (theme safe) */
+
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* SURFACE ELEMENTS */
+
+    .emergency-points div,
+    .landmark-grid div,
+    .safety-card,
+    .number {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+    }
+    .hero-image-wrapper {
+      position: relative;
+      max-width: 320px;
+    }
+
+    /* remove card styling */
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: none;
+
+      position: relative;
+      z-index: 2;
+    }
+    .hero-image-wrapper {
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+    /* SAFETY ASSURANCE */
+
+    .safety-assurance {
+      position: relative;
+    }
+
+    .assurance-card {
+      max-width: 760px;
+
+      padding: 40px;
+      border-radius: var(--radius-lg);
+
+      background: linear-gradient(
+        160deg,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.35)
+      );
+
+      border: 1px solid var(--border-soft);
+
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* subtle accent glow */
+
+    .safety-assurance::after {
+      content: "";
+
+      position: absolute;
+
+      right: -120px;
+      top: -60px;
+
+      width: 420px;
+      height: 420px;
+
+      background: radial-gradient(
+        circle,
+        rgba(92, 204, 251, 0.18),
+        transparent 70%
+      );
+
+      filter: blur(40px);
+      pointer-events: none;
+    }
+    .assurance-label {
+      display: inline-block;
+
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+
+      padding: 6px 12px;
+      margin-bottom: 10px;
+
+      border-radius: 999px;
+
+      background: rgba(92, 204, 251, 0.15);
+      color: #2a7fa5;
+
+      font-weight: 600;
+    }
+
+    .assurance-title {
+      font-size: 26px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .assurance-title::after {
+      content: "";
+
+      display: block;
+
+      width: 60px;
+      height: 3px;
+
+      margin-top: 8px;
+
+      background: linear-gradient(
+        90deg,
+        rgba(92, 204, 251, 0.8),
+        rgba(238, 142, 67, 0.8)
+      );
+
+      border-radius: 4px;
+    }
+    body.dark .assurance-card {
+      background: linear-gradient(
+        160deg,
+        rgba(30, 36, 48, 0.9),
+        rgba(30, 36, 48, 0.45)
+      );
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+    body.dark .assurance-label {
+      background: rgba(92, 204, 251, 0.18);
+      color: #8fdcff;
+    }
+
+/* section spacing */
+.police-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.hero-text{
-max-width:540px;
+/* center layout */
+.police-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
-.hero-lead{
-font-size:19px;
-margin-bottom:12px;
+/* GLASS CARD */
+.police-card {
+  position: relative;
+
+  max-width: 720px;
+  padding: 42px 48px;
+
+  border-radius: 28px;
+
+  /* ✨ multi-layer glass */
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.65),
+    rgba(255,255,255,0.15)
+  );
+
+  backdrop-filter: blur(22px) saturate(140%);
+
+  border: 1px solid rgba(255,255,255,0.4);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  overflow: hidden;
+}
+.police-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.05) 40%,
+    transparent 60%
+  );
+
+  opacity: 0.6;
+  pointer-events: none;
+}
+.police-card::after {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -120px;
+  right: -120px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,140,64,0.18),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+  pointer-events: none;
 }
 
-.hero-muted{
-color:var(--text-secondary);
-}
-
-/* IMAGE */
-
-.hero-image{
-display:flex;
-justify-content:center;
-}
-
-.hero-image-wrapper{
-position:relative;
-max-width:320px;
-}
-
-.hero-image img{
-width:100%;
-border-radius:18px;
-box-shadow:0 20px 40px rgba(0,0,0,.15);
-position:relative;
-z-index:2;
-}
-
-/* GLOW (fixed positioning problem) */
-
-.hero-glow{
-position:absolute;
-inset:-40px;
-background:radial-gradient(circle, rgba(255,140,60,.25), transparent 70%);
-filter:blur(35px);
-z-index:1;
-}
-
-/* GLASS */
-
-.glass-card{
-background:var(--glass);
-backdrop-filter:blur(14px);
-border:1px solid var(--border-soft);
-border-radius:16px;
-padding:36px;
-}
-
-/* EMERGENCY */
-
-.emergency-points{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin:18px 0;
-}
-
-.emergency-points div{
-background:var(--bg-surface);
-padding:10px 16px;
-border-radius:10px;
-border:1px solid var(--border-soft);
-}
-
-.emergency-numbers{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:20px;
-margin-top:22px;
-}
-
-.number{
-background:var(--bg-surface);
-border-radius:12px;
-padding:18px;
-border:1px solid var(--border-soft);
-}
-
-.number span{
-font-size:30px;
-font-weight:600;
-}
-
-.number p{
-color:var(--text-secondary);
-font-size:14px;
-}
-
-/* POLICE */
-
-.police-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:60px;
-align-items:center;
-}
-
-.svg-accent svg{
-width:100%;
-color:var(--text-primary);
-}
-
-/* LANDMARK */
-
-.landmark-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:12px;
-margin-top:20px;
-}
-
-.landmark-grid div{
-padding:14px;
-border-radius:10px;
-background:var(--bg-surface);
-border:1px solid var(--border-soft);
-}
-
-/* SAFETY */
-
-.safety-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
-}
-
-.safety-card{
-background:var(--bg-surface);
-border:1px solid var(--border-soft);
-padding:22px;
-border-radius:14px;
-}
-
-/* RHYTHM */
-
-.city-rhythm{
-background:radial-gradient(circle at 70% 10%, rgba(120,160,255,.08), transparent 60%);
-}
-
-.rhythm-card{
-max-width:720px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
-gap:40px;
-}
-
-.police-grid{
-grid-template-columns:1fr;
-}
-
-.hero-text{
-max-width:100%;
-}
-
-.hero-image-wrapper{
-max-width:280px;
-}
-
-}
-/* GLASS CARD (theme safe) */
-
-.glass-card{
-background:var(--bg-card);
-backdrop-filter:blur(14px);
-border:1px solid var(--border-soft);
-border-radius:16px;
-padding:36px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-
-/* SURFACE ELEMENTS */
-
-.emergency-points div,
-.landmark-grid div,
-.safety-card,
-.number{
-
-background:var(--bg-surface);
-border:1px solid var(--border-soft);
-border-radius:12px;
-
-}
-.hero-image-wrapper{
-position:relative;
-max-width:320px;
-}
-
-/* remove card styling */
-
-.hero-image img{
-width:100%;
-height:auto;
-display:block;
-
-border:none;
-border-radius:0;
-box-shadow:none;
-background:none;
-
-position:relative;
-z-index:2;
-}
-.hero-image-wrapper{
-background:none;
-border:none;
-box-shadow:none;
-}
-/* SAFETY ASSURANCE */
-
-.safety-assurance{
-position:relative;
-}
-
-.assurance-card{
-
-max-width:760px;
-
-padding:40px;
-border-radius:var(--radius-lg);
-
-background:linear-gradient(
-160deg,
-rgba(255,255,255,.9),
-rgba(255,255,255,.35)
-);
-
-border:1px solid var(--border-soft);
-
-box-shadow:
-0 12px 30px rgba(0,0,0,.08);
+/* heading */
+.police-card h2 {
 
 }
 
-/* subtle accent glow */
+/* paragraphs */
+.police-card p {
 
-.safety-assurance::after{
-
-content:"";
-
-position:absolute;
-
-right:-120px;
-top:-60px;
-
-width:420px;
-height:420px;
-
-background:
-radial-gradient(
-circle,
-rgba(92,204,251,.18),
-transparent 70%
-);
-
-filter:blur(40px);
-pointer-events:none;
-
-}
-.assurance-label{
-
-display:inline-block;
-
-font-size:12px;
-letter-spacing:.08em;
-text-transform:uppercase;
-
-padding:6px 12px;
-margin-bottom:10px;
-
-border-radius:999px;
-
-background:rgba(92,204,251,.15);
-color:#2a7fa5;
-
-font-weight:600;
-
+  margin-bottom: 14px;
 }
 
-.assurance-title{
-font-size:26px;
-margin-bottom:14px;
-position:relative;
+/* highlight cultural phrase */
+.police-card em {
+  font-style: normal;
+  
+
+  background: linear-gradient(90deg, #ff8c40, #ff6a2a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.assurance-title::after{
+.police-section::before {
+  content: "";
+  position: absolute;
 
-content:"";
+  width: 400px;
+  height: 400px;
 
-display:block;
+  top: -100px;
+  left: -100px;
 
-width:60px;
-height:3px;
+  background: radial-gradient(
+    circle,
+    rgba(255,140,64,0.18),
+    transparent 70%
+  );
 
-margin-top:8px;
-
-background:linear-gradient(
-90deg,
-rgba(92,204,251,.8),
-rgba(238,142,67,.8)
-);
-
-border-radius:4px;
-
+  filter: blur(20px);
+  pointer-events: none;
 }
-body.dark .assurance-card{
 
-background:linear-gradient(
-160deg,
-rgba(30,36,48,.9),
-rgba(30,36,48,.45)
-);
 
-border:1px solid rgba(255,255,255,.08);
 
-box-shadow:
-0 12px 40px rgba(0,0,0,.45),
-inset 0 1px 0 rgba(255,255,255,.05);
-
-}
-body.dark .assurance-label{
-
-background:rgba(92,204,251,.18);
-color:#8fdcff;
-
-}
-</style>
-
+  </style>
 </BaseLayout>

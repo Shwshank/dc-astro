@@ -65,27 +65,25 @@ const {
 <div class="blog-grid-wrapper">
     <div class="grid-bg"></div>
 
-    <div class="blog-grid">
-        {posts.map((post:any) => (
-            <a href={`/blogs/${post.slug}`} class="blog-card glass">
+<div class="blog-grid">
+    {(posts || []).map((post:any) => (
+        <a href={post.href} class="blog-card glass">
 
-                <!-- IMAGE -->
-                {post.image && (
-                    <div class="card-image">
-                        <Image src={post.image} alt={post.title} />
-                    </div>
-                )}
-
-                <!-- CONTENT -->
-                <div class="card-content">
-                    <h3>{post.title}</h3>
-                    <p>{post.excerpt}</p>
-                    <span class="read-more">Read →</span>
+            {post.image && (
+                <div class="card-image">
+                    <Image src={post.image} alt={post.title} />
                 </div>
+            )}
 
-            </a>
-        ))}
-    </div>
+            <div class="card-content">
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+                <span class="read-more">Read →</span>
+            </div>
+
+        </a>
+    ))}
+</div>
 </div>
 
 

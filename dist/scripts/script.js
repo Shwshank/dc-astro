@@ -97,7 +97,7 @@
 
   /* ================= CONTACT FORM (FIREBASE LEADS) ================= */
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("pageshow", () => {
 
     const form = document.getElementById("contactForm");
     if (!form) return;

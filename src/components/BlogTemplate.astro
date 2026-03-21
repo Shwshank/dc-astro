@@ -38,23 +38,24 @@ const safeAuthorImage = authorImage || defaultAuthor;
             )
         }
         <div class="hero-card">
-            <div class="hero-text">
-                <h1>{title}</h1>
+  <div class="hero-text">
+    <h1>{title}</h1>
 
-                <div class="post-meta">
-                    <div class="author">
-                        <Image src={safeAuthorImage} alt={author} />
-                        <span>{author}</span>
-                    </div>
+    <div class="post-meta">
+      <div class="author">
+        <Image src={safeAuthorImage} alt={author} />
+        <span >{author}</span>
+      </div>
 
-                    <div class="meta-secondary">
-                        <span>{readTimeInMinutes} min read</span>
-                        <span class="dot">•</span>
-                        <span>{date}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="meta-secondary">
+        <span class="dot">•</span>
+        <span>{readTimeInMinutes} min read</span>
+        <span class="dot">•</span>
+        <span class="last-updated">Last updated {date}</span>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
 
     <!-- CONTENT -->
@@ -72,7 +73,7 @@ const safeAuthorImage = authorImage || defaultAuthor;
         </p>
 
         <div class="final-action">
-            <a href="/contact" class="cta-mini">Tell us</a>
+            <a target="_blank" href="/contact" class="cta-mini">Tell us</a>
         </div>
     </div>
 
@@ -447,6 +448,8 @@ background: radial-gradient(
     rgba(255, 140, 0, 0.12),
     transparent 60%
   );
+  pointer-events: none;
+  
 }
 
 /* text */
@@ -595,5 +598,28 @@ body.dark .final-box {
   border: 1px solid rgba(255,255,255,0.08);
 
   backdrop-filter: blur(16px);
+}
+.meta-secondary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.last-updated {
+  font-weight: inherit;
+}
+
+/* optional subtle highlight */
+.last-updated {
+  opacity: 0.9;
+}
+html.dark .meta-secondary {
+  color: rgba(255,255,255,0.7);
+}
+
+html.dark .last-updated {
+  color: rgba(255,255,255,0.85);
 }
 </style>

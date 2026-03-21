@@ -1,0 +1,386 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+// IMAGES (from your existing assets)
+import hero from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import auto from "../../assets/images/3.png";
+import night from "../../assets/images/nighttraffic.jpg";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout title="Delhi Traffic Guide | Delhi Concierge">
+  <BlogTemplate
+    title="Why Delhi Traffic Feels Chaotic (And How It Actually Works)"
+    heroImage={hero}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Blog", href: "/blog" },
+      { label: "Delhi Traffic Guide" },
+    ]}
+    gallery={[metro, auto, night]}
+    cta={{
+      title: "Skip the confusion. Move with clarity.",
+      description:
+        "Delhi Concierge helps you navigate the city without trial-and-error.",
+      buttonText: "Plan My Movement",
+      link: "/contact",
+    }}
+    finalThought={{
+      title: "Final Thought",
+      unbiased_opinion:
+        "Delhi doesn’t get easier — you just get better at navigating it.",
+    }}
+    date="March 18, 2026"
+    author="Shaw"
+    readTimeInMinutes={5}
+    nextBlog={{
+      title1: "How to Navigate Delhi Without Losing Your Mind",
+      description1:
+        "A complete system for stress-free movement across the city.",
+      link1: "/blog/navigation-in-delhi",
+      image1: metro,
+      category1: "Transport",
+      title2: "Is Delhi Safe at Night? What Actually Matters",
+      description2: "Forget myths. Here’s what truly affects your safety.",
+      link2: "/blog/delhi-night-safety",
+      image2: night,
+      category2: "Safety",
+    }}
+  >
+    <!-- BLOG CONTENT -->
+    <article  class="blog-content">
+      <h1>Why Delhi Traffic Feels Chaotic (And How It Actually Works)</h1>
+
+      <!-- HOOK 1 -->
+      <p class="hook">
+        The first time you experience Delhi traffic, it doesn’t feel like a
+        system—it feels like everything is happening at once.
+      </p>
+
+      <!-- CLEAR ANSWER -->
+      <p class="answer">
+        Delhi traffic feels chaotic because it operates on real-time human
+        adjustment rather than strict rule enforcement. Drivers, pedestrians,
+        and even animals continuously adapt to each other, creating a flow that
+        appears unpredictable but rarely stops.
+      </p>
+
+      <h2>Why It Feels So Different</h2>
+      <p>
+        For most expats and first-time travelers, the confusion doesn’t come
+        from the number of vehicles—it comes from how movement works.
+      </p>
+      <p>
+        There are signals, lanes, and traffic rules in Delhi, but they don’t
+        fully dictate behavior. Instead, people move based on awareness, timing,
+        and constant micro-adjustments.
+      </p>
+      <p>
+        This is why driving in Delhi feels unfamiliar at first, especially if
+        you’re used to strict lane discipline and predictable right-of-way
+        systems.
+      </p>
+
+      <h2>The System Behind the Chaos</h2>
+      <p>
+        What looks random on the surface follows a consistent pattern
+        underneath.
+      </p>
+      <p>
+        Drivers rarely wait for a perfect gap—they create one. Pedestrians don’t
+        wait for empty roads—they move with the expectation that vehicles will
+        adjust. Space is negotiated in real time.
+      </p>
+
+      <!-- HOOK 2 -->
+      <p class="hook">
+        Here’s what most people get wrong about Delhi traffic—it isn’t broken,
+        it’s adaptive.
+      </p>
+
+      <p>
+        This adaptability is what keeps traffic moving, even under pressure.
+        Unlike rigid systems that collapse under overload, Delhi’s traffic
+        absorbs complexity and keeps flowing.
+      </p>
+
+      <h2>The Role of the Unexpected</h2>
+      <p>
+        One of the most surprising aspects for travelers in Delhi is the
+        presence of animals on the road—especially cows.
+      </p>
+      <p>
+        Cows may sit or stand in the middle of traffic, and due to cultural and
+        religious respect, they are generally not disturbed. Instead, vehicles
+        adjust around them without disrupting the overall flow.
+      </p>
+      <p>
+        For someone new to Delhi, this can feel illogical. In reality, it’s a
+        normalized part of the system.
+      </p>
+
+      <h2>Not All Delhi Traffic Is the Same</h2>
+
+      <h3>Old Delhi</h3>
+      <p>
+        In Old Delhi, traffic feels compressed and intense. Roads are narrow,
+        movement comes from every direction, and the density of people and
+        vehicles creates constant pressure.
+      </p>
+
+      <h3>Central Delhi</h3>
+      <p>
+        In contrast, Central Delhi offers wider roads and more structured
+        movement. The flow is more predictable, and the overall experience feels
+        significantly calmer.
+      </p>
+
+      <p>
+        This contrast is important for anyone trying to understand Delhi travel
+        experience—because traffic behavior changes depending on where you are
+        in the city.
+      </p>
+
+      <h2>Driving in Delhi as a Foreigner</h2>
+      <p>
+        For expats and visitors, driving in Delhi can feel overwhelming at
+        first. The key challenge is not skill, but adaptation.
+      </p>
+      <p>
+        Once you stop expecting strict rule enforcement and start observing
+        movement patterns, the system becomes easier to read.
+      </p>
+      <p>
+        If you’re planning to drive, it’s worth understanding how locals
+        navigate this environment. You can explore a deeper breakdown in this
+        <a href="/delhi-driving-guide">driving in Delhi guide</a>.
+      </p>
+
+      <h2>Understanding the Flow</h2>
+      <p>
+        Delhi traffic rewards awareness over rigidity. People who adapt to the
+        flow move through it more efficiently than those who try to control it.
+      </p>
+      <p>
+        This behavior aligns with broader patterns seen in
+        <a
+          href="https://en.wikipedia.org/wiki/Traffic_congestion"
+          target="_blank">high-density urban traffic systems</a
+        >, where flexibility often replaces strict structure.
+      </p>
+
+      <h2>The Real Insight</h2>
+      <p class="highlight">
+        What looks like chaos in Delhi traffic is actually a system built on
+        constant negotiation—messy, human, and always moving.
+      </p>
+
+      <section class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is Delhi traffic really that chaotic for expats?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              For most expats and first-time travelers, Delhi traffic feels
+              chaotic initially because it operates differently from structured
+              systems. However, once you understand the flow and patterns, it
+              becomes predictable.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is it safe to drive in Delhi as a foreigner?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Driving in Delhi is safe if you adapt to local driving behavior.
+              The key is awareness, not strict rule-following. Many expats
+              choose to observe first before driving themselves.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Why are cows often seen on Delhi roads?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Cows are present due to cultural and religious respect in India.
+              They are not disturbed, and traffic naturally adjusts around them
+              without disrupting overall flow.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is Delhi traffic worse than other major cities?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Delhi traffic is not necessarily worse—it is different. Unlike
+              rigid systems, it relies on adaptive behavior, which can feel
+              overwhelming but functions efficiently under high density.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+    <script>
+  document.querySelectorAll(".faq-section").forEach(section => {
+    const items = section.querySelectorAll(".faq-item");
+
+    items.forEach(item => {
+      const btn = item.querySelector(".faq-question");
+
+      btn?.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+    <style>
+      /* ========================= */
+      /* BLOG CONTENT SYSTEM */
+      /* ========================= */
+      .blog-content {
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--text-primary);
+      }
+
+      /* FLOW */
+      .blog-content > * + * {
+        margin-top: 10px;
+      }
+
+      .blog-content h2 + p,
+      .blog-content h3 + p {
+        margin-top: 4px;
+      }
+
+      /* HEADINGS */
+      .blog-content h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 18px;
+      }
+
+      .blog-content h3 {
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 12px;
+      }
+
+      /* TEXT */
+      .blog-content p {
+        margin: 0;
+        color: var(--text-secondary);
+      }
+
+      .blog-content strong {
+        color: var(--text-primary);
+      }
+
+      /* ========================= */
+      /* FAQ */
+      /* ========================= */
+
+      .faq-section {
+        margin-top: 80px !important;
+        margin-bottom: 60px !important;
+        padding: 40px;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(118, 154, 165, 0.9),
+          rgba(205, 222, 252, 0.15)
+        );
+        backdrop-filter: blur(12px);
+      }
+
+      .faq-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .faq-question {
+        width: 100%;
+        padding: 18px 0;
+        background: none;
+        border: none;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.35s ease;
+      }
+
+      .faq-answer p {
+        padding-bottom: 18px;
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 200px;
+      }
+
+      /* ========================= */
+      /* DARK MODE (manual class) */
+      /* ========================= */
+
+      html.dark .faq-section {
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(255, 140, 64, 0.12),
+            transparent 60%
+          ),
+          linear-gradient(135deg, #0f172a, #1e293b);
+      }
+
+      html.dark .faq-title,
+      html.dark .faq-question {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      html.dark .faq-answer p {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      html.dark .faq-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </BlogTemplate>
+  <CTA
+    title="Ready to navigate Delhi with ease?"
+    text="Our concierge services are designed to help you tackle the city's challenges head-on."
+    buttonText="Explore Services"
+    buttonLink="/services"
+  />
+</BaseLayout>

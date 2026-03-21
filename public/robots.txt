@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /_astro/
+
+Sitemap: https://delhiconcierge.in/sitemap-index.xml
