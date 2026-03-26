@@ -1,0 +1,314 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/nighttraffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Why is the first day in a new city so important?",
+        answer: "Because it sets your mental rhythm. A calm and structured start reduces overwhelm and builds confidence for the rest of the trip.",
+    },
+    {
+        question: "Should I visit major attractions on the first day?",
+        answer: "Not necessarily. Starting with lower-intensity environments helps you adjust before exploring more complex areas.",
+    },
+    {
+        question: "How can I avoid feeling overwhelmed in a new city?",
+        answer: "By controlling pace, limiting decisions, and gradually increasing exposure instead of doing everything at once.",
+    },
+    {
+        question: "What does a concierge do differently on day one?",
+        answer: "They focus on easing you into the city—balancing comfort, pacing, and exposure so you feel oriented rather than overwhelmed.",
+    },
+];
+---
+
+<BaseLayout title="Introducing the City With Clarity | Concierge Insights">
+    <BlogTemplate
+        title="Introducing You to the City, With Clarity"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Concierge Insights", href: "/blog/concierge-insights" },
+            { label: "Introducing the City" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Start your journey with clarity.",
+            description:
+                "Ease into a new city with the right pace, structure, and guidance from the very beginning.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "The way you begin shapes how everything else feels.",
+        }}
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "How a Concierge Thinks: Designing Your Day Without Overwhelm",
+            description1:
+                "See how your day is structured to reduce fatigue and increase clarity.",
+            link1: "/blog/how-a-concierge-thinks-delhi",
+            image1: city,
+            category1: "Concierge",
+            title2: "Situational Judgment: What We Notice That Most Travelers Miss",
+            description2:
+                "Understand how real-time decisions are made before problems appear.",
+            link2: "/blog/situational-judgment-delhi",
+            image2: metro,
+            category2: "Concierge",
+        }}
+    >
+        <article class="blog-content">
+            <h1>Introducing You to Delhi, With Clarity</h1>
+
+            <p class="hook">Delhi doesn’t reveal itself all at once.</p>
+
+            <p>
+                It unfolds in layers—history, movement, color, sound—all
+                existing together in a way that can feel both overwhelming and
+                deeply fascinating.
+            </p>
+
+            <p>
+                For someone arriving for the first time, it’s not the scale of
+                the city that feels complex. It’s how much is happening at the
+                same time.
+            </p>
+
+            <p class="highlight-bar">
+                My role is not to simplify Delhi. It’s to introduce it in a way
+                that feels clear.
+            </p>
+
+            <!-- SECTION 1 -->
+            <h2>I Begin With Space, Not Intensity</h2>
+
+            <p>
+                Delhi carries the weight of one of the oldest living
+                civilizations—its architecture, its streets, its rhythm shaped
+                over centuries of empires, migrations, and cultural exchange.
+            </p>
+
+            <p>But that depth doesn’t need to be absorbed all at once.</p>
+
+            <p>
+                Instead of starting in the most crowded or chaotic environments,
+                I begin with spaces that allow you to take it in gradually—where
+                the city feels expansive, not overwhelming.
+            </p>
+
+            <p>
+                This creates a sense of grounding before stepping into its more
+                vibrant layers.
+            </p>
+
+            <p class="highlight-bar">
+                You don’t enter the city abruptly—you ease into it.
+            </p>
+
+            <!-- SECTION 2 -->
+            <h2>I Introduce the Rhythm Behind the Chaos</h2>
+
+            <p>
+                At first glance, Delhi can feel chaotic—traffic flowing in all
+                directions, streets alive with movement, people navigating
+                spaces with an unspoken understanding.
+            </p>
+
+            <p>
+                But beneath that intensity, there is structure. A rhythm that
+                locals follow instinctively.
+            </p>
+
+            <p>
+                I help you experience that rhythm, so what first feels
+                unpredictable begins to feel intuitive.
+            </p>
+
+            <p>
+                The city doesn’t slow down—but your understanding of it becomes
+                clearer.
+            </p>
+
+            <p class="highlight-bar">
+                What feels chaotic at first begins to feel alive—and even calm
+                in its own way.
+            </p>
+
+            <!-- SECTION 3 -->
+            <h2>I Layer Culture, Not Overload It</h2>
+
+            <p>
+                Delhi is not just a city—it’s a convergence of cultures from
+                across the Indian subcontinent.
+            </p>
+
+            <p>
+                You’ll see it in the colors of clothing, the diversity of food,
+                the languages, and the way different communities coexist within
+                the same space.
+            </p>
+
+            <p>
+                The food itself tells stories—recipes shaped by history,
+                migration, and generations of tradition.
+            </p>
+
+            <p>
+                Instead of presenting all of this at once, I layer the
+                experience—so each part feels meaningful, not overwhelming.
+            </p>
+
+            <p>You don’t just see culture—you begin to understand it.</p>
+
+            <p class="highlight-bar">
+                Depth is introduced gradually, so it stays with you.
+            </p>
+
+            <!-- SECTION 4 -->
+            <h2>I Balance Energy With Comfort</h2>
+
+            <p>
+                Delhi moves between extremes—vibrant markets and quiet gardens,
+                historic monuments and modern spaces, intensity and stillness.
+            </p>
+
+            <p>Experiencing the city fully means engaging with both.</p>
+
+            <p>
+                I balance these contrasts carefully—so moments of exploration
+                are followed by moments of calm.
+            </p>
+
+            <p>
+                This keeps your energy steady, allowing you to stay present
+                without feeling drained.
+            </p>
+
+            <p class="highlight-bar">
+                You experience the richness of the city—without being consumed
+                by it.
+            </p>
+
+            <!-- FINAL -->
+            <h2>The Real Difference</h2>
+
+            <p>
+                Delhi doesn’t need to be simplified. It needs to be introduced
+                with care.
+            </p>
+
+            <p>
+                When the pace is right, the structure is clear, and the
+                experience is thoughtfully layered, the city begins to make
+                sense.
+            </p>
+
+            <p>
+                You don’t feel like you’re navigating complexity—you feel like
+                you’re discovering it.
+            </p>
+
+            <p class="highlight-bar">
+                And that’s when Delhi becomes not overwhelming—but
+                unforgettable.
+            </p>
+        </article>
+
+        <FAQ faqs={faqs} />
+
+        <style>
+            .blog-content {
+                max-width: 720px;
+                margin: 0 auto;
+                font-size: 16.5px;
+                line-height: 1.8;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 18px;
+            }
+
+            .blog-content p + p {
+                margin-top: 10px;
+            }
+
+            .blog-content h1 {
+                font-size: 34px;
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+
+            .hook {
+                font-size: 18px;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar {
+                position: relative;
+                padding-left: 18px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            @media (max-width: 768px) {
+                .blog-content {
+                    font-size: 15.5px;
+                    line-height: 1.75;
+                }
+
+                .blog-content h1 {
+                    font-size: 28px;
+                }
+
+                .blog-content h2 {
+                    font-size: 20px;
+                }
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Move through the city with ease."
+        text="Let the first step feel clear, so everything else follows naturally."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

@@ -1,0 +1,272 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/market.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/nighttraffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+  {
+    question: "What does personalization mean in a concierge service?",
+    answer:
+      "It means designing experiences around your preferences, pace, comfort level, and small details—not just booking standard plans."
+  },
+  {
+    question: "Do I need to share everything in advance?",
+    answer:
+      "Not necessarily. A good concierge observes and adapts in real time, even picking up preferences during the experience."
+  },
+  {
+    question: "How are dietary restrictions handled?",
+    answer:
+      "They are managed quietly in the background—so your experience feels seamless without constant reminders or limitations."
+  },
+  {
+    question: "Is personalization only about luxury?",
+    answer:
+      "No. It’s about relevance and comfort—making sure what you experience fits you, not just what’s available."
+  }
+];
+---
+
+<BaseLayout title="Personalized Concierge Experience | Concierge Insights">
+  <BlogTemplate
+    title="Behind the Scenes: How We Personalize Every Experience"
+    heroImage={hero}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Blog", href: "/blog" },
+      { label: "Concierge Insights", href: "/blog/concierge-insights" },
+      { label: "Personalization" },
+    ]}
+    gallery={[metro, city]}
+    cta={{
+      title: "Travel designed around you.",
+      description:
+        "Experience a journey that adapts to your preferences, pace, and comfort—without you having to manage it.",
+      buttonText: "Explore More Guides",
+      link: "/blog",
+    }}
+
+    date="March 25, 2026"
+    author="Shaw"
+    readTimeInMinutes={5}
+    nextBlog={{
+      title1: "How a Concierge Thinks: Designing Your Day Without Overwhelm",
+      description1:
+        "See how your day is structured to reduce fatigue and maximize clarity.",
+      link1: "/blog/how-a-concierge-thinks-delhi",
+      image1: city,
+      category1: "Concierge",
+      title2: "Situational Judgment: What We Notice That Most Travelers Miss",
+      description2:
+        "How real-time decisions are made before problems appear.",
+      link2: "/blog/situational-judgment-delhi",
+      image2: metro,
+      category2: "Concierge",
+    }}
+  >
+
+<article class="blog-content">
+
+  <h1>Behind the Scenes: How We Personalize Every Experience</h1>
+
+  <p class="hook">
+    Most people think personalization is something you request.
+  </p>
+
+  <p>
+    In reality, if you have to ask for it, something has already been missed.
+  </p>
+
+  <p>
+    When it’s done right, it doesn’t feel like a service adjusting to you.  
+    It feels like everything is already aligned—with your pace, your comfort, and your preferences.
+  </p>
+
+  <p class="highlight-bar">
+    It doesn’t feel customized. It simply feels right.
+  </p>
+
+  <!-- SECTION 1 -->
+  <h2>It Starts Before the Day Begins</h2>
+
+  <p>
+    Before you step out, most of the important decisions are already in place.  
+    Not just noted—but thoughtfully applied.
+  </p>
+
+  <p>
+    Your preferences, comfort levels, and small details are considered in advance, so you don’t have to repeat or manage them during the day.
+  </p>
+
+  <p>
+    What you experience is not preparation—it’s clarity.  
+    The day begins smoothly, without the need to figure things out as you go.
+  </p>
+
+  <p class="highlight-bar">
+    You don’t prepare for the day. The day is prepared for you.
+  </p>
+
+  <!-- SECTION 2 -->
+  <h2>We Notice What You Don’t Need to Say</h2>
+
+  <p>
+    Not everything important is spoken. Preferences often reveal themselves through small patterns—what you engage with, what you move past, how long you stay.
+  </p>
+
+  <p>
+    Instead of waiting for instructions, we observe and adapt quietly.  
+    Adjustments happen in real time, without interrupting your experience.
+  </p>
+
+  <p>
+    This allows the day to evolve naturally, without you needing to explain or correct anything along the way.
+  </p>
+
+  <p class="highlight-bar">
+    You feel understood, without having to explain yourself.
+  </p>
+
+  <!-- SECTION 3 -->
+  <h2>The Details Are Handled Before They Reach You</h2>
+
+  <p>
+    Small details often create the biggest disruptions—dietary preferences, comfort, timing, or repeated coordination.
+  </p>
+
+  <p>
+    When these are not managed well, they create friction.  
+    You have to remind, adjust, or compromise.
+  </p>
+
+  <p>
+    We remove that layer entirely by handling these details in advance, so everything is already aligned by the time you arrive.
+  </p>
+
+  <p>
+    Nothing feels delayed or out of place. The experience continues without interruption.
+  </p>
+
+  <p class="highlight-bar">
+    You don’t notice the effort—you notice the ease.
+  </p>
+
+  <!-- SECTION 4 -->
+  <h2>The Experience Moves With You</h2>
+
+  <p>
+    Your pace changes throughout the day. Energy shifts, interest deepens or fades, and what feels right in the morning may feel different later.
+  </p>
+
+  <p>
+    Fixed plans ignore this. They expect you to keep up.
+  </p>
+
+  <p>
+    We don’t. The experience adapts to you—quietly, and without friction.
+  </p>
+
+  <p>
+    Whether you want to slow down, stay longer, or move on, the day adjusts in a way that feels natural, not forced.
+  </p>
+
+  <p class="highlight-bar">
+    You’re not following the plan. The plan follows you.
+  </p>
+
+  <!-- FINAL -->
+  <h2>The Real Difference</h2>
+
+  <p>
+    Personalization is not about adding more choices.  
+    It’s about removing the need to manage them.
+  </p>
+
+  <p>
+    When everything is thoughtfully handled in the background, your attention stays where it should be—on the experience itself.
+  </p>
+
+  <p>
+    You don’t feel like something was customized for you.  
+    You feel like everything simply worked.
+  </p>
+
+  <p class="highlight-bar">
+    And that’s when the experience becomes effortless.
+  </p>
+
+</article>
+
+    <style>
+      .blog-content {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 16.5px;
+        line-height: 1.8;
+        color: var(--text-primary);
+      }
+
+      .blog-content > * + * {
+        margin-top: 18px;
+      }
+
+      .blog-content p + p {
+        margin-top: 10px;
+      }
+
+      .blog-content h1 {
+        font-size: 34px;
+        font-weight: 600;
+      }
+
+      .blog-content h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 40px;
+      }
+
+      .blog-content p {
+        margin: 0;
+        color: var(--text-secondary);
+      }
+
+      .hook {
+        font-size: 18px;
+        color: var(--text-primary);
+      }
+
+      .highlight-bar {
+        position: relative;
+        padding-left: 18px;
+        margin: 22px 0;
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .highlight-bar::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 4px;
+        height: calc(100% - 12px);
+        border-radius: 2px;
+        background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+      }
+    </style>
+
+  </BlogTemplate>
+
+  <CTA
+    title="Experience travel without friction."
+    text="Let every detail be handled, so you can stay present."
+    buttonText="Explore Services"
+    buttonLink="/services"
+  />
+</BaseLayout>

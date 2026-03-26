@@ -1,0 +1,263 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/nighttraffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Why not visit more places in a single day?",
+        answer: "Because more places increase fatigue. A well-designed day focuses on flow, not volume.",
+    },
+    {
+        question: "What does a concierge optimize for?",
+        answer: "Energy, attention, and clarity—not just logistics or coverage.",
+    },
+    {
+        question: "Why are breaks important in Delhi?",
+        answer: "The city is intense. Without resets, sensory fatigue builds quickly and reduces enjoyment.",
+    },
+    {
+        question: "Why decide plans later in the day?",
+        answer: "Energy levels change. Good decisions are made based on how you feel in the moment, not in the morning.",
+    },
+];
+---
+
+<BaseLayout title="How a Concierge Thinks | Delhi Concierge">
+    <BlogTemplate
+        title="How a Concierge Thinks: Designing Your Day Without Overwhelm"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Concierge Insights", href: "/blog/concierge-insights" },
+            { label: "How a Concierge Thinks" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Experience Delhi without overwhelm.",
+            description:
+                "A well-designed day removes confusion and lets you stay present in the experience.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "Situational Judgment: What We Notice That Most Travelers Miss",
+            description1:
+                "How real-time decisions are made before problems appear.",
+            link1: "/blog/situational-judgment-delhi",
+            image1: city,
+            category1: "Concierge",
+            title2: "How to Plan a Day in Delhi Without Getting Overwhelmed",
+            description2: "Structure your day with clarity instead of chaos.",
+            link2: "/blog/how-to-plan-delhi-day",
+            image2: metro,
+            category2: "Concierge",
+        }}
+    >
+        <article class="blog-content">
+            <h1>How a Concierge Thinks</h1>
+
+            <p class="hook">Most people think a concierge plans your day.</p>
+
+            <p>That’s not what we do.</p>
+
+            <p>We design how your day feels.</p>
+
+            <p>
+                The difference is subtle—but it’s the reason some trips feel
+                effortless, while others feel exhausting, even when everything
+                looks perfect on paper.
+            </p>
+
+            <p class="highlight-bar">
+                Our role is to remove the mental load, so you can stay present
+                in the experience.
+            </p>
+
+            <!-- 1 -->
+            <h2>1. We Protect Your Attention</h2>
+
+            <p>
+                Travel doesn’t become tiring because of distance—it becomes
+                tiring because of decisions.
+            </p>
+
+            <p>
+                Where to go next, what’s worth it, how long to stay, what to
+                skip. These decisions seem small, but they accumulate throughout
+                the day. Over time, your attention gets fragmented. And when
+                that happens, even meaningful experiences start to feel diluted.
+            </p>
+
+            <p>
+                We reduce that noise. By removing unnecessary choices, we allow
+                your attention to stay where it belongs—in the moment you’re in.
+            </p>
+
+            <p class="highlight-bar">
+                When your mind is clear, the experience becomes deeper.
+            </p>
+
+            <!-- 2 -->
+            <h2>2. We Design for Flow, Not Volume</h2>
+
+            <p>
+                Most itineraries try to maximize coverage—more places, more
+                stops, more activity. But more rarely means better.
+            </p>
+
+            <p>
+                We focus on flow. One strong experience anchors the day, and
+                everything else supports it without competing for your energy.
+                This creates a natural rhythm. You’re not rushing between
+                moments—you’re moving through them.
+            </p>
+
+            <p>
+                The result is a day that feels complete, without ever feeling
+                heavy or forced.
+            </p>
+
+            <p class="highlight-bar">
+                A well-paced day gives you space to feel, not just see.
+            </p>
+
+            <!-- 3 -->
+            <h2>3. Mindful Exploration Becomes Therapy</h2>
+
+            <p>
+                When travel is rushed, it becomes consumption—you move quickly,
+                take it in, and move on.
+            </p>
+
+            <p>
+                But when the pace slows and decisions reduce, something shifts.
+                You begin to notice more. Small details, textures,
+                conversations, silence. This is where exploration becomes
+                mindful. And that’s where it starts to feel therapeutic.
+            </p>
+
+            <p>
+                You’re no longer reacting to the environment—you’re absorbing
+                it. The mind settles. The noise reduces. The experience becomes
+                grounding instead of overwhelming.
+            </p>
+
+            <p>
+                In that state, even simple moments—a quiet street, a meal, a
+                pause—feel complete.
+            </p>
+
+            <p class="highlight-bar">
+                When the pace is right, the city stops feeling loud—and starts
+                feeling alive.
+            </p>
+
+            <!-- 4 -->
+            <h2>4. We Adapt to How You Feel</h2>
+
+            <p>
+                No two days feel the same. Your energy shifts, your mood
+                changes, your pace evolves.
+            </p>
+
+            <p>Fixed plans ignore this. They expect you to keep up.</p>
+
+            <p>
+                We don’t. We adjust in real time—quietly, without friction—so
+                the experience continues to feel natural. Whether you want to
+                slow down, explore more, or simply pause, the day adapts around
+                you.
+            </p>
+
+            <p class="highlight-bar">
+                You’re not following the plan. The plan follows you.
+            </p>
+
+            <!-- FINAL -->
+            <h2>The Real Difference</h2>
+
+            <p>You don’t need to manage your trip to make it meaningful.</p>
+
+            <p>
+                You just need the right structure—one that removes friction,
+                reduces decisions, and gives your mind space to settle.
+            </p>
+
+            <p>
+                That’s what we do in the background. Quietly, precisely, without
+                interrupting your experience.
+            </p>
+
+            <p class="highlight-bar">
+                You enjoy more—not because there’s less happening, but because
+                there’s less to handle.
+            </p>
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 14px;
+                margin: 14px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 4px;
+                height: calc(100% - 8px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.65;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 14px;
+            }
+
+            .blog-content h2 {
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 18px;
+            }
+
+            .blog-content h3 {
+                font-size: 17px;
+                font-weight: 600;
+                margin-top: 12px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

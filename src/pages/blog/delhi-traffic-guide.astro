@@ -8,6 +8,30 @@ import metro from "../../assets/images/metro.png";
 import auto from "../../assets/images/3.png";
 import night from "../../assets/images/nighttraffic.jpg";
 import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+  {
+    question: "Is Delhi traffic really that chaotic for expats?",
+    answer:
+      "For most expats and first-time travelers, Delhi traffic feels chaotic initially because it operates differently from structured systems. However, once you understand the flow and patterns, it becomes predictable.",
+  },
+  {
+    question: "Is it safe to drive in Delhi as a foreigner?",
+    answer:
+      "Driving in Delhi is safe if you adapt to local driving behavior. The key is awareness, not strict rule-following. Many expats choose to observe first before driving themselves.",
+  },
+  {
+    question: "Why are cows often seen on Delhi roads?",
+    answer:
+      "Cows are present due to cultural and religious respect in India. They are not disturbed, and traffic naturally adjusts around them without disrupting overall flow.",
+  },
+  {
+    question: "Is Delhi traffic worse than other major cities?",
+    answer:
+      "Delhi traffic is not necessarily worse—it is different. Unlike rigid systems, it relies on adaptive behavior, which can feel overwhelming but functions efficiently under high density.",
+  },
+];
 ---
 
 <BaseLayout title="Delhi Traffic Guide | Delhi Concierge">
@@ -17,6 +41,7 @@ import CTA from "../../components/CTA.astro";
     breadcrumbs={[
       { label: "Home", href: "/" },
       { label: "Blog", href: "/blog" },
+      { label: "Delhi Survival", href: "/blog/delhi-survival-guide" },
       { label: "Delhi Traffic Guide" },
     ]}
     gallery={[metro, auto, night]}
@@ -50,7 +75,7 @@ import CTA from "../../components/CTA.astro";
     }}
   >
     <!-- BLOG CONTENT -->
-    <article  class="blog-content">
+    <article class="blog-content">
       <h1>Why Delhi Traffic Feels Chaotic (And How It Actually Works)</h1>
 
       <!-- HOOK 1 -->
@@ -177,80 +202,8 @@ import CTA from "../../components/CTA.astro";
         constant negotiation—messy, human, and always moving.
       </p>
 
-      <section class="faq-section">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Is Delhi traffic really that chaotic for expats?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              For most expats and first-time travelers, Delhi traffic feels
-              chaotic initially because it operates differently from structured
-              systems. However, once you understand the flow and patterns, it
-              becomes predictable.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Is it safe to drive in Delhi as a foreigner?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Driving in Delhi is safe if you adapt to local driving behavior.
-              The key is awareness, not strict rule-following. Many expats
-              choose to observe first before driving themselves.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Why are cows often seen on Delhi roads?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Cows are present due to cultural and religious respect in India.
-              They are not disturbed, and traffic naturally adjusts around them
-              without disrupting overall flow.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Is Delhi traffic worse than other major cities?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Delhi traffic is not necessarily worse—it is different. Unlike
-              rigid systems, it relies on adaptive behavior, which can feel
-              overwhelming but functions efficiently under high density.
-            </p>
-          </div>
-        </div>
-      </section>
+      <FAQ faqs={faqs} />
     </article>
-    <script>
-  document.querySelectorAll(".faq-section").forEach(section => {
-    const items = section.querySelectorAll(".faq-item");
-
-    items.forEach(item => {
-      const btn = item.querySelector(".faq-question");
-
-      btn?.addEventListener("click", () => {
-        item.classList.toggle("active");
-      });
-    });
-  });
-</script>
 
     <style>
       /* ========================= */
@@ -293,87 +246,6 @@ import CTA from "../../components/CTA.astro";
 
       .blog-content strong {
         color: var(--text-primary);
-      }
-
-      /* ========================= */
-      /* FAQ */
-      /* ========================= */
-
-      .faq-section {
-        margin-top: 80px !important;
-        margin-bottom: 60px !important;
-        padding: 40px;
-        border-radius: 20px;
-        background: linear-gradient(
-          135deg,
-          rgba(118, 154, 165, 0.9),
-          rgba(205, 222, 252, 0.15)
-        );
-        backdrop-filter: blur(12px);
-      }
-
-      .faq-title {
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 30px;
-      }
-
-      .faq-item {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      }
-
-      .faq-question {
-        width: 100%;
-        padding: 18px 0;
-        background: none;
-        border: none;
-        font-size: 17px;
-        font-weight: 600;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.35s ease;
-      }
-
-      .faq-answer p {
-        padding-bottom: 18px;
-        color: rgba(0, 0, 0, 0.7);
-      }
-
-      .faq-item.active .faq-answer {
-        max-height: 200px;
-      }
-
-      /* ========================= */
-      /* DARK MODE (manual class) */
-      /* ========================= */
-
-      html.dark .faq-section {
-        background:
-          radial-gradient(
-            circle at top right,
-            rgba(255, 140, 64, 0.12),
-            transparent 60%
-          ),
-          linear-gradient(135deg, #0f172a, #1e293b);
-      }
-
-      html.dark .faq-title,
-      html.dark .faq-question {
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      html.dark .faq-answer p {
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      html.dark .faq-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
     </style>
   </BlogTemplate>

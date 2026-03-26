@@ -1,0 +1,350 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/nighttraffic.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/market.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Why do people stare so much in Delhi?",
+        answer: "In most cases, it’s curiosity, not aggression. It comes from different social norms around attention and public space.",
+    },
+    {
+        question: "Is staring in Delhi a sign of danger?",
+        answer: "Usually no. It may feel uncomfortable, but it rarely indicates a threat unless combined with persistent or aggressive behavior.",
+    },
+    {
+        question: "How should I react when people stare?",
+        answer: "Avoid prolonged eye contact, keep moving, and don’t engage unless necessary. Small adjustments reduce discomfort quickly.",
+    },
+    {
+        question: "Why do people ask for photos?",
+        answer: "It’s often curiosity or social media interest. You may be seen as unique or interesting, not targeted negatively.",
+    },
+];
+---
+
+<BaseLayout title="Why People Stare in Delhi | Delhi Concierge">
+    <BlogTemplate
+        title="Why People Stare in Delhi (And What It Actually Means)"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Cultural Decoding", href: "/blog/cultural-decoding" },
+            { label: "Why People Stare" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Understand the city, not just observe it.",
+            description:
+                "Once you decode everyday behavior, situations that feel uncomfortable become easy to handle.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "The Delhi stare feels intense only until you understand it. Once decoded, it becomes background noise—not something you react to.",
+        }}
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={4}
+        nextBlog={{
+            title1: "Common Situations in Delhi That Feel Unsafe (But Aren’t)",
+            description1:
+                "Learn how to interpret everyday situations with clarity.",
+            link1: "/blog/delhi-situations-safety-guide",
+            image1: city,
+            category1: "Cultural",
+            title2: "How to Say No in Delhi (Without Creating Awkward Situations)",
+            description2: "Set boundaries without escalating interactions.",
+            link2: "/blog/how-to-say-no-delhi",
+            image2: metro,
+            category2: "Cultural",
+        }}
+    >
+        <article class="blog-content">
+            <h1>Why People Stare in Delhi</h1>
+
+            <p class="hook">
+                It can feel like you're under a spotlight in Delhi. The staring
+                is direct, sometimes intense, and often longer than expected.
+                For many visitors, this is one of the first moments where the
+                city feels unfamiliar.
+            </p>
+
+            <p class="answer">
+                But in most cases, the “Delhi stare” isn’t a threat—it’s
+                curiosity. What feels uncomfortable at first usually comes from
+                unfamiliar social patterns, not intent. Once you understand that
+                difference, the emotional weight of the moment reduces
+                significantly.
+            </p>
+
+            <h2>The Core Reality</h2>
+
+            <p>
+                What feels uncomfortable is not just the act of being looked at,
+                but the difference in how attention is expressed. In many
+                cultures, eye contact is brief and controlled, while in Delhi it
+                can be more open and unfiltered. This shift alone is enough to
+                make a neutral situation feel intense.
+            </p>
+
+            <p>
+                The moment you enter a new environment, your mind tries to
+                interpret unfamiliar behavior as risk. But in this case, what
+                feels intense is often just a different baseline of normal. Your
+                reaction is based more on contrast than on actual threat.
+            </p>
+
+            <p class="highlight-bar">
+                The stare feels intense—but it’s rarely personal.
+            </p>
+
+            <!-- 1 -->
+
+            <h2>The “Human TV” Effect</h2>
+
+            <p>
+                In many parts of the city, especially outside central zones, you
+                may stand out more than you expect. Your clothing, posture, or
+                even the way you interact with your surroundings can feel
+                different to people observing you. This difference naturally
+                draws attention without any deeper intent.
+            </p>
+
+            <p>
+                In these moments, you become something like a moving point of
+                interest. Not because you’re being judged, but because you’re
+                different from the everyday visual pattern. People are simply
+                reacting to contrast, not evaluating you.
+            </p>
+
+            <p>
+                For many people, this isn’t an interaction—it’s passive
+                observation, similar to how you might notice something
+                unfamiliar in a new place. There’s usually no expectation of
+                engagement or response from you.
+            </p>
+
+            <p class="highlight-bar">
+                You’re not being watched with intent—you’re being noticed out of
+                curiosity.
+            </p>
+
+            <!-- 2 -->
+
+            <h2>Different Concepts of Privacy</h2>
+
+            <p>
+                In a city of this scale, personal space works differently. With
+                millions of people moving through shared environments,
+                observation becomes part of navigation. People rely on visual
+                awareness to function smoothly in dense spaces.
+            </p>
+
+            <p>
+                People look around constantly—to understand movement, avoid
+                collisions, or simply stay aware of what’s happening around
+                them. This creates an environment where attention is more
+                visible and less restrained.
+            </p>
+
+            <p>
+                Because of this, attention is less filtered. A shopkeeper, for
+                example, may look at you for longer simply because you are the
+                most dynamic thing in their line of sight. It’s not intentional
+                focus—it’s situational awareness.
+            </p>
+
+            <p>
+                Stillness often attracts attention, while movement blends into
+                the flow of the city. The more you pause, the more noticeable
+                you become.
+            </p>
+
+            <p class="highlight-bar">
+                In Delhi, attention is part of awareness—not necessarily
+                interaction.
+            </p>
+
+            <!-- 3 -->
+
+            <h2>The “Selfie” Factor</h2>
+
+            <p>
+                In some situations, the staring comes from hesitation. People
+                may be deciding whether to approach you for a photo. This moment
+                of hesitation often looks like prolonged attention.
+            </p>
+
+            <p>
+                This is especially common among younger groups or in areas where
+                visitors are less frequent. You may be seen as interesting,
+                different, or even “social-media worthy.” The intent is usually
+                positive, even if the approach feels awkward.
+            </p>
+
+            <p>
+                The first few times, this can feel friendly or even enjoyable.
+                But when it happens repeatedly, the same interaction can start
+                to feel tiring or intrusive. The emotional shift happens because
+                the novelty wears off.
+            </p>
+
+            <p>
+                What feels like attention is often just repeated curiosity,
+                experienced multiple times in a short span. Each individual
+                interaction is small, but together they can feel overwhelming.
+            </p>
+
+            <p class="highlight-bar">
+                One interaction feels positive—repetition is what creates
+                discomfort.
+            </p>
+
+            <!-- 4 -->
+
+            <h2>Style & Visual Contrast</h2>
+
+            <p>
+                What you wear plays a bigger role than expected. Bright colors,
+                outdoor gear, or unfamiliar styles can stand out immediately in
+                a dense visual environment. Even subtle differences can make you
+                more noticeable than you expect.
+            </p>
+
+            <p>
+                Even small differences—like shoes, accessories, or how you carry
+                yourself—can attract attention when they contrast with what
+                people see every day. These differences create visual breaks in
+                otherwise familiar patterns.
+            </p>
+
+            <p>
+                This attention is rarely about you as a person—it’s about the
+                visual difference you bring into the space. The reaction is to
+                the contrast, not to your identity.
+            </p>
+
+            <p class="highlight-bar">
+                The more you stand out visually, the more attention naturally
+                follows.
+            </p>
+
+            <!-- CONTEXT -->
+
+            <h2>When It’s Actually Not Normal</h2>
+
+            <p>
+                While most staring is harmless, context still matters. The
+                difference is not in the act itself, but in the pattern around
+                it. Observing behavior over time gives better clarity than
+                reacting instantly.
+            </p>
+
+            <p>
+                Situations that deserve attention usually involve persistence or
+                escalation—when attention turns into action, or when behavior
+                becomes directed and repeated. This is where awareness becomes
+                important.
+            </p>
+
+            <ul>
+                <li>Someone consistently following your movement</li>
+                <li>Repeated attempts to approach or stop you</li>
+                <li>Behavior that shifts from observation to interference</li>
+            </ul>
+
+            <p class="highlight-bar">
+                Staring alone is common—patterns are what matter.
+            </p>
+
+            <!-- INSIGHT -->
+
+            <h2>The Real Insight</h2>
+
+            <p class="highlight-bar">
+                The Delhi stare feels uncomfortable because it’s unfamiliar—not
+                because it’s unsafe.
+            </p>
+
+            <p>
+                Once you stop interpreting it as a threat, your reaction
+                changes. You conserve energy, stay calmer, and move through the
+                city with more ease. This shift happens naturally as familiarity
+                increases.
+            </p>
+
+            <p>
+                Over time, something that once felt intense becomes background
+                noise—just another part of how the city operates. And when that
+                happens, the city feels far more manageable than it did at
+                first.
+            </p>
+
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 16px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 16px;
+            }
+
+            .blog-content p + p {
+                margin-top: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

@@ -10,46 +10,38 @@ import six from "../../assets/images/6.png";
 
 /* CATEGORY META */
 const category = "Delhi Survival";
-const description = "Navigate Delhi without overwhelm. Practical, ground-level insights to help you move smarter, stay safe, and feel in control.";
+const description =
+    "Navigate Delhi without overwhelm. Practical, ground-level insights to help you move smarter, stay safe, and feel in control.";
 
 /* MOCK BLOG DATA (replace with your CMS or content collection) */
 const allPosts = [
     {
         title: "How to Avoid Getting Overcharged in Delhi",
-        excerpt: "A practical guide to auto fares, taxi traps, and when to walk away.",
-        href: "/blog/delhi-traffic-guide",
-        image: market
+        excerpt:
+            "A practical guide to auto fares, taxi traps, and when to walk away.",
+        href: "/blog/avoid-getting-overcharged-delhi",
+        image: market,
     },
     {
         title: "Why Delhi Traffic Feels Chaotic (And How to Navigate It)",
         excerpt: "Decode chaos, signals, and unspoken rules of the road.",
         href: "/blog/delhi-traffic-guide",
-        image: traffic
+        image: traffic,
     },
-    {
-        title: "Is Delhi Safe at Night? What Actually Matters",
-        excerpt: "Forget myths. Here’s what truly affects your safety.",
-        href: "/blog/delhi-traffic-guide",
-        image: nighttraffic
-    },
+
     {
         title: "Metro vs Cab vs Auto: What to Use When",
         excerpt: "Make the right call based on time, comfort, and cost.",
-        href: "/blog/delhi-traffic-guide",
-        image: metro
+        href: "/blog/delhi-transport-metro-vs-cab-vs-auto",
+        image: metro,
     },
-    {
-        title: "Tourist Scams in Delhi (And How to Avoid Them)",
-        excerpt: "The most common traps and how to spot them instantly.",
-        href: "/blog/delhi-traffic-guide",
-        image: market2
-    },
+
     {
         title: "How to Talk to Drivers Without Getting Confused",
         excerpt: "Language hacks and confidence tricks that work.",
-        href: "/blog/delhi-traffic-guide",
-        image: six
-    }
+        href: "/blog/how-to-talk-to-drivers-delhi",
+        image: six,
+    },
 ];
 
 /* PAGINATION LOGIC */
@@ -60,7 +52,7 @@ const totalPages = Math.ceil(allPosts.length / postsPerPage);
 
 const posts = allPosts.slice(
     (currentPage - 1) * postsPerPage,
-    currentPage * postsPerPage
+    currentPage * postsPerPage,
 );
 ---
 
@@ -71,9 +63,10 @@ const posts = allPosts.slice(
     posts={posts}
     currentPage={1}
     totalPages={3}
+    baseUrl="/blog/delhi-survival"
     breadcrumb={[
         { label: "Home", href: "/" },
         { label: "Blog", href: "/blog" },
-        { label: "Delhi Survival" }
+        { label: "Delhi Survival" },
     ]}
 />

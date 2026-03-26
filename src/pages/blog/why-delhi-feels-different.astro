@@ -1,0 +1,319 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/market.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/traffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Why does Delhi feel so different from other cities?",
+        answer: "Delhi combines multiple cultures, histories, and behaviors in one place, which creates a layered and dynamic experience.",
+    },
+    {
+        question: "Is Delhi culturally diverse?",
+        answer: "Yes, Delhi is one of the most culturally diverse cities in India, with communities from across the country living together.",
+    },
+    {
+        question: "Why do people seem more expressive in Delhi?",
+        answer: "The city’s history and migration patterns have shaped a more energetic, direct, and expressive communication style.",
+    },
+    {
+        question: "Can I experience different cultures within Delhi?",
+        answer: "Yes, different neighborhoods reflect different parts of India, from food to language to lifestyle.",
+    },
+];
+---
+
+<BaseLayout title="Why Delhi Feels So Different | Delhi Concierge">
+    <BlogTemplate
+        title="Why Delhi Feels So Different: A City of Many Cultures"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Cultural Decoding", href: "/blog/cultural-decoding" },
+            { label: "Why Delhi Feels Different" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Understand the city beyond the surface.",
+            description:
+                "Delhi makes more sense when you understand the patterns behind what you see.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "Delhi doesn’t feel different because it’s chaotic—it feels different because it contains many worlds at once.",
+        }}
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "Common Situations in Delhi That Feel Unsafe (But Aren’t)",
+            description1:
+                "Learn how to interpret everyday situations with clarity instead of anxiety.",
+            link1: "/blog/delhi-situations-safety-guide",
+            image1: city,
+            category1: "Cultural",
+            title2: "Why People Stare in Delhi (And What It Actually Means)",
+            description2:
+                "Decode one of the most misunderstood behaviors in the city.",
+            link2: "/blog/why-people-stare-delhi",
+            image2: metro,
+            category2: "Cultural",
+        }}
+    >
+        <article class="blog-content">
+            <h1>Why Delhi Feels So Different</h1>
+
+            <p class="hook">
+                Delhi often feels overwhelming at first—not just because of the
+                noise or the crowds, but because everything seems to operate
+                differently at once. It’s not just a change in environment—it’s
+                a shift in how space, behavior, and interaction all come
+                together.
+            </p>
+
+            <p class="answer">
+                The city doesn’t follow a single pattern. It feels different
+                because it’s not one culture, one pace, or one identity—it’s
+                many, layered together. What you experience here is a constant
+                overlap of worlds that don’t fully blend, but still function
+                side by side.
+            </p>
+
+            <h2>A Cultural Crossroads</h2>
+
+            <p>
+                Across the Indian subcontinent, there are hundreds of cultures,
+                languages, and traditions—each with its own way of living,
+                communicating, and expressing identity. As the capital, Delhi
+                becomes the point where all of them intersect.
+            </p>
+
+            <p>
+                People from different regions bring their habits, food,
+                language, and social norms with them. Instead of merging into
+                one uniform culture, these identities continue to exist
+                alongside each other.
+            </p>
+
+            <p>
+                This creates an environment where the “rules” are not fixed.
+                What feels normal in one area may shift completely just a few
+                kilometers away.
+            </p>
+
+            <p class="highlight-bar">
+                Delhi feels different because it contains multiple cultural
+                logics at the same time.
+            </p>
+
+            <h2>The Social Energy</h2>
+
+            <p>
+                People in Delhi are often expressive, direct, and socially
+                active. Conversations happen quickly, reactions are visible, and
+                interactions feel immediate rather than reserved.
+            </p>
+
+            <p>
+                For someone new, this can feel intense or even overwhelming,
+                especially when compared to more restrained social environments.
+            </p>
+
+            <p>
+                At the same time, there is a strong tendency to make outsiders
+                feel comfortable. Locals may approach, help, or engage more
+                openly than expected—sometimes even with an overexcited
+                curiosity.
+            </p>
+
+            <p>
+                This mix of intensity and openness creates a unique dynamic
+                where interactions feel both energetic and welcoming at the same
+                time.
+            </p>
+
+            <p class="highlight-bar">
+                What feels overwhelming is often just openness expressed without
+                filters.
+            </p>
+
+            <h2>Layers of History</h2>
+
+            <p>
+                Delhi is not built on a single timeline. It has been the capital
+                of multiple empires, each leaving behind its own architecture,
+                culture, and worldview.
+            </p>
+
+            <p>
+                You might walk past a centuries-old Sufi shrine, a Mughal-era
+                monument, and a British colonial boulevard within the same
+                stretch of the city.
+            </p>
+
+            <p>
+                These layers don’t sit separately—they exist together, creating
+                a city that feels historically dense and globally influenced at
+                the same time.
+            </p>
+
+            <p>
+                This overlap of eras gives Delhi a sense of depth that can feel
+                unfamiliar, especially if you’re used to cities with a more
+                linear history.
+            </p>
+
+            <p class="highlight-bar">
+                Delhi feels global because its history is layered, not linear.
+            </p>
+
+            <h2>The Energy of Migration</h2>
+
+            <p>
+                Modern Delhi has been shaped heavily by migration, especially
+                after the Partition of 1947, when millions arrived and rebuilt
+                their lives from nothing.
+            </p>
+
+            <p>
+                This history created a culture rooted in resilience,
+                adaptability, and a strong drive to move forward.
+            </p>
+
+            <p>
+                Over time, this translated into a city that feels ambitious,
+                fast-moving, and sometimes larger-than-life in its energy.
+            </p>
+
+            <p>
+                What may feel aggressive on the surface is often just
+                urgency—people navigating opportunities, challenges, and daily
+                life with momentum.
+            </p>
+
+            <p class="highlight-bar">
+                The city’s intensity comes from a history of rebuilding and
+                constant movement.
+            </p>
+
+            <h2>A Patchwork of “Mini-Indias”</h2>
+
+            <p>
+                Delhi isn’t just diverse—it’s segmented into cultural pockets
+                that reflect different parts of the country.
+            </p>
+
+            <p>
+                Entire neighborhoods carry distinct identities, from Tibetan
+                influences in Majnu ka Tilla to Bengali culture in CR Park, and
+                Northeast communities in areas like Safdarjung.
+            </p>
+
+            <p>
+                Each space has its own rhythm, language, and way of interaction,
+                creating the feeling of moving between different worlds without
+                leaving the city.
+            </p>
+
+            <p>
+                This constant shift in environment is one of the reasons Delhi
+                feels unpredictable at first—but also why it becomes fascinating
+                over time.
+            </p>
+
+            <p class="highlight-bar">
+                In Delhi, you don’t just explore one culture—you move across
+                many in a single day.
+            </p>
+
+            <h2>The Real Insight</h2>
+
+            <p class="highlight-bar">
+                Delhi feels different because it’s not designed to be
+                uniform—it’s designed to hold complexity.
+            </p>
+
+            <p>
+                Once you stop expecting consistency, the city starts making
+                sense. What felt chaotic begins to feel layered and
+                interconnected.
+            </p>
+
+            <p>
+                Over time, your perspective shifts—from trying to simplify the
+                city to understanding how its complexity actually works.
+            </p>
+
+            <p>
+                And when that shift happens, Delhi doesn’t feel overwhelming
+                anymore—it feels alive, dynamic, and deeply human.
+            </p>
+
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 16px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 16px;
+            }
+
+            .blog-content p + p {
+                margin-top: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

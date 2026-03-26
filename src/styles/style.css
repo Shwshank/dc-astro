@@ -31,6 +31,7 @@ Optimized version (no features removed)
   --radius-sm:12px;
 
   --ease:cubic-bezier(.22,.61,.36,1);
+  --container-width: 820px;
 }
 
 /* ================= DARK MODE ================= */
@@ -779,3 +780,60 @@ body.dark .success-body{
         0 8px 30px rgba(0,0,0,0.12),
         inset 0 1px 0 rgba(255,255,255,0.08);
 }
+
+.scroll-top {
+  position: fixed;
+  bottom: 90px;
+  right: 18px;
+
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 24px;
+
+  /* 🌿 Light neon green gradient */
+
+
+  font-size: 18px;
+  font-weight: 600;
+
+
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+
+  transition: all 0.25s ease;
+  border-radius: 25%;
+  color: gray !important;
+}
+
+/* visible */
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* hover */
+.scroll-top:hover {
+  transform: translateY(-2px) scale(1.05);
+
+}
+
+/* tap */
+.scroll-top:active {
+  transform: scale(0.96);
+}
+@media (min-width: 1024px) {
+  .scroll-top {
+    right: calc((90vw - var(--container-width, 820px)) / 2 - 10px);
+  }
+}
+

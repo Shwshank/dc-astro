@@ -1,19 +1,20 @@
 ---
 const { currentPage, totalPages, baseUrl } = Astro.props;
 
-const getPageUrl = (page:any) => {
-    return page === 1 ? baseUrl : `${baseUrl}/page/${page}`;
+const getPageUrl = (page: any) => {
+  if (page <= 1) return baseUrl;
+  return `${baseUrl}/page/${page}`;
 };
 ---
 
 <div class="pagination-container">
 
     <!-- PREV -->
-    {currentPage > 1 && (
-        <a href={getPageUrl(currentPage - 1)} class="nav-btn glass">
-            ←
-        </a>
-    )}
+{currentPage > 1 && (
+  <a href={getPageUrl(currentPage - 1)} class="nav-btn glass">
+    ←
+  </a>
+)}
 
     <!-- NUMBERS -->
     <div class="page-numbers">
@@ -31,12 +32,12 @@ const getPageUrl = (page:any) => {
         })}
     </div>
 
-    <!-- NEXT -->
-    {currentPage < totalPages && (
-        <a href={getPageUrl(currentPage + 1)} class="nav-btn glass">
-            →
-        </a>
-    )}
+<!-- NEXT -->
+{currentPage < totalPages && (
+  <a href={getPageUrl(currentPage + 1)} class="nav-btn glass">
+    →
+  </a>
+)}
 
 </div>
 

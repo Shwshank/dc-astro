@@ -1,0 +1,333 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+// IMAGES (replace later if needed)
+import hero from "../../assets/images/nighttraffic.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/traffic.jpg";
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Is Delhi safe at night for tourists?",
+        answer: "Yes, Delhi is generally safe at night for tourists, especially in well-lit and active areas like Connaught Place, Aerocity, and South Delhi. The key is to stay in populated zones and use reliable transport.",
+    },
+    {
+        question: "Is it safe for women to travel alone at night in Delhi?",
+        answer: "Many women travel safely at night in Delhi by following simple precautions—staying in active areas, using app-based transport, and sharing their location with someone. Awareness and planning make a significant difference.",
+    },
+    {
+        question: "Which areas should be avoided in Delhi at night?",
+        answer: "Areas that become empty or poorly lit late at night, such as narrow lanes in Old Delhi or parts of Paharganj, can feel uncomfortable. It’s better to stick to main roads and active neighborhoods.",
+    },
+    {
+        question: "Is Delhi Metro safe at night?",
+        answer: "Yes, the Delhi Metro is one of the safest ways to travel, with security checks, CCTV, and dedicated women-only coaches. Just be mindful of last train timings, which are usually around 11 PM.",
+    },
+    {
+        question: "What is the safest way to travel in Delhi at night?",
+        answer: "App-based rides like Uber, Ola, or BluSmart are the safest options at night. They provide tracking, verified drivers, and route visibility, making travel more predictable and secure.",
+    },
+    {
+        question: "What should I do if I feel unsafe at night in Delhi?",
+        answer: "Move to a busier, well-lit area and use a reliable transport service. If needed, you can contact the Delhi Tourist Police at +91 8750871111 for assistance.",
+    },
+];
+---
+
+<BaseLayout title="Is Delhi Safe at Night? | Delhi Concierge">
+    <BlogTemplate
+        title="Is Delhi Safe at Night? What Actually Matters"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Safety", href: "/blog/safety-scams" },
+            { label: "Delhi Night Safety" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Move through Delhi with confidence.",
+            description:
+                "Delhi Concierge helps you understand the city so you don’t have to second guess every decision.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "Delhi at night isn’t unsafe—it’s situational. Once you understand the patterns, it becomes easy to navigate.",
+        }}
+        date="March 24, 2026"
+        author="Shaw"
+        readTimeInMinutes={4}
+        nextBlog={{
+            title1: "How to Avoid Getting Overcharged in Delhi",
+            description1:
+                "Simple habits that help you avoid overpaying and move with clarity.",
+            link1: "/blog/pricing/avoid-getting-overcharged-delhi",
+            image1: city,
+            category1: "Pricing",
+            title2: "Why Delhi Traffic Feels Chaotic",
+            description2:
+                "Understand the system behind the chaos and move smarter.",
+            link2: "/blog/transport/delhi-traffic-guide",
+            image2: metro,
+            category2: "Transport",
+        }}
+    >
+        <article class="blog-content">
+            <h1>Is Delhi Safe at Night?</h1>
+
+            <p class="hook">
+                The question most people ask before stepping out at night in
+                Delhi is simple—“Is it safe?”
+            </p>
+
+            <p class="answer">
+                Yes, modern Delhi is largely safe at night—especially in active
+                and well-connected areas. The key is understanding where to be,
+                how to move, and what locals already do instinctively.
+            </p>
+
+            <h2>How the City Changes After Dark</h2>
+
+            <p>Delhi doesn’t shut down at night—but it does change.</p>
+
+            <p>
+                The same city that feels busy during the day becomes quieter and
+                more spread out. Some areas stay active, while others empty out
+                quickly.
+            </p>
+
+            <p class="highlight-bar">
+                Safety in Delhi at night isn’t about the time—it’s about the
+                location.
+            </p>
+
+            <p>
+                One street can feel completely safe, while the next feels empty.
+                Locals understand this difference and naturally adjust where
+                they go.
+            </p>
+
+            <h2>A Common Local Habit</h2>
+
+            <p>
+                In Delhi, especially among women, it’s common to inform someone
+                before heading out at night or while commuting back home.
+            </p>
+
+            <p>It’s not about fear—it’s about awareness.</p>
+
+            <p class="highlight-bar">
+                A simple “I’m on my way” message adds a layer of confidence.
+            </p>
+
+            <p>
+                It’s a small habit, but it makes moving around at night feel
+                more connected and secure. If you want a broader understanding
+                of how safety works across the city, you can explore the
+                <a href="/safety">Delhi safety guide</a> for a complete breakdown.
+            </p>
+
+            <h2>1. Stay Within Active Areas</h2>
+
+            <p>
+                The easiest way to stay comfortable at night is to stay where
+                there are people.
+            </p>
+
+            <p>
+                Areas like Connaught Place, Khan Market, Aerocity, and parts of
+                South Delhi remain active, well-lit, and monitored.
+            </p>
+
+            <p>
+                On the other hand, places like Paharganj or Old Delhi can become
+                quiet after 9 PM, especially inside smaller lanes.
+            </p>
+
+            <p class="highlight-bar">
+                If a place feels empty, it’s better to move to a busier street.
+            </p>
+
+            <h2>2. Use Reliable Transport</h2>
+
+            <p>How you travel at night matters more than anything else.</p>
+
+            <p>
+                Avoid random taxis or autos. Instead, use apps like Uber, Ola,
+                or BluSmart.
+            </p>
+
+            <p>These give you:</p>
+
+            <ul>
+                <li>GPS tracking</li>
+                <li>driver details</li>
+                <li>ride sharing options</li>
+            </ul>
+
+            <p class="highlight-bar">
+                A tracked ride is always safer than an unknown one.
+            </p>
+
+            <p>
+                Before getting in, verify the number plate. Many people also
+                share their live location—it’s a normal habit. If you're also
+                trying to avoid unnecessary charges during rides or late-night
+                travel, this
+                <a href="/blog/avoid-getting-overcharged-delhi"
+                    >guide on avoiding overcharging in Delhi</a
+                > can help you move with more clarity.
+            </p>
+
+            <h2>Metro at Night</h2>
+
+            <p>The Delhi Metro is safe, clean, and well-monitored.</p>
+
+            <p>It even has women-only coaches for added comfort.</p>
+
+            <p>However, most lines stop around 11 PM.</p>
+
+            <p class="highlight-bar">
+                Always plan your ride before exiting the station late at night.
+            </p>
+
+            <h2>3. Follow Local Timing</h2>
+
+            <p>Delhi has a natural night rhythm.</p>
+
+            <p>
+                Most people head home around 10:30–11 PM unless they’re in
+                nightlife zones.
+            </p>
+
+            <p>
+                If you’re out late, stay in active venues and step out only when
+                your ride arrives.
+            </p>
+
+            <p class="highlight-bar">
+                Timing your movement reduces unnecessary exposure.
+            </p>
+
+            <h2>Blending In Helps</h2>
+
+            <p>
+                Delhi is modern, but dressing slightly conservatively at night
+                can reduce unwanted attention.
+            </p>
+
+            <p>
+                Many women carry a scarf (dupatta) as a flexible option if
+                needed.
+            </p>
+
+            <p>It’s not mandatory—just a practical local habit.</p>
+            <h2>What Changes After a Few Nights</h2>
+
+            <p>
+                The first night in Delhi often feels slightly unfamiliar. You
+                notice things more—the lighting, the movement, the silence in
+                certain streets, the activity in others. There’s a constant
+                layer of observation happening in your mind, trying to
+                understand what’s normal and what’s not. But this phase doesn’t
+                last long.
+            </p>
+
+            <p>
+                After a few nights, you begin to recognize patterns without
+                thinking about them. You instinctively choose better routes,
+                prefer certain areas, and feel more comfortable making quick
+                decisions. What initially felt uncertain starts to feel
+                structured, and your attention shifts from “Is this safe?” to
+                “This feels fine.”
+            </p>
+
+            <p class="highlight-bar">
+                Familiarity changes the experience more than anything else.
+            </p>
+
+            <p>
+                And once that familiarity sets in, the city doesn’t feel
+                restrictive—it feels navigable.
+            </p>
+            <h2>The Real Insight</h2>
+
+            <p class="highlight-bar">
+                Delhi at night isn’t unsafe—it’s situational. Once you
+                understand the pattern, it becomes easy to navigate.
+            </p>
+
+            <p>
+                The city has systems, people, and awareness working in your
+                favor.
+            </p>
+
+            <p>
+                And once you understand how it works, you stop worrying—and
+                start moving with confidence.
+            </p>
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 14px;
+                margin: 14px 0;
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 4px;
+                height: calc(100% - 8px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.65;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 10px;
+            }
+
+            .blog-content h2 {
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 18px;
+            }
+
+            .blog-content h3 {
+                font-size: 17px;
+                font-weight: 600;
+                margin-top: 12px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+            .blog-content strong {
+                color: var(--text-primary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

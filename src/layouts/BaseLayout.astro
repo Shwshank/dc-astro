@@ -101,9 +101,40 @@ const { title } = Astro.props;
 
         <script type="module" src="/scripts/script.js"></script>
         <script>
-  window.addEventListener("pageshow", () => {
-    document.body.classList.remove("page-leave");
-  });
-</script>
+            window.addEventListener("pageshow", () => {
+                document.body.classList.remove("page-leave");
+            });
+
+            // Go on top button
+            window.addEventListener("load", () => {
+                if ((window as any).__scrollTopInitialized) return;
+                (window as any).__scrollTopInitialized = true;
+               
+
+                const btn = document.querySelector(".scroll-top") as HTMLElement | null;
+                if (!btn) return;
+                function toggleVisibility() {
+                    if (window.scrollY > 200) {
+                        btn && btn.classList.add("visible");
+                    } else {
+                        btn && btn.classList.remove("visible");
+                    }
+                }
+
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }
+
+                window.addEventListener("scroll", toggleVisibility);
+                btn.addEventListener("click", scrollToTop);
+
+                toggleVisibility(); // run once
+            });
+        </script>
+
+        <button class="btn scroll-top" aria-label="Go to top"> ▲ </button>
     </body>
 </html>

@@ -1,0 +1,359 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/metro.png";
+import park from "../../assets/images/market.jpg";
+import city from "../../assets/images/nighttraffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Is yoga commonly practiced in Delhi?",
+        answer: "Yes, yoga is a regular part of daily life for many people, practiced in schools, parks, and community spaces.",
+    },
+    {
+        question: "Can tourists join yoga sessions in parks?",
+        answer: "In most cases, yes. Public yoga groups are informal and welcoming, and visitors are often invited to join.",
+    },
+    {
+        question: "Are there professional yoga studios in Delhi?",
+        answer: "Yes, Delhi has a mix of traditional centers and modern studios catering to different styles and preferences.",
+    },
+    {
+        question: "Is Rishikesh close to Delhi?",
+        answer: "Yes, Rishikesh is a short trip away and is globally known as the yoga capital of the world.",
+    },
+];
+---
+
+<BaseLayout title="Yoga in Delhi | Delhi Concierge">
+    <BlogTemplate
+        title="Yoga in Delhi: More Than Just a Practice"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Cultural Decoding", href: "/blog/cultural-decoding" },
+            { label: "Yoga in Delhi" },
+        ]}
+        gallery={[park, city]}
+        cta={{
+            title: "Slow down within the chaos.",
+            description:
+                "In a fast-moving city, small rituals like yoga create moments of clarity and balance.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "In Delhi, yoga isn’t something you schedule—it’s something you grow into as part of everyday life.",
+        }}
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "Why Delhi Feels So Different: A City of Many Cultures",
+            description1:
+                "Understand how multiple cultures shape the city’s rhythm.",
+            link1: "/blog/why-delhi-feels-different",
+            image1: city,
+            category1: "Cultural",
+            title2: "Food in Delhi: A Cultural Experience, Not Just a Meal",
+            description2: "Explore how food reflects the city’s diversity.",
+            link2: "/blog/delhi-food-culture-guide",
+            image2: park,
+            category2: "Cultural",
+        }}
+    >
+        <article class="blog-content">
+            <h1>Yoga in Delhi: More Than Just a Practice</h1>
+
+            <p class="hook">
+                In a city defined by movement, noise, and constant stimulation,
+                yoga exists as a quiet counterbalance—something that slows
+                everything down without removing you from it.
+            </p>
+
+            <p class="answer">
+                In Delhi, yoga isn’t something separate from life. It’s
+                something that runs alongside it—absorbing stress, restoring
+                rhythm, and creating moments of stillness within the chaos.
+            </p>
+
+            <h2>A Practice You Grow Into</h2>
+
+            <p>
+                Yoga in India isn’t introduced as a trend or a lifestyle
+                upgrade—it’s introduced early, often during school years, where
+                children practice basic postures and breathing exercises as part
+                of their routine.
+            </p>
+
+            <p>
+                This early exposure removes the idea of yoga being something
+                “extra.” Instead, it becomes familiar—something people return to
+                naturally at different stages of life.
+            </p>
+
+            <p>
+                As adults, many continue practicing in informal ways—joining
+                neighborhood groups, attending community sessions, or simply
+                incorporating small routines into their mornings.
+            </p>
+
+            <p>
+                This continuity creates a culture where yoga feels less like a
+                scheduled activity and more like a habit that adapts with you
+                over time.
+            </p>
+
+            <p class="highlight-bar">
+                Yoga in Delhi is not something you start—it’s something you
+                return to.
+            </p>
+
+            <h2>The Morning Rhythm of the City</h2>
+
+            <p>
+                Early mornings in Delhi reveal a different version of the city.
+                Before traffic builds and noise takes over, parks and open
+                spaces become calm, structured environments.
+            </p>
+
+            <p>
+                Locations like Lodhi Garden or Nehru Park act as the city’s
+                “green lungs,” where groups gather quietly and begin their
+                practice as the day starts to unfold.
+            </p>
+
+            <p>
+                You’ll find a wide range of people—elderly groups practicing
+                slow movements, laughter yoga circles releasing energy, and
+                individuals sitting in stillness.
+            </p>
+
+            <p>
+                The atmosphere is not instructional or rigid. It feels natural,
+                almost like the city collectively taking a breath before the day
+                accelerates.
+            </p>
+
+            <p>
+                For a visitor, this moment often provides the first sense of
+                calm within an otherwise intense environment.
+            </p>
+
+            <p class="highlight-bar">
+                The city may feel chaotic—but its mornings are quietly
+                structured.
+            </p>
+
+            <h2>Open, Shared, and Accessible</h2>
+
+            <p>
+                Unlike many places where wellness is tied to private memberships
+                or structured programs, yoga in Delhi often exists in shared
+                public spaces.
+            </p>
+
+            <p>
+                Community groups gather in parks, on open grounds, or within
+                residential areas, practicing together without formal barriers.
+            </p>
+
+            <p>
+                These spaces are typically open, and if you show interest,
+                you’re often welcomed without hesitation.
+            </p>
+
+            <p>
+                This openness reflects a broader cultural pattern—wellness is
+                not something exclusive, but something that can be shared.
+            </p>
+
+            <p>
+                For many visitors, this accessibility feels unexpected,
+                especially in a city that otherwise feels fast and
+                transactional.
+            </p>
+
+            <p class="highlight-bar">
+                Yoga here is not gated—it’s part of the public rhythm.
+            </p>
+
+            <h2>Tradition and Modern Practice</h2>
+
+            <p>
+                Delhi’s yoga landscape exists across a spectrum. On one end are
+                traditional centers that focus on philosophy, discipline, and a
+                deeper understanding of the practice.
+            </p>
+
+            <p>
+                These spaces often include chanting, breathing techniques, and
+                lifestyle elements that go beyond physical movement.
+            </p>
+
+            <p>
+                On the other end are modern studios, offering structured classes
+                aligned with global fitness standards—air-conditioned spaces,
+                guided sessions, and more physically intense routines.
+            </p>
+
+            <p>
+                This duality allows the practice to adapt to different
+                intentions—whether someone is looking for physical activity,
+                mental clarity, or a deeper connection.
+            </p>
+
+            <p>
+                Instead of replacing tradition, modern formats exist alongside
+                it, creating multiple entry points into the same practice.
+            </p>
+
+            <p class="highlight-bar">
+                Yoga in Delhi adapts to you—it doesn’t expect you to adapt to
+                it.
+            </p>
+
+            <h2>Yoga as a Reset Within the City</h2>
+
+            <p>
+                In a city that constantly demands attention, movement, and
+                decision-making, yoga acts as a reset point—a way to step out of
+                that cycle without leaving the environment.
+            </p>
+
+            <p>
+                It creates a pause where sensory overload reduces, even if just
+                for a short period.
+            </p>
+
+            <p>
+                This is why the practice feels different here—it’s not just
+                about flexibility or fitness, but about restoring balance in a
+                high-intensity setting.
+            </p>
+
+            <p>
+                It’s common for sessions to extend into small social
+                rituals—fresh juice stalls, quiet conversations, or simply
+                sitting in the same space a little longer.
+            </p>
+
+            <p>
+                These moments reinforce the idea that yoga is not just a
+                practice, but a transition into a calmer state of mind.
+            </p>
+
+            <p class="highlight-bar">
+                Yoga in Delhi is less about performance—and more about recovery.
+            </p>
+
+            <h2>Beyond the City: Rishikesh</h2>
+
+            <p>
+                A few hours from Delhi lies Rishikesh, widely known as the yoga
+                capital of the world.
+            </p>
+
+            <p>
+                Many people extend their journey to experience a deeper, more
+                immersive version of the practice in a quieter, nature-focused
+                environment.
+            </p>
+
+            <p>
+                The contrast between Delhi and Rishikesh highlights the full
+                spectrum of yoga—from urban integration to spiritual retreat.
+            </p>
+
+            <p>
+                This proximity makes it possible to experience
+                both—understanding yoga as part of daily life, and also as a
+                dedicated, immersive practice.
+            </p>
+
+            <p class="highlight-bar">
+                Delhi introduces the rhythm—Rishikesh deepens the experience.
+            </p>
+
+            <h2>The Real Insight</h2>
+
+            <p class="highlight-bar">
+                Yoga in Delhi exists because the city needs balance—and people
+                have built it into their routine.
+            </p>
+
+            <p>
+                It’s not separate from the chaos—it’s a response to it. A way to
+                stay grounded while everything else keeps moving.
+            </p>
+
+            <p>
+                And over time, what begins as an observation often becomes
+                something you start seeking out yourself.
+            </p>
+
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 16px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 16px;
+            }
+
+            .blog-content p + p {
+                margin-top: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

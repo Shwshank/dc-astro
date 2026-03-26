@@ -1,0 +1,73 @@
+---
+import BlogCategoryTemplate from "../../components/BlogCategoryTemplate.astro";
+
+import heroImage from "../../assets/images/traffic.jpg";
+import market from "../../assets/images/market.jpg";
+import traffic from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import night from "../../assets/images/nighttraffic.jpg";
+
+/* CATEGORY META */
+const category = "Concierge Insights";
+
+const description =
+    "Practical, high-signal guidance to help you make better decisions in Delhi—where to go, what to choose, and how to navigate without second-guessing.";
+
+/* BLOG DATA */
+const allPosts = [
+    {
+        title: "How a Concierge Thinks: Designing Your Day Without Overwhelm",
+        excerpt:
+            "We don’t plan more—we plan better. See how your day is structured to reduce fatigue and maximize clarity.",
+        href: "/blog/how-a-concierge-thinks-delhi",
+        image: traffic,
+    },
+    {
+        title: "Situational Judgment: What We Notice That Most Travelers Miss",
+        excerpt:
+            "From subtle discomfort to shifting environments—how real-time decisions are made before problems appear.",
+        href: "/blog/situational-judgment-delhi",
+        image: night,
+    },
+    {
+        title: "Behind the Scenes: How We Personalize Every Experience",
+        excerpt:
+            "Preferences, allergies, pace, and personality—how small details shape a seamless and thoughtful journey.",
+        href: "/blog/personalized-concierge-experience",
+        image: market,
+    },
+    {
+        title: "How We Introduce You to Delhi (Without Overloading You)",
+        excerpt:
+            "A calm, guided entry into a complex city—how we balance exposure, pace, and comfort from the very beginning.",
+        href: "/blog/introducing-delhi-with-clarity",
+        image: traffic,
+    },
+];
+
+/* PAGINATION */
+const postsPerPage = 6;
+const currentPage = 1;
+
+const totalPages = Math.ceil(allPosts.length / postsPerPage);
+
+const posts = allPosts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage,
+);
+---
+
+<BlogCategoryTemplate
+    heroImage={heroImage}
+    category="Concierge Insights"
+    description="Make better decisions in Delhi with clarity. Practical insights on where to go, what to choose, and how to move without confusion."
+    posts={posts}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl="/blog/concierge-insights"
+    breadcrumb={[
+        { label: "Home", href: "/" },
+        { label: "Blog", href: "/blog" },
+        { label: "Concierge Insights" },
+    ]}
+/>

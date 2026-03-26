@@ -1,0 +1,80 @@
+---
+import BlogCategoryTemplate from "../../components/BlogCategoryTemplate.astro";
+
+import heroImage from "../../assets/images/market.jpg";
+import market from "../../assets/images/market.jpg";
+import traffic from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import night from "../../assets/images/nighttraffic.jpg";
+
+/* CATEGORY META */
+const category = "Cultural Decoding";
+
+const description =
+    "Understand how Delhi actually works. Decode everyday behaviors, social patterns, and unspoken rules so you can navigate the city with clarity.";
+
+/* BLOG DATA */
+const allPosts = [
+    {
+        title: "Common Situations in Delhi That Feel Unsafe (But Aren’t)",
+        excerpt:
+            "From staring to crowded spaces—what’s normal, what’s not, and how to respond calmly.",
+        href: "/blog/delhi-situations-safety-guide",
+        image: market,
+    },
+    {
+        title: "Why People Stare in Delhi (And What It Actually Means)",
+        excerpt:
+            "Decode one of the most misunderstood behaviors and learn how to respond without discomfort.",
+        href: "/blog/why-people-stare-delhi",
+        image: night,
+    },
+    {
+        title: "Why Delhi Feels So Different: A City of Many Cultures",
+        excerpt:
+            "From languages to food to daily behavior—Delhi is a cultural mix where different worlds overlap and function together.",
+        href: "/blog/why-delhi-feels-different",
+        image: market,
+    },
+    {
+        title: "Yoga in Delhi: More Than Just a Practice",
+        excerpt:
+            "From early morning parks to structured studios—understand how yoga fits into everyday life and how you can experience it meaningfully.",
+        href: "/blog/yoga-in-delhi-guide",
+        image: metro,
+    },
+    {
+        title: "Food in Delhi: A Cultural Experience, Not Just a Meal",
+        excerpt:
+            "From street food to regional cuisines—explore how food reflects Delhi’s diversity and how to navigate it with confidence.",
+        href: "/blog/delhi-food-culture-guide",
+        image: market,
+    },
+];
+
+/* PAGINATION */
+const postsPerPage = 6;
+const currentPage = 1;
+
+const totalPages = Math.ceil(allPosts.length / postsPerPage);
+
+const posts = allPosts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage,
+);
+---
+
+<BlogCategoryTemplate
+    heroImage={heroImage}
+    category="Cultural Decoding"
+    description="Decode everyday behavior, reduce confusion, and move through Delhi with clarity instead of hesitation."
+    posts={posts}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl="/blog/cultural-decoding"
+    breadcrumb={[
+        { label: "Home", href: "/" },
+        { label: "Blog", href: "/blog" },
+        { label: "Cultural Decoding" },
+    ]}
+/>

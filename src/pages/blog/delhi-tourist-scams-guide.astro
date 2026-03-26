@@ -1,0 +1,338 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+// IMAGES (replace later if needed)
+import hero from "../../assets/images/market-2.webp";
+import street from "../../assets/images/traffic.jpg";
+import auto from "../../assets/images/3.png";
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question:
+            "Is it safe to exchange currency with people offering better rates on the street?",
+        answer: "No. Street currency exchange is illegal and often a scam involving fake notes or incorrect calculations. Always use authorized exchange counters, banks, or airport kiosks.",
+    },
+    {
+        question:
+            "Why do some people ask for donations for temples, schools, or charities on the street?",
+        answer: "Many of these are not legitimate. Scammers may show fake documents or emotional stories to pressure you. It’s best to donate only through verified organizations or official channels.",
+    },
+    {
+        question:
+            "What is the 'fake police officer' scam and how should I respond?",
+        answer: "In rare cases, scammers impersonate police and try to intimidate tourists into paying fines. Real police will always show proper ID. Stay calm, ask for identification, and avoid handing over money on the spot.",
+    },
+    {
+        question: "Are QR code payments always safe in Delhi?",
+        answer: "UPI is widely used and generally safe, but scammers may show fake payment confirmations or request you to scan malicious QR codes. Always verify that money has been received in your own app before leaving.",
+    },
+];
+---
+
+<BaseLayout title="Common Tourist Scams in Delhi | Delhi Concierge">
+    <BlogTemplate
+        title="Common Tourist Scams in Delhi (And How to Avoid Them)"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Safety", href: "/blog/safety-scams" },
+            { label: "Tourist Scams in Delhi" },
+        ]}
+        gallery={[street, auto]}
+        cta={{
+            title: "Move through Delhi with confidence.",
+            description:
+                "Understand how the city works so you don’t have to second guess every interaction.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "Most situations in Delhi aren’t scams—they’re just unfamiliar. Once you recognize the patterns, you move with ease.",
+        }}
+        date="March 24, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "Is Delhi Safe at Night?",
+            description1:
+                "Understand how safety works across different areas of the city.",
+            link1: "/blog/safety/delhi-night-safety",
+            image1: street,
+            category1: "Safety",
+            title2: "How to Avoid Getting Overcharged in Delhi",
+            description2:
+                "Simple habits that help you avoid overpaying in everyday situations.",
+            link2: "/blog/pricing/avoid-getting-overcharged-delhi",
+            image2: auto,
+            category2: "Pricing",
+        }}
+    >
+        <article class="blog-content">
+            <h2>Why Tourist Scams Feel So Convincing</h2>
+
+            <p>
+                Most people don’t expect to deal with scams when they arrive in
+                a new city, especially in the first few hours. In Delhi, the
+                confusion doesn’t come from danger—it comes from situations that
+                feel believable in the moment, especially when you’re still
+                figuring things out.
+            </p>
+
+            <p>
+                Someone speaks confidently, offers help, or creates urgency.
+                They might sound official, informed, or even genuinely helpful.
+                And because you don’t yet know what’s normal and what isn’t, it
+                becomes harder to question what’s being said.
+            </p>
+
+            <p class="highlight-bar">
+                These situations don’t rely on force—they rely on timing,
+                confidence, and unfamiliarity.
+            </p>
+
+            <p>
+                Once you understand this pattern, everything starts to shift.
+                What initially feels confusing becomes easier to read, and you
+                naturally start trusting your own judgment instead of reacting
+                to pressure.
+            </p>
+
+            <!-- SCAM 1 -->
+
+            <h2>1. The “Closed Hotel / Road Block” Situation</h2>
+
+            <p>
+                This usually happens right after arrival—at the airport or New
+                Delhi Railway Station—when you’re still settling in and more
+                likely to rely on guidance. A driver might casually inform you
+                that your hotel is closed, the road is blocked, or there’s been
+                some unexpected issue.
+            </p>
+
+            <p>
+                The explanation often sounds detailed enough to feel real. They
+                may mention a protest, a festival, or even claim they just spoke
+                to your hotel. Immediately after, they offer an
+                alternative—another hotel or a “tourist office” that can help
+                you.
+            </p>
+
+            <p class="highlight-bar">
+                In most cases, nothing is actually wrong—your hotel is open and
+                reachable.
+            </p>
+
+            <p>
+                What makes this work is urgency. You’re encouraged to make a
+                quick decision before verifying anything. A simple check on maps
+                or contacting your hotel directly usually breaks the entire
+                situation.
+            </p>
+
+            <!-- SCAM 2 -->
+
+            <h2>2. The “Official Ticket” Confusion</h2>
+
+            <p>
+                Around railway stations or major monuments, you might come
+                across people who confidently tell you that you need a special
+                ticket, validation, or approval before entering. The tone often
+                feels authoritative, which is why it works.
+            </p>
+
+            <p>
+                They may guide you toward an “official office” nearby, which
+                looks convincing at first glance. In reality, it’s usually just
+                a private shop trying to sell overpriced tours or services.
+            </p>
+
+            <p class="highlight-bar">
+                Official tickets are always issued at official counters or
+                online—not through people outside.
+            </p>
+
+            <p>
+                The simplest way to handle this is to keep moving. Walk directly
+                to the actual entrance or ticket counter and verify things
+                yourself instead of relying on street instructions.
+            </p>
+
+            <!-- SCAM 3 -->
+
+            <h2>3. The “Free Help” That Isn’t Free</h2>
+
+            <p>
+                In busy areas like Connaught Place or Jama Masjid, someone might
+                approach you casually and start a conversation in fluent
+                English. It often begins in a friendly, low-pressure
+                way—directions, small talk, or curiosity about where you’re
+                from.
+            </p>
+
+            <p>
+                Sometimes it turns into an offer—a quick tour, a temple visit,
+                or even a small “gift” like a bracelet or sticker. The
+                interaction feels informal and harmless at first.
+            </p>
+
+            <p class="highlight-bar">
+                What starts casually often leads to expectations later.
+            </p>
+
+            <p>
+                Once you’re engaged, there’s usually pressure to tip, donate, or
+                visit a shop where they earn a commission. The easiest response
+                is to stay polite, say no clearly, and continue walking without
+                getting drawn into a longer conversation.
+            </p>
+
+            <!-- STRUCTURE -->
+
+            <h2>A Simple Way to Handle These Situations</h2>
+
+            <p>
+                Instead of trying to analyze every situation, it helps to follow
+                a few simple patterns that work across most interactions. You
+                don’t need to overthink—just stay consistent in how you respond.
+            </p>
+
+            <ul>
+                <li>
+                    verify information yourself instead of relying on strangers
+                </li>
+                <li>avoid making quick decisions under pressure</li>
+                <li>stick to official counters, apps, or direct sources</li>
+            </ul>
+
+            <p class="highlight-bar">
+                When you slow the situation down, most confusion disappears on
+                its own.
+            </p>
+
+            <p>
+                These small habits don’t require effort, but they remove the
+                uncertainty that these situations depend on.
+            </p>
+
+            <!-- LOCAL BEHAVIOR -->
+
+            <h2>How Locals Naturally Respond</h2>
+
+            <p>
+                Locals don’t try to evaluate every situation—they simply ignore
+                what isn’t relevant and move on. If something feels unnecessary
+                or out of place, they don’t stop to question it, they just
+                continue walking.
+            </p>
+
+            <p>
+                Even when someone insists, the response stays simple. No
+                arguments, no explanations—just a clear “no” and disengagement.
+            </p>
+
+            <p class="highlight-bar">
+                The response is not confrontation—it’s disengagement.
+            </p>
+
+            <p>
+                This works because most of these situations rely on continued
+                interaction. Once that interaction stops, the situation usually
+                ends immediately.
+            </p>
+
+            <!-- CONTEXTUAL LINK -->
+
+            <h2>Understanding the Bigger Pattern</h2>
+
+            <p>
+                Many of these situations overlap with how everyday interactions
+                work in the city—especially when it comes to pricing and quick
+                decisions. The same awareness that helps you here also applies
+                in situations like negotiating fares or identifying when
+                something feels off.
+            </p>
+
+            <p>
+                If you want a clearer understanding of that side of things, this
+                <a href="/blog/avoid-getting-overcharged-delhi">
+                    guide on avoiding overcharging in Delhi
+                </a>
+                connects directly with these patterns and makes them easier to recognize.
+            </p>
+
+            <!-- FINAL -->
+
+            <h2>The Real Insight</h2>
+
+            <p class="highlight-bar">
+                These situations don’t define the city—they just reflect moments
+                of unfamiliarity.
+            </p>
+
+            <p>
+                Once you recognize the patterns, you don’t need to stay alert
+                all the time or question every interaction. You simply move with
+                a bit more awareness and let things play out naturally.
+            </p>
+
+            <p>
+                And when that happens, the experience shifts—from hesitation to
+                clarity—making the city feel far more open, manageable, and easy
+                to navigate.
+            </p>
+
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            /* ========================= */
+            /* SIGNATURE HIGHLIGHT */
+            /* ========================= */
+
+            .highlight-bar {
+                position: relative;
+                padding-left: 14px;
+                margin: 14px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 4px;
+                height: calc(100% - 8px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+
+            .blog-content p {
+                margin: 0;
+            }
+
+            .blog-content > * + * {
+                margin-top: 14px;
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="We help you understand how the city actually works—so every interaction feels easier."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

@@ -1,0 +1,330 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/market.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/traffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Is it normal for people to stare in Delhi?",
+        answer: "Yes. In many cases it’s curiosity, not aggression. It can feel intense, but it’s usually not a threat.",
+    },
+    {
+        question: "Are crowded places like markets or metros unsafe?",
+        answer: "They are dense, not dangerous by default. Keep your belongings secure, but don’t assume bad intent.",
+    },
+    {
+        question: "Why do people argue loudly in public?",
+        answer: "Expressive communication is common. What looks like a fight is often a short-lived disagreement.",
+    },
+    {
+        question: "How do I know if something is actually unsafe?",
+        answer: "Look for escalation—physical pushing, isolation, or persistent targeting. Intensity alone is not a reliable signal.",
+    },
+];
+---
+
+<BaseLayout
+    title="Common Situations in Delhi That Feel Unsafe | Delhi Concierge"
+>
+    <BlogTemplate
+        title="Common Situations in Delhi That Feel Unsafe (But Aren’t)"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Cultural Decoding", href: "/blog/cultural-decoding" },
+            { label: "Situations That Feel Unsafe" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Reduce confusion, not curiosity.",
+            description:
+                "Learn how to read situations in Delhi so you respond with clarity instead of stress.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "In Delhi, intensity is common. The skill is learning when it’s just noise—and when it actually matters.",
+        }}
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "How to Say No in Delhi (Without Creating Awkward Situations)",
+            description1:
+                "Set boundaries clearly without escalating interactions.",
+            link1: "/blog/how-to-say-no-delhi",
+            image1: city,
+            category1: "Cultural",
+            title2: "Is Delhi Safe at Night? What Actually Matters",
+            description2:
+                "Understand what truly affects safety across the city.",
+            link2: "/blog/delhi-night-safety-guide",
+            image2: metro,
+            category2: "Safety",
+        }}
+    >
+        <article class="blog-content">
+            <h2>Situations That Feel Unsafe (But Usually Aren’t)</h2>
+
+            <p>
+                Most discomfort in Delhi doesn’t come from danger—it comes from
+                unfamiliar patterns repeating quickly. The city moves faster,
+                closer, and louder than what many visitors are used to.
+            </p>
+
+            <p>
+                Instead of reacting to every moment, it helps to understand a
+                few common situations deeply. Once you recognize these patterns,
+                what initially feels overwhelming starts to feel predictable.
+            </p>
+
+            <!-- 1 -->
+
+            <h3>1. The “Delhi Stare”</h3>
+
+            <p>
+                You may notice people looking at you—sometimes directly and for
+                longer than expected. For many visitors, this feels intense and
+                personal, especially in quieter moments.
+            </p>
+
+            <p>
+                <strong>The Reality:</strong> In most cases, this is curiosity. If
+                you look different or are clearly a traveler, people may simply be
+                observing—not confronting.
+            </p>
+
+            <p>
+                The discomfort comes from unfamiliar eye-contact norms, not from
+                intent. What feels like pressure is often just attention without
+                social filtering.
+            </p>
+
+            <p class="highlight-bar">
+                Attention feels personal—but it’s often just curiosity.
+            </p>
+
+            <p>
+                <strong>The Move:</strong> Avoid prolonged eye contact, wear sunglasses
+                if needed, and keep moving. If it feels too direct, stepping into
+                a shop or shifting direction resets the interaction immediately.
+            </p>
+
+            <!-- 2 -->
+
+            <h3>2. Crowds & Lack of Personal Space</h3>
+
+            <p>
+                In metros, markets, or especially areas like Old Delhi, people
+                move in extremely tight spaces. You’ll be brushed past, nudged,
+                and surrounded by constant motion.
+            </p>
+
+            <p>
+                In places like Chandni Chowk, it’s common to see bikes, autos,
+                pedestrians, and carts all moving through the same narrow
+                road—sometimes passing so close it feels like they’re brushing
+                shoulders.
+            </p>
+
+            <p>
+                <strong>The Reality:</strong> This is not chaos in the dangerous sense—it’s
+                a high-density flow system. People are used to navigating it instinctively,
+                even when it looks unpredictable from the outside.
+            </p>
+
+            <p>
+                For a first-time visitor, this can feel stressful or even
+                unsafe. But after a few minutes—or a couple of rides—you start
+                understanding the rhythm.
+            </p>
+
+            <p class="highlight-bar">
+                What feels chaotic at first becomes readable once you experience
+                it.
+            </p>
+
+            <p>
+                <strong>The Move:</strong> Keep your bag in front (the “Delhi front-pack”),
+                stay aware, and move with the flow instead of resisting it. Trying
+                to control the environment creates more stress than adapting to it.
+            </p>
+
+            <!-- 3 -->
+
+            <h3>3. Loud Conversations & Arguments</h3>
+
+            <p>
+                You may see people speaking loudly, gesturing, or appearing to
+                argue—especially drivers or groups on the street.
+            </p>
+
+            <p>
+                To an outsider, this can look like a situation about to escalate
+                into something physical.
+            </p>
+
+            <p>
+                <strong>The Reality:</strong> Delhi communication is expressive. What
+                looks like conflict is often just a short disagreement over something
+                small—like directions, pricing, or traffic.
+            </p>
+
+            <p>
+                These interactions are usually brief and resolve quickly, often
+                without any lasting tension.
+            </p>
+
+            <p class="highlight-bar">
+                Volume in Delhi is not always conflict—it’s communication style.
+            </p>
+
+            <p>
+                <strong>The Move:</strong> Don’t stop to observe. Keep walking at
+                a steady pace. If there’s no physical escalation, it’s just part of
+                the environment—not a situation you need to engage with.
+            </p>
+
+            <!-- 4 -->
+
+            <h3>4. Frequent Attention (Talking, Photos, Questions)</h3>
+
+            <p>
+                You may be approached by vendors, people asking questions, or
+                even groups wanting to take photos with you.
+            </p>
+
+            <p>
+                The first few times, this can feel friendly—even enjoyable. It
+                feels like a moment of connection or curiosity.
+            </p>
+
+            <p>
+                But when it happens repeatedly—multiple times in a short span—it
+                can start to feel intrusive or tiring.
+            </p>
+
+            <p>
+                <strong>The Reality:</strong> This comes from curiosity and high social
+                interaction, especially in busy or tourist-heavy areas. It’s not targeted
+                attention—it’s repeated exposure.
+            </p>
+
+            <p>
+                The shift from “this is interesting” to “this is annoying” is
+                very normal—and happens to most travelers.
+            </p>
+
+            <p class="highlight-bar">
+                What feels overwhelming is often just repeated curiosity—not
+                individual intent.
+            </p>
+
+            <p>
+                <strong>The Move:</strong> You’re not obligated to engage. A simple
+                “No” with a neutral expression—or just continuing to walk—is enough.
+                Setting boundaries early prevents small interactions from becoming
+                exhausting.
+            </p>
+
+            <!-- CONTEXT -->
+
+            <h2>How to Read the Difference</h2>
+
+            <p>
+                Instead of reacting to intensity, focus on patterns that
+                indicate real risk.
+            </p>
+
+            <p>
+                Situations that actually matter usually involve persistence,
+                isolation, or escalation—not just noise, crowd density, or
+                repeated interaction.
+            </p>
+
+            <ul>
+                <li>Someone repeatedly targeting or following you</li>
+                <li>Being pulled toward isolated or low-visibility areas</li>
+                <li>
+                    Physical escalation (grabbing, blocking, forcing
+                    interaction)
+                </li>
+            </ul>
+
+            <p class="highlight-bar">
+                Real risk is about behavior patterns—not visual intensity.
+            </p>
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 16px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 16px;
+            }
+
+            .blog-content p + p {
+                margin-top: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content h3 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-top: 20px;
+                margin-bottom: 4px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

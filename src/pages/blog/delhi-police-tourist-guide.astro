@@ -1,0 +1,333 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/nighttraffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "Are police in Delhi trustworthy for tourists?",
+        answer: "Yes, uniformed personnel in Delhi are generally reliable and helpful, especially in public or emergency situations.",
+    },
+    {
+        question: "What should I do if I feel unsafe in Delhi?",
+        answer: "Move toward a uniformed officer, metro station, or any staffed location. These are safe and structured environments.",
+    },
+    {
+        question: "How can I identify real police officers?",
+        answer: "Look for proper uniforms, name badges, and official insignia. Real officers operate in visible, structured environments.",
+    },
+    {
+        question: "Are there women officers available in Delhi?",
+        answer: "Yes, most departments have women personnel to assist female travelers, especially in public spaces and transport hubs.",
+    },
+];
+---
+
+<BaseLayout title="Police & Uniformed Officers in Delhi | Delhi Concierge">
+    <BlogTemplate
+        title="Police & Uniformed Officers in Delhi: What Tourists Should Know"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Safety", href: "/blog/safety-scams" },
+            { label: "Police & Uniforms" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Move through Delhi with clarity.",
+            description:
+                "Understanding how the city works removes hesitation and builds confidence in real situations.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "In Delhi, uniformed presence is not something to fear—it’s a system designed to support you when needed.",
+        }}
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={4}
+        nextBlog={{
+            title1: "Tourist Scams in Delhi (And How to Avoid Them)",
+            description1:
+                "Learn how to identify and avoid common traps across the city.",
+            link1: "/blog/delhi-tourist-scams-guide",
+            image1: city,
+            category1: "Safety",
+            title2: "Where to Stay Safe During Rainstorms & Emergencies",
+            description2:
+                "Understand where to go when situations become unpredictable.",
+            link2: "/blog/delhi-rain-emergency-safety-guide",
+            image2: metro,
+            category2: "Safety",
+        }}
+    >
+        <article class="blog-content">
+            <h1>Police & Uniformed Officers in Delhi</h1>
+
+            <p class="hook">
+                One of the most reassuring things about Delhi is the visible
+                presence of uniformed personnel across the city. But for a
+                first-time visitor, it’s not always clear who is who.
+            </p>
+
+            <p class="answer">
+                Delhi doesn’t rely on just one force—multiple agencies work
+                together. Once you understand how to identify them, these
+                uniforms become anchors of clarity, not confusion.
+            </p>
+
+            <h2>More Than Just Police</h2>
+            <p>
+                In most situations, you’ll notice that these officers are not
+                isolated—they are positioned in visible, active areas. This is
+                intentional. It ensures that help is accessible without needing
+                to search for it.
+            </p>
+
+            <p>
+                If you ever feel unsure, your first instinct should not be to
+                figure everything out alone—but to move toward a visible
+                authority presence.
+            </p>
+
+            <p class="highlight-bar">
+                In Delhi, safety improves the moment you move toward structure.
+            </p>
+            <p>
+                In Delhi, safety isn’t handled by a single department. Police,
+                metro security, traffic units, and other agencies operate
+                together across different environments.
+            </p>
+
+            <p>
+                Each group has a specific role, and you’ll see them positioned
+                exactly where they are most needed—on roads, inside stations,
+                and at public checkpoints.
+            </p>
+
+            <p class="highlight-bar">
+                Uniformed personnel in Delhi are reliable and trustworthy in
+                real situations.
+            </p>
+
+            <p>
+                Most departments also have women personnel available, especially
+                in public areas, to assist female travelers more comfortably.
+            </p>
+
+            <h2>How to Identify the Right Officer</h2>
+
+            <p>
+                Instead of trying to remember names of departments, it’s easier
+                to recognize uniforms visually. Each type has a distinct look
+                and operates in specific environments.
+            </p>
+
+            <h3>1. The “Khaki” – Delhi Police</h3>
+
+            <p>
+                Delhi Police officers wear all-tan/khaki uniforms and are the
+                most visible presence across streets, markets, and public areas.
+            </p>
+
+            <p>
+                They are responsible for general safety, law enforcement, and
+                assisting people in everyday situations.
+            </p>
+            <p>
+                When approaching a Delhi Police officer, keep your explanation
+                simple. You don’t need long stories—just state what happened or
+                what you need.
+            </p>
+
+            <p>
+                For example, saying “I’m not able to find this location” or
+                “This driver is asking for extra money” is enough to start the
+                conversation.
+            </p>
+
+            <p>
+                Most interactions are straightforward, and officers are used to
+                assisting people in everyday situations—not just serious cases.
+            </p>
+
+            <p class="highlight-bar">
+                Look for the red-blue "DP" insignia on the shoulder and a
+                nameplate on the chest.
+            </p>
+
+            <p>
+                If you need directions, want to report a scam, or feel
+                uncomfortable in a public area, these are the officers to
+                approach.
+            </p>
+
+            <h3>2. The “Camo” – CISF (Metro & Airport Security)</h3>
+
+            <p>
+                CISF personnel wear camouflage uniforms and operate inside metro
+                stations and airports. They are highly trained and focused on
+                security within these controlled environments.
+            </p>
+
+            <p>
+                You’ll usually see them near entry gates, scanners, and
+                platforms, maintaining order and monitoring movement.
+            </p>
+            <p>
+                Inside metro stations, if something feels off—even slightly—it’s
+                better to act early rather than wait. CISF personnel are trained
+                for quick response and are used to handling all kinds of
+                situations.
+            </p>
+
+            <p>
+                Even something as simple as feeling lost or confused is enough
+                reason to approach them.
+            </p>
+
+            <p class="highlight-bar">
+                Inside controlled spaces like metro stations, help is always
+                within a few steps.
+            </p>
+            <p class="highlight-bar">
+                They are disciplined, armed, and positioned at key security
+                points.
+            </p>
+
+            <p>
+                If you feel unsafe while inside a station or during transit,
+                they are the most immediate and reliable help available.
+            </p>
+
+            <h3>3. The “White & Blue” – Traffic Police</h3>
+
+            <p>
+                Traffic Police officers wear white shirts with blue trousers and
+                are stationed at intersections, signals, and busy roads.
+            </p>
+
+            <p>
+                Their role is to manage traffic flow, enforce road rules, and
+                handle road-related issues.
+            </p>
+
+            <p class="highlight-bar">
+                They are easy to spot at major junctions and near
+                transport-heavy areas.
+            </p>
+
+            <p>
+                If you’re dealing with a driver issue, overcharging, or a road
+                incident, they are the right people to approach.
+            </p>
+
+            <h2>When to Approach Them</h2>
+
+            <p>
+                You don’t need to wait for an emergency to approach a uniformed
+                officer. Even small uncertainties—like confusion about
+                directions or a situation that feels off—are valid reasons.
+            </p>
+
+            <p>
+                The key is to stay calm, speak clearly, and explain your
+                situation simply.
+            </p>
+
+            <p class="highlight-bar">
+                In Delhi, visible authority is meant to be used—not avoided.
+            </p>
+
+            <h2>The Real Insight</h2>
+
+            <p class="highlight-bar">
+                When you feel uncertain, move toward structure—uniforms,
+                stations, and staffed spaces.
+            </p>
+
+            <p>
+                These environments are designed to reduce confusion and provide
+                clarity. Once you understand this, situations that feel
+                unfamiliar become manageable.
+            </p>
+
+            <p>
+                And that shift—from hesitation to confidence—is what makes
+                navigating Delhi easier.
+            </p>
+
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            .highlight-bar {
+                position: relative;
+                padding-left: 16px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 16px;
+            }
+
+            .blog-content p + p {
+                margin-top: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 32px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content h3 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-top: 20px;
+                margin-bottom: 4px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate Delhi with clarity."
+        text="Understand the city before you experience it."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

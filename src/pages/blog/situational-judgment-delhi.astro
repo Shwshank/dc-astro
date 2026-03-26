@@ -1,0 +1,296 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+import hero from "../../assets/images/traffic.jpg";
+import metro from "../../assets/images/metro.png";
+import city from "../../assets/images/nighttraffic.jpg";
+
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "What is situational judgment in travel?",
+        answer: "It’s the ability to read environments, notice subtle changes, and make small adjustments before problems appear.",
+    },
+    {
+        question: "Why is it important while traveling?",
+        answer: "Because most discomfort comes from unnoticed shifts—crowds, timing, or energy changes. Early awareness prevents overwhelm.",
+    },
+    {
+        question: "Can travelers develop this skill?",
+        answer: "Yes, but it takes experience. A concierge applies this judgment instantly, without you needing to think about it.",
+    },
+    {
+        question: "What does a concierge actually do differently?",
+        answer: "They adjust plans in real time—based on environment, energy, and subtle cues—so your experience stays smooth.",
+    },
+];
+---
+
+<BaseLayout title="Situational Judgment | Concierge Insights">
+    <BlogTemplate
+        title="Situational Judgment: What We Notice That Most Travelers Miss"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Concierge Insights", href: "/blog/concierge-insights" },
+            { label: "Situational Judgment" },
+        ]}
+        gallery={[metro, city]}
+        cta={{
+            title: "Travel with clarity, not constant decisions.",
+            description:
+                "Experience a smoother journey where adjustments happen before you even notice them.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+
+        date="March 25, 2026"
+        author="Shaw"
+        readTimeInMinutes={5}
+        nextBlog={{
+            title1: "How a Concierge Thinks: Designing Your Day Without Overwhelm",
+            description1:
+                "Understand how your day is structured to reduce fatigue and increase clarity.",
+            link1: "/blog/how-a-concierge-thinks-delhi",
+            image1: city,
+            category1: "Concierge",
+            title2: "Behind the Scenes: How We Personalize Every Experience",
+            description2:
+                "See how preferences, pace, and small details shape a seamless journey.",
+            link2: "/blog/personalized-concierge-experience",
+            image2: metro,
+            category2: "Concierge",
+        }}
+    >
+        <article class="blog-content">
+            <h1>
+                Situational Judgment: What We Notice That Most Travelers Miss
+            </h1>
+
+            <p class="hook">
+                Most problems during travel don’t begin as problems.
+            </p>
+
+            <p>
+                They start as small shifts—something feels slightly off, a place
+                feels different than expected, a situation takes longer than it
+                should. These moments are easy to ignore. And most of the time,
+                nothing happens.
+            </p>
+
+            <p>
+                But good travel isn’t about reacting when something goes wrong.
+                It’s about noticing early—before anything needs to be fixed.
+            </p>
+
+            <p class="highlight-bar">
+                We don’t wait for issues. We adjust before they become visible.
+            </p>
+
+            <!-- 1 -->
+            <h2>1. We Read the Environment, Not Just the Plan</h2>
+
+            <p>A plan might look perfect on paper—but environments change.</p>
+
+            <p>
+                Crowds shift. Energy changes. What felt calm an hour ago might
+                feel chaotic now. Most travelers follow the plan. A concierge
+                reads the environment first.
+            </p>
+
+            <p>
+                We observe how a place feels the moment we arrive—pace, density,
+                tone—and adjust accordingly without disrupting your experience.
+            </p>
+
+            <p class="highlight-bar">
+                The plan is a reference. The environment is the reality.
+            </p>
+
+            <!-- 2 -->
+            <h2>2. We Notice Discomfort Before It’s Spoken</h2>
+
+            <p>
+                Discomfort rarely shows up as a clear signal. It appears
+                subtly—slower movement, less engagement, small hesitation. Most
+                people push through it, assuming it’s part of the experience.
+            </p>
+
+            <p>
+                We don’t wait for you to say something is wrong. We notice the
+                shift before it becomes visible.
+            </p>
+
+            <p>
+                And we adjust quietly—changing pace, shifting direction, or
+                introducing a pause—so the moment resets without interruption.
+            </p>
+
+            <p class="highlight-bar">
+                You feel better without needing to ask for it.
+            </p>
+
+            <!-- 3 -->
+            <h2>3. We Manage Transitions, Not Just Destinations</h2>
+
+            <p>
+                Most friction doesn’t come from where you are—it comes from
+                moving between places.
+            </p>
+
+            <p>
+                Transitions carry noise, uncertainty, and small decisions that
+                build mental load. When unmanaged, this creates fatigue—even if
+                each destination is enjoyable.
+            </p>
+
+            <p>
+                We smooth these transitions. Timing, route, pacing—everything is
+                adjusted to feel seamless.
+            </p>
+
+            <p>
+                So instead of noticing the movement, you stay immersed in the
+                experience.
+            </p>
+
+            <p class="highlight-bar">
+                The best transitions are the ones you don’t notice.
+            </p>
+
+            <!-- 4 -->
+            <h2>4. We Adjust Before You Need to React</h2>
+
+            <p>
+                Most people respond to situations after they’ve already changed.
+                A place becomes crowded. A wait becomes longer. A space feels
+                less comfortable.
+            </p>
+
+            <p>By then, the experience has already shifted.</p>
+
+            <p>
+                We work ahead of that curve. Small adjustments—timing,
+                positioning, pacing—are made before friction builds.
+            </p>
+
+            <p>
+                The result is not dramatic. It’s subtle. But it keeps the day
+                feeling smooth and controlled.
+            </p>
+
+            <p class="highlight-bar">
+                Good judgment is quiet. You only notice it by how effortless
+                things feel.
+            </p>
+
+            <!-- FINAL -->
+            <h2>The Real Difference</h2>
+
+            <p>
+                You don’t need to constantly assess every situation while
+                traveling.
+            </p>
+
+            <p>
+                That layer of awareness—reading environments, adjusting in real
+                time, managing small shifts—is what we handle in the background.
+                So instead of thinking about what might go wrong, you stay
+                focused on what’s happening right now.
+            </p>
+
+            <p class="highlight-bar">
+                You experience the moment—while we quietly take care of
+                everything around it.
+            </p>
+        </article>
+
+        <FAQ faqs={faqs} />
+
+        <style>
+            .blog-content {
+                max-width: 720px;
+                margin: 0 auto;
+                font-size: 16.5px;
+                line-height: 1.8;
+                color: var(--text-primary);
+            }
+
+            .blog-content > * + * {
+                margin-top: 18px;
+            }
+
+            .blog-content p + p {
+                margin-top: 10px;
+            }
+
+            .blog-content h1 {
+                font-size: 34px;
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+
+            .blog-content h2 {
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-bottom: 6px;
+            }
+
+            .blog-content p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+
+            .hook {
+                font-size: 18px;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar {
+                position: relative;
+                padding-left: 18px;
+                margin: 22px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: calc(100% - 12px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            @media (max-width: 768px) {
+                .blog-content {
+                    font-size: 15.5px;
+                    line-height: 1.75;
+                }
+
+                .blog-content h1 {
+                    font-size: 28px;
+                }
+
+                .blog-content h2 {
+                    font-size: 20px;
+                }
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Navigate with confidence."
+        text="Let the details be handled, so you can focus on the experience."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>

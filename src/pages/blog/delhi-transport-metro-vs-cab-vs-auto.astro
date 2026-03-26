@@ -1,0 +1,324 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+
+// IMAGES (reuse or adjust later)
+import hero from "../../assets/images/metro.png";
+import auto from "../../assets/images/3.png";
+import cab from "../../assets/images/traffic.jpg";
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+
+const faqs = [
+    {
+        question: "What is the fastest way to travel in Delhi?",
+        answer: "The Metro is usually the fastest option for long distances because it avoids traffic completely. For shorter distances, autos can sometimes be quicker.",
+    },
+    {
+        question: "When should I use a cab in Delhi?",
+        answer: "Cabs are best for late-night travel, airport transfers, or situations where comfort and direct connectivity matter more than speed.",
+    },
+    {
+        question: "Are auto-rickshaws safe and reliable?",
+        answer: "Yes, autos are widely used and reliable for short distances. Using app-based options or checking prices beforehand helps make the experience smoother.",
+    },
+    {
+        question: "Should I use only one mode of transport in Delhi?",
+        answer: "No. The most efficient way to travel is by combining Metro, autos, and cabs depending on the situation.",
+    },
+];
+---
+
+<BaseLayout title="Metro vs Cab vs Auto in Delhi | Delhi Concierge">
+    <BlogTemplate
+        title="Metro vs Cab vs Auto in Delhi: When to Use What"
+        heroImage={hero}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Delhi Survival", href: "/blog/delhi-survival-guide" },
+            { label: "Metro vs Cab vs Auto" },
+        ]}
+        gallery={[hero, auto, cab]}
+        cta={{
+            title: "Move through Delhi with clarity.",
+            description:
+                "Understand when to use each mode of transport and avoid unnecessary delays.",
+            buttonText: "Explore More Guides",
+            link: "/blog",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion:
+                "In Delhi, movement isn’t about choosing one option—it’s about knowing when to switch.",
+        }}
+        date="March 24, 2026"
+        author="Shaw"
+        readTimeInMinutes={4}
+        nextBlog={{
+            title1: "Why Delhi Traffic Feels Chaotic",
+            description1:
+                "Understand the system behind the chaos and move more efficiently.",
+            link1: "/blog/transport/delhi-traffic-guide",
+            image1: cab,
+            category1: "Transport",
+            title2: "How to Avoid Getting Overcharged in Delhi",
+            description2:
+                "Simple habits that help you avoid overpaying and stay in control.",
+            link2: "/blog/pricing/avoid-getting-overcharged-delhi",
+            image2: auto,
+            category2: "Pricing",
+        }}
+    >
+        <article class="blog-content">
+            <h2>How Transport Actually Works in Delhi</h2>
+
+            <p>
+                Moving around Delhi isn’t about picking one mode of transport
+                and sticking to it. The city doesn’t work that way. Distances
+                are long, traffic is unpredictable, and the experience of the
+                same route can change completely depending on the time of day.
+            </p>
+
+            <p>
+                What feels like the obvious choice at one moment can quickly
+                become inefficient the next. A cab might feel convenient until
+                you’re stuck in traffic, while the Metro might feel fast until
+                you realize your destination is still a few kilometers away.
+            </p>
+
+            <p class="highlight-bar">
+                In Delhi, transport works best when you adapt—not when you
+                commit to one option.
+            </p>
+
+            <p>
+                Locals switch constantly between Metro, cabs, and autos
+                depending on the situation. Once you understand when each one
+                works best, getting around the city becomes much smoother.
+            </p>
+
+            <!-- METRO -->
+
+            <h2>The Metro: Your Anti-Traffic System</h2>
+
+            <p>
+                The Delhi Metro is the most predictable way to move across the
+                city. It avoids traffic entirely, follows fixed timings, and
+                connects most major areas efficiently.
+            </p>
+
+            <p>
+                If your journey involves covering longer distances—especially
+                across different parts of Delhi or nearby cities—the Metro
+                almost always saves time. What might take 60–90 minutes by road
+                during peak hours can often be reduced significantly on the
+                train.
+            </p>
+
+            <p class="highlight-bar">
+                If your destination is more than 5–6 km away, the Metro is
+                usually the fastest option.
+            </p>
+
+            <p>
+                It becomes even more valuable during peak hours (8:00–10:30 AM
+                and 5:00–8:30 PM), when road traffic slows down but the Metro
+                continues at the same pace.
+            </p>
+
+            <p>
+                The only limitation is the “last mile.” Most stations are not
+                exactly at your destination, which means you’ll usually need
+                another mode of transport once you exit.
+            </p>
+
+            <!-- CAB -->
+
+            <h2>Cabs: The Comfort Layer</h2>
+
+            <p>
+                Cabs offer something the Metro doesn’t—comfort and direct
+                connectivity. You get picked up from your location and dropped
+                exactly where you need to go, without transitions or walking.
+            </p>
+
+            <p>
+                This makes them ideal in situations where convenience matters
+                more than speed. Late-night travel, airport runs, formal events,
+                or simply avoiding heat and pollution are all scenarios where
+                cabs become the better choice.
+            </p>
+
+            <p class="highlight-bar">
+                When the journey needs to feel easy and controlled, a cab is the
+                better option.
+            </p>
+
+            <p>
+                Services like Uber and BluSmart are widely used, with BluSmart
+                often preferred for reliability and cleaner vehicles. However,
+                pricing can fluctuate depending on demand, especially during
+                rain or rush hours.
+            </p>
+
+            <p>
+                Because of this, it helps to quickly compare prices across apps
+                before booking. That small check can save both time and money.
+            </p>
+
+            <!-- AUTO -->
+
+            <h2>Auto-Rickshaws: The Flexible Gap-Filler</h2>
+
+            <p>
+                Autos sit somewhere in between—they’re not meant for long
+                journeys, but they’re extremely effective for short distances.
+            </p>
+
+            <p>
+                If your destination is within 2–3 km, or if you’re trying to
+                cover the distance between a Metro station and your final stop,
+                autos often become the fastest option.
+            </p>
+
+            <p class="highlight-bar">
+                For short distances, autos move faster than cars stuck in
+                traffic.
+            </p>
+
+            <p>
+                Their biggest advantage is flexibility. They can navigate narrow
+                lanes, take quicker turns, and move through traffic in ways
+                larger vehicles can’t.
+            </p>
+
+            <p>
+                A practical approach many people use is to check the price on
+                apps like Uber Auto or Rapido first. This gives you a reference,
+                which you can either book directly or use while speaking to a
+                street driver.
+            </p>
+
+            <!-- COMBINING -->
+
+            <h2>How Locals Actually Combine These</h2>
+
+            <p>
+                The real efficiency in Delhi doesn’t come from choosing one
+                mode—it comes from combining them.
+            </p>
+
+            <p>
+                A typical journey often looks like this: Metro for the main
+                distance, followed by an auto for the last mile, and a cab only
+                when comfort or timing becomes important.
+            </p>
+
+            <p class="highlight-bar">
+                Each mode solves a different part of the journey.
+            </p>
+
+            <p>
+                Once you start thinking this way, travel decisions become
+                simpler. You’re no longer trying to find the “best”
+                option—you’re just using the right tool at the right time. If
+                you want a clearer system for moving across the city without
+                second guessing, this
+                <a href="/navigate-delhi"> guide to navigating Delhi </a>
+                breaks it down step by step.
+            </p>
+
+            <!-- DECISION FRAME -->
+
+            <h2>A Simple Way to Decide</h2>
+
+            <p>If you’re unsure what to choose, a simple mental check helps.</p>
+
+            <p>Think in terms of distance, time, and comfort:</p>
+
+            <ul>
+                <li>Long distance → Metro</li>
+                <li>Short distance → Auto</li>
+                <li>Comfort or late night → Cab</li>
+            </ul>
+
+            <p class="highlight-bar">
+                You don’t need perfect planning—just a quick sense of what fits
+                the situation.
+            </p>
+
+            <!-- INSIGHT -->
+
+            <h2>The Real Shift</h2>
+
+            <p>
+                At first, transport in Delhi can feel overwhelming because there
+                are too many choices.
+            </p>
+
+            <p>
+                But after a few days, you start noticing patterns. You
+                understand when traffic builds, which routes feel faster, and
+                how different modes behave at different times.
+            </p>
+
+            <p class="highlight-bar">
+                What feels complicated at first becomes intuitive very quickly.
+            </p>
+
+            <p>
+                And once that happens, the city stops feeling difficult to
+                navigate—and starts feeling surprisingly efficient.
+            </p>
+
+            <!-- FAQ -->
+            <FAQ faqs={faqs} />
+        </article>
+
+        <style>
+            /* ========================= */
+            /* SIGNATURE HIGHLIGHT */
+            /* ========================= */
+
+            .highlight-bar {
+                position: relative;
+                padding-left: 14px;
+                margin: 14px 0;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .highlight-bar::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 4px;
+                height: calc(100% - 8px);
+                border-radius: 2px;
+                background: linear-gradient(180deg, #ff8c40, #ff6a2a);
+            }
+
+            .blog-content {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+
+            .blog-content p {
+                margin: 0;
+            }
+
+            .blog-content > * + * {
+                margin-top: 14px;
+            }
+        </style>
+    </BlogTemplate>
+
+    <CTA
+        title="Move through Delhi without confusion."
+        text="We help you understand how the city actually works—so every decision feels easier."
+        buttonText="Explore Services"
+        buttonLink="/services"
+    />
+</BaseLayout>
