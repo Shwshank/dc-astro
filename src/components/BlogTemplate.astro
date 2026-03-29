@@ -8,6 +8,7 @@ const {
     title,
     heroImage,
     breadcrumbs = [],
+    category,
     gallery = [],
     nextPost,
     finalThought,
@@ -22,7 +23,10 @@ const safeAuthorImage = authorImage || defaultAuthor;
 
 <div class="blog">
     <!-- BREADCRUMBS -->
-    {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
+    <div class="breadcrumb-wrapper">
+        {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
+        <span class="category-tag">{category}</span>
+    </div>
 
     <!-- HERO -->
     <section class="hero">
@@ -123,6 +127,30 @@ const safeAuthorImage = authorImage || defaultAuthor;
     /* ========================= */
     /* DISCOVERY SECTION */
     /* ========================= */
+
+    /* Container to push the tag to the right */
+.breadcrumb-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* The Category Tag UI */
+.category-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  
+  /* Matching your existing theme colors from the inspector */
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-soft);
+}
 
     .discovery {
         margin-top: 32px;
@@ -629,4 +657,14 @@ const safeAuthorImage = authorImage || defaultAuthor;
   text-decoration: none;
   color: inherit;
 }
+/* Mobile-only tweak to shift the tag up */
+@media (max-width: 480px) {
+  .category-tag {
+    /* Adjust this pixel value to get the exact desired height */
+    margin-top: -6px !important; 
+    
+    /* Ensure the tag remains vertically centered relative to its text */
+    display: inline-flex;
+    align-items: center;
+  }
 </style>
