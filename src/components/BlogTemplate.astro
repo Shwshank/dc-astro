@@ -19,13 +19,27 @@ const {
     nextBlog,
 } = Astro.props as any;
 const safeAuthorImage = authorImage || defaultAuthor;
+
+const colorMap: Record<string, string> = {
+    transport: "#AF9F1C", 
+    safety: "#EE8E43",    
+    culture: "#B9D417",   
+    concierge: "#8E44AD", 
+    food: "#5CCCFB",      
+};
+
+const baseColor = colorMap[category?.toLowerCase()] || "#808080";
+
+const bgColor = `${baseColor}1F`;
 ---
 
 <div class="blog">
     <!-- BREADCRUMBS -->
     <div class="breadcrumb-wrapper">
         {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
-        <span class="category-tag">{category}</span>
+        <span class="category-tag" style={`background-color: ${bgColor}; color: ${baseColor}; border-color: ${baseColor}33;`} >    
+            {category}
+        </span>
     </div>
 
     <!-- HERO -->
@@ -138,19 +152,7 @@ const safeAuthorImage = authorImage || defaultAuthor;
 }
 
 /* The Category Tag UI */
-.category-tag {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  
-  /* Matching your existing theme colors from the inspector */
-  background-color: var(--bg-card);
-  color: var(--text-primary);
-  border: 1px solid var(--border-soft);
-}
+
 
     .discovery {
         margin-top: 32px;
@@ -657,14 +659,32 @@ const safeAuthorImage = authorImage || defaultAuthor;
   text-decoration: none;
   color: inherit;
 }
-/* Mobile-only tweak to shift the tag up */
-@media (max-width: 480px) {
-  .category-tag {
-    /* Adjust this pixel value to get the exact desired height */
-    margin-top: -6px !important; 
+
+ .category-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     
-    /* Ensure the tag remains vertically centered relative to its text */
+    padding: 4px 12px;
+    border-radius: 999px; /* Pill shape */
+    border: 1px solid; /* Color handled by inline style */
+    
     display: inline-flex;
     align-items: center;
-  }
+    justify-content: center;
+    
+    /* Clean transition if you ever add hover effects */
+    transition: all 0.2s ease;
+}
+
+
+/* Mobile-only tweak to shift the tag up */
+@media (max-width: 480px) {
+    .category-tag {
+        margin-top: -50px !important;
+    }
+}
+
+
 </style>
