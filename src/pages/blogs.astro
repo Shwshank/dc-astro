@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { getCollection } from "astro:content";
+
+// ✅ FETCH GUIDES
+const guides = (await getCollection("blogs"))
+  .filter(g => !g.data.draft)
+  .sort((a:any, b:any) => b.data.pubDate - a.data.pubDate);
+
+---
+
+<BaseLayout title="Guides | Delhi Concierge">
+
+    <!-- KEEP YOUR EXISTING GRID (unchanged if you want) -->
+
+    <section class="section blog-feed">
+        <div class="container feed-container">
+            <h2 class="feed-title">All Guides : {guides.length}</h2>
+
+            <div class="feed-list">
+                {guides.map((guide) => (
+                    <a href={`/blogs/${guide.id}`} class="feed-item">
+                        <div class="feed-left">
+                            <h3 class="feed-group">{guide.data.title}</h3>
+                            <p>{guide.data.description}</p>
+                        </div>
+
+                        <div class="feed-right">
+                            <span>
+                                {guide.data.category ?? "Blog"}
+                            </span>
+
+                            <span>
+                                {guide.data.readingTime
+                                  ? `${guide.data.readingTime} min`
+                                  : ""}
+                            </span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <CTA />
+
+</BaseLayout>

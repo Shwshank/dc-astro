@@ -8,7 +8,12 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/mdx": "^5.0.2",
     "@astrojs/sitemap": "^3.7.1",
-    "astro": "^6.0.7"
+    "astro": "^6.0.7",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

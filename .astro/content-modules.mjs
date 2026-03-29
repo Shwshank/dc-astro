@@ -1,1 +1,23 @@
-export default new Map();
+
+export default new Map([
+["src/content/blogs/common-tourist-scams-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fcommon-tourist-scams-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/delhi-metro-vs-cab-vs-auto.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fdelhi-metro-vs-cab-vs-auto.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/delhi-night-safety-guide.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fdelhi-night-safety-guide.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/delhi-rain-emergency-safety-guide.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fdelhi-rain-emergency-safety-guide.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/delhi-situations-that-feel-unsafe.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fdelhi-situations-that-feel-unsafe.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/delhi-street-food-safety-guide.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fdelhi-street-food-safety-guide.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/delhi-traffic-survival-guide.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fdelhi-traffic-survival-guide.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/food-in-delhi-cultural-experience.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Ffood-in-delhi-cultural-experience.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/how-a-concierge-thinks.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fhow-a-concierge-thinks.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/how-to-avoid-getting-overcharged-in-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fhow-to-avoid-getting-overcharged-in-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/introducing-delhi-with-clarity.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fintroducing-delhi-with-clarity.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/personalizing-every-experience.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fpersonalizing-every-experience.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/police-uniformed-officers-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fpolice-uniformed-officers-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/situational-judgment-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fsituational-judgment-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/talking-to-drivers-in-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Ftalking-to-drivers-in-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/test-blog.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Ftest-blog.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/why-delhi-feels-different.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fwhy-delhi-feels-different.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/why-people-stare-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fwhy-people-stare-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blogs/yoga-in-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblogs%2Fyoga-in-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/guides/avoid-getting-overcharged-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fguides%2Favoid-getting-overcharged-delhi.mdx&astroContentModuleFlag=true")]]);
+		

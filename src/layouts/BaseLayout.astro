@@ -6,6 +6,8 @@ import SuccessModal from "../components/SuccessModal.astro";
 import heroImage from "../assets/images/delhi_hero.webp";
 
 const { title } = Astro.props;
+const { seoDescription } = Astro.props;
+const { seoTitle } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,8 +19,8 @@ const { title } = Astro.props;
         <title>{title}</title>
 
         <meta
-            name="description"
-            content="Personal help for travellers and expats arriving in Delhi. Orientation sessions, safe exploration and settling-in support across Delhi NCR."
+            name={seoTitle}
+            content={ seoDescription }
         />
 
         <meta name="robots" content="index, follow" />

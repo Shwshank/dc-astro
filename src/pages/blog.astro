@@ -1,6 +1,59 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import { getCollection } from "astro:content";
+
+const guides = (await getCollection("blogs"))
+    .filter((g) => !g.data.draft)
+    .sort((a: any, b: any) => b.data.pubDate - a.data.pubDate);
+
+const categories = [
+    {
+        key: "transport",
+        title: "Delhi Transport Guide",
+        description:
+            "Practical knowledge for navigating everyday life in Delhi — transportation, useful apps, payments, neighbourhoods, and avoiding common mistakes.",
+        meta: "Transport • SIM cards • Local apps",
+        icon: "circle",
+    },
+    {
+        key: "safety",
+        title: "Safety & Scam Awareness",
+        description:
+            "Learn how common scams work, where travelers get misled, and how to navigate situations confidently.",
+        meta: "Taxi scams • Fake guides • Tourist traps",
+        icon: "diamond",
+    },
+    {
+        key: "culture",
+        title: "Food & Cultural Decoding",
+        description:
+            "Understand food, etiquette, and cultural signals that visitors often misunderstand.",
+        meta: "Etiquette • Food • Cultural habits",
+        icon: "double-circle",
+    },
+    {
+        key: "concierge",
+        title: "Concierge Insights",
+        description:
+            "Behind-the-scenes insights from working as a concierge in Delhi.",
+        meta: "Real experiences • Travel insights • Local strategies",
+        icon: "curve",
+    },
+];
+
+const guidesByCategory = categories.reduce(
+    (acc, cat) => {
+        acc[cat.key] = guides.filter((g) => g.data.category === cat.key);
+        return acc;
+    },
+    {} as Record<string, typeof guides>,
+);
+
+const uniqueCategories = [
+    "all",
+    ...Array.from(new Set(guides.map((g) => g.data.category))),
+];
 ---
 
 <BaseLayout title="Blog | Delhi Concierge">
@@ -8,365 +61,382 @@ import CTA from "../components/CTA.astro";
 
     <!-- BLOG CATEGORIES -->
 
+    <section class="blog-feed">
+        <div class="feed-wrapper">
+            <div class="feed-header">
+                <h2 class="feed-title">All Blogs ({guides.length})</h2>
+
+                <select id="categoryFilter" class="category-dropdown">
+                    {
+                        uniqueCategories.map((cat: any) => (
+                            <option value={cat}>
+                                {cat === "all"
+                                    ? "All"
+                                    : cat.charAt(0).toUpperCase() +
+                                      cat.slice(1)}
+                            </option>
+                        ))
+                    }
+                </select>
+            </div>
+
+            <!-- LIST -->
+            <div class="feed-list" id="guideList">
+                {
+                    guides.map((guide) => (
+                        <a
+                            href={`/blogs/${guide.id}`}
+                            class="feed-item"
+                            data-category={guide.data.category}
+                        >
+                            <div class="feed-left">
+                                <h3>{guide.data.title}</h3>
+                                <p>
+    {guide.data.description}
+    {guide.data.readingTime && (
+        <>
+            {" "}
+            • <span style="color:var(--accent-blue)" > <b> {guide.data.readingTime} min </b> </span>
+        </>
+    )}
+</p>
+                                
+                            </div>
+
+                            <div class="feed-right">
+                                <span>
+                                    {guide.data.category
+                                        .charAt(0)
+                                        .toUpperCase() +
+                                        guide.data.category.slice(1)}
+                                </span>
+
+                            </div>
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
     <section class="section">
         <div class="container">
             <h2 class="blog-title">Browse by Topic</h2>
 
             <div class="blog-grid">
-                <!-- CARD 1 -->
+                {
+                    categories.map((cat) => (
+                        <a href={`#${cat.key}`} class={`blog-card ${cat.key}`}>
+                            <svg class="card-art" viewBox="0 0 200 200">
+                                {cat.icon === "circle" && (
+                                    <circle cx="100" cy="100" r="80" />
+                                )}
+                                {cat.icon === "diamond" && (
+                                    <path d="M20 100 L100 20 L180 100 L100 180 Z" />
+                                )}
+                                {cat.icon === "double-circle" && (
+                                    <>
+                                        <circle cx="60" cy="100" r="30" />
+                                        <circle cx="140" cy="100" r="30" />
+                                    </>
+                                )}
+                                {cat.icon === "curve" && (
+                                    <path d="M40 160 Q100 40 160 160" />
+                                )}
+                            </svg>
 
-                <a href="/blog/delhi-survival-guide" class="blog-card survival">
-                    <svg class="card-art" viewBox="0 0 200 200">
-                        <circle cx="100" cy="100" r="80"></circle>
-                    </svg>
+                            <h3>{cat.title}</h3>
+                            <p>{cat.description}</p>
 
-                    <h3>Delhi Survival Guide</h3>
-
-                    <p>
-                        Practical knowledge for navigating everyday life in
-                        Delhi — transportation, useful apps, payments,
-                        neighbourhoods, and avoiding the most common mistakes
-                        newcomers make.
-                    </p>
-
-                    <span class="meta">
-                        Transport • SIM cards • Local apps
-                    </span>
-
-                    <span class="read"> Read guides → </span>
-                </a>
-
-                <!-- CARD 2 -->
-
-                <a href="/blog/safety-scams" class="blog-card safety">
-                    <svg class="card-art" viewBox="0 0 200 200">
-                        <path d="M20 100 L100 20 L180 100 L100 180 Z"></path>
-                    </svg>
-
-                    <h3>Safety & Scam Awareness</h3>
-
-                    <p>
-                        Delhi is vibrant but can overwhelm first-time visitors.
-                        Learn how common scams work, where travelers get misled,
-                        and how to navigate situations confidently.
-                    </p>
-
-                    <span class="meta">
-                        Taxi scams • Fake guides • Tourist traps
-                    </span>
-
-                    <span class="read"> Read guides → </span>
-                </a>
-
-                <!-- CARD 3 -->
-
-                <a href="/blog/cultural-decoding" class="blog-card culture">
-                    <svg class="card-art" viewBox="0 0 200 200">
-                        <circle cx="60" cy="100" r="30"></circle>
-                        <circle cx="140" cy="100" r="30"></circle>
-                    </svg>
-
-                    <h3>Cultural Decoding</h3>
-
-                    <p>
-                        India can feel culturally complex. These articles
-                        explain everyday behaviors, social expectations, and
-                        cultural signals visitors often misunderstand.
-                    </p>
-
-                    <span class="meta">
-                        Etiquette • Food • Cultural habits 
-                    </span>
-
-                    <span class="read"> Read guides → </span>
-                </a>
-
-                <!-- CARD 4 -->
-
-                <a href="/blog/concierge-insights" class="blog-card concierge">
-                    <svg class="card-art" viewBox="0 0 200 200">
-                        <path d="M40 160 Q100 40 160 160"></path>
-                    </svg>
-
-                    <h3>Concierge Insights</h3>
-
-                    <p>
-                        Behind-the-scenes insights from working as a concierge
-                        in Delhi — patterns we see with travelers, common
-                        problems, and how experienced locals solve them.
-                    </p>
-
-                    <span class="meta">
-                        Real experiences • Travel insights • Local strategies
-                    </span>
-
-                    <span class="read"> Read guides → </span>
-                </a>
+                            <span class="meta">{cat.meta}</span>
+                            <span class="read">
+                                {guidesByCategory[cat.key].length} Blogs →
+                            </span>
+                        </a>
+                    ))
+                }
             </div>
         </div>
     </section>
 
-    <section class="section blog-feed">
-        <div class="container feed-container">
-            <h2 class="feed-title">All Articles : 10</h2>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filter = document.getElementById(
+                "categoryFilter",
+            ) as HTMLSelectElement | null;
+            const items = document.querySelectorAll<HTMLElement>(
+                "#guideList .feed-item",
+            );
+            const title = document.querySelector(
+                ".feed-title",
+            ) as HTMLElement | null;
 
-            <div class="feed-list">
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3  class="feed-group">Understanding Delhi Traffic Flow</h3>
-                        <p>
-                            How movement works across different parts of the
-                            city
-                        </p>
-                    </div>
+            if (!filter || !title) return;
 
-                    <div class="feed-right">
-                        <span>Transport</span>
-                        <span>5 min</span>
-                    </div>
-                </a>
+            const safeFilter = filter;
+            const safeTitle = title;
 
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3  class="feed-group">Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
+            function updateList() {
+                const value = safeFilter.value;
+                let visibleCount = 0;
 
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
+                items.forEach((item) => {
+                    const category = item.dataset.category;
 
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3>Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
+                    if (value === "all" || category === value) {
+                        item.style.display = "flex";
+                        visibleCount++;
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
 
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
+                safeTitle.innerText =
+                    value === "all"
+                        ? `All Blogs (${visibleCount})`
+                        : `Blog ${value.charAt(0).toUpperCase() + value.slice(1)} (${visibleCount})`;
+            }
 
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3>Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
-
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
-
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3>Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
-
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
-
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3>Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
-
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
-
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3>Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
-
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
-
-                <a href="#" class="feed-item">
-                    <div class="feed-left">
-                        <h3>Common Tourist Scams in Delhi</h3>
-                        <p>How to recognise and avoid common situations</p>
-                    </div>
-
-                    <div class="feed-right">
-                        <span>Safety</span>
-                        <span>6 min</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- REUSE EXISTING CTA COMPONENT -->
-
+            safeFilter.addEventListener("change", updateList);
+            updateList();
+        });
+    </script>
     <CTA />
-
     <style>
-        /* BLOG GRID */
-        /* section */
+        /* ================= ROOT ================= */
 
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.6); /* ⬅️ FIXED */
+            --glass-border: rgba(0, 0, 0, 0.06);
+            --glass-soft: rgba(255, 255, 255, 0.5); /* ⬅️ FIXED */
+            --glass-hover: rgba(255, 255, 255, 0.7);
+        }
 
-        .feed-group {
-  margin-top: 32px;
-  margin-bottom: 10px;
-
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-
-  color: var(--text-muted);
-}
-
-
-        .feed-container {
-  max-width: 760px;   /* KEY FIX */
-}
-
+        /* ================= BLOG FEED ================= */
 
         .blog-feed {
             padding-top: 30px;
+            margin-bottom: 70px;
         }
 
-        /* title */
+        /* ================= FEED WRAPPER ================= */
+
+        .feed-wrapper {
+            position: relative;
+            isolation: isolate; /* 🔥 fixes glow bleed */
+
+            max-width: 820px;
+            margin: 0 auto;
+
+            padding: 28px 28px 18px;
+            border-radius: 24px;
+
+            background: var(--glass-bg);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid var(--glass-border);
+
+            box-shadow:
+                0 30px 60px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+            overflow: hidden;
+        }
+
+        /* 🔥 SAFE glow */
+        .feed-wrapper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(92, 204, 251, 0.2),
+                    transparent 60%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(255, 140, 64, 0.2),
+                    transparent 60%
+                );
+
+            z-index: -1;
+        }
+
+        /* ================= HEADER ================= */
+
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
         .feed-title {
             font-size: 24px;
-            margin-bottom: 24px;
+            font-weight: 500;
+            color: var(--text-primary);
         }
 
-        /* list */
-.feed-list {
-  display: flex;
-  flex-direction: column;
-  max-height: 520px;   /* 👈 adjust as needed */
-  overflow-y: auto;
+        /* ================= DROPDOWN ================= */
 
-  padding-right: 8px;  /* space for scrollbar */
-}
-.feed-list::-webkit-scrollbar {
-  width: 6px;
-}
+        .category-dropdown {
+            padding: 8px 14px;
+            border-radius: 12px;
 
-.feed-list::-webkit-scrollbar-track {
-  background: transparent;
-}
+            border: 1px solid var(--glass-border);
+            background: var(--glass-soft);
 
-.feed-list::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.2);
-  border-radius: 10px;
-}
+            color: var(--text-primary);
+            font-size: 14px;
 
-.feed-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(0,0,0,0.35);
-}
-
-
-/* item */
-.feed-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-
-  padding: 18px 16px;
-  border-radius: 10px;
-
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.feed-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.feed-item:nth-child(even) {
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,0.04),
-    rgba(0,0,0,0.01)
-  );
-}
-
-        /* left content */
-.feed-left h3 {
-  font-size: 19px;
-  margin-bottom: 6px;
-
-  font-weight: 500;
-  letter-spacing: -0.2px;
-
-  color: var(--text-primary);
-}
-
-/* REMOVE random blue/purple links */
-.feed-item h3 {
-  color: inherit;
-}
-
-.feed-item:hover h3 {
-  color: #ff8c40;
-}
-
-.feed-left p {
-  font-size: 14.5px;
-  color: var(--text-secondary);
-}
-
-        /* right meta */
-
-        /* left */
-.feed-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* right */
-.feed-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* center vertically */
-  align-items: flex-end;
-
-  min-width: 70px;
-}
-
-.feed-right {
-  text-align: right;
-
-  font-size: 11px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-
-  color: var(--text-muted);
-
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-
-  min-width: 70px;
-}
-
-        /* subtle interaction */
-        .feed-item:hover h3 {
-            color: #ff8c40;
+            cursor: pointer;
         }
+
+        /* ================= LIST ================= */
+
+        .feed-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            max-height: 520px; /* slightly more space */
+            overflow-y: auto;
+
+            padding-right: 6px;
+            padding-bottom: 4px;
+        }
+
+        /* SCROLLBAR */
+
+        .feed-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .feed-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+        }
+
+        /* ================= ITEM ================= */
+
+        .feed-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+
+            padding: 14px 14px;
+            border-radius: 14px;
+
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        /* EVEN */
+        .feed-item:nth-child(even) {
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        /* ODD */
+        .feed-item:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        .feed-item:hover {
+            transform: translateX(4px);
+
+            background: rgba(255, 255, 255, 0.5);
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        /* ================= LEFT ================= */
+
+        .feed-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feed-left h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .feed-left p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* ================= RIGHT TAG ================= */
+
+        .feed-right {
+            display: flex;
+            align-items: center;
+
+            font-size: 10px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            padding: 6px 12px;
+            border-radius: 999px;
+
+            background: rgba(0, 0, 0, 0.04); /* FIXED */
+            border: 1px solid rgba(0, 0, 0, 0.08);
+
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        body.dark .feed-item:nth-child(even) {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        body.dark .feed-item:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        body.dark .feed-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark .feed-right {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .feed-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .feed-list::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        body.dark .feed-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ================= BLOG GRID ================= */
+
+        .blog-title {
+            margin-bottom: 28px;
+            font-size: 26px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 26px;
+        }
+
+        /* ================= BLOG CARD ================= */
+
         .blog-grid {
             display: grid;
             grid-template-columns: 1fr;

@@ -1,0 +1,124 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogTemplate from "../../components/BlogTemplate.astro";
+import CTA from "../../components/CTA.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/images/*.{jpeg,jpg,png,gif,webp}",
+);
+
+const blogFallbackImageName = "delhi_hero";
+
+export async function getStaticPaths() {
+    const blogs = await getCollection("blogs");
+    return blogs.map((entry) => ({
+        params: { id: entry.id },
+        props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const heroImagePath = Object.entries(images).find(([path]) => {
+    const fileName = path.split("/").pop()?.split(".")[0].toLowerCase();
+    return fileName === entry.data.heroImage?.toLowerCase();
+});
+
+const imageMap = images;
+
+// 1. Reusable helper function
+const resolveImage = async (imageName: string | undefined) => {
+    if (!imageName) return null;
+
+    const entries = Object.entries(images);
+
+    // Helper to find a match based on filename
+    const findMatch = (name: string) =>
+        entries.find(([path]) => {
+            const fileName = path.split("/").pop()?.split(".")[0].toLowerCase();
+            return fileName === name.toLowerCase();
+        });
+
+    let match = findMatch(imageName);
+
+    // Fallback logic if the primary image isn't found
+    if (!match && blogFallbackImageName) {
+        console.warn(
+            `⚠️ Image "${imageName}" not found, using fallback "${blogFallbackImageName}"`,
+        );
+        match = findMatch(blogFallbackImageName);
+    }
+
+    return match ? (await match[1]()).default : null;
+};
+
+const heroImageResolved = await resolveImage(entry.data.heroImage);
+
+const galleryImageResolved = await Promise.all(
+    (entry.data.gallery ?? []).map((img: any) => resolveImage(img)),
+).then((arr) => arr.filter(Boolean));
+
+const nextBlogImageResolved = entry.data.nextBlog?.image1
+    ? await resolveImage(entry.data.nextBlog.image1)
+    : undefined;
+
+const nextBlogImage2Resolved = entry.data.nextBlog?.image2
+    ? await resolveImage(entry.data.nextBlog.image2)
+    : undefined;
+
+const nextBlogData = entry.data.nextBlog;
+---
+
+<BaseLayout 
+title={entry.data.title} 
+seoTitle = {entry.data.seoTitle}
+seoDescription = {entry.data.seoDescription}
+>
+    <BlogTemplate
+        title={entry.data.title}
+        heroImage={heroImageResolved}
+        gallery={galleryImageResolved}
+        breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: entry.data.title },
+        ]}
+        date={entry.data.pubDate.toDateString()}
+        author={entry.data.author}
+        readTimeInMinutes={5}
+        cta={{
+            title: "Move smarter, not harder.",
+            description:
+                "Delhi Concierge helps you navigate pricing, movement, and decisions with clarity.",
+            buttonText: "Explore Delhi Mindfull",
+            link: "/services",
+        }}
+        finalThought={{
+            title: "Final Thought",
+            unbiased_opinion: entry.data.finalThought_unbiased_opinion,
+        }}
+        nextBlog={nextBlogData
+            ? {
+                  title1: nextBlogData.title1,
+                  description1: nextBlogData.description1,
+                  link1: nextBlogData.link1,
+                  image1: nextBlogImageResolved,
+                  category1: nextBlogData.category1,
+                  title2: nextBlogData.title2,
+                  description2: nextBlogData.description2,
+                  link2: nextBlogData.link2,
+                  image2: nextBlogImage2Resolved,
+                  category2: nextBlogData.category2,
+              }
+            : undefined}
+    >
+        <!-- 🔥 THIS IS THE MAGIC -->
+        <article class="blog-content">
+            <Content />
+        </article>
+    </BlogTemplate>
+
+    <CTA />
+</BaseLayout>

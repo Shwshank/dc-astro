@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const noteEntries = await getCollection('notes');
+  return noteEntries.map(entry => ({
+    // Use 'id' here to match the filename [id].astro
+    params: { id: entry.id }, 
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title}>
+  <article class="prose lg:prose-xl mx-auto py-10">
+    <h1>{entry.data.title}</h1>
+    <p class="text-gray-500">{entry.data.pubDate.toDateString()}</p>
+    <hr class="my-4" />
+    <Content />
+  </article>
+</BaseLayout>

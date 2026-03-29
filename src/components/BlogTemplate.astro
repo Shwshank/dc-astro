@@ -44,7 +44,7 @@ const safeAuthorImage = authorImage || defaultAuthor;
                 <div class="post-meta">
                     <div class="author">
                         <Image src={safeAuthorImage} alt={author} />
-                        <span>{author}</span>
+                        <a href="/about" <span> {author} </span> </a>
                     </div>
 
                     <div class="meta-secondary">
@@ -62,7 +62,7 @@ const safeAuthorImage = authorImage || defaultAuthor;
 
     <slot />
     {
-        finalThought && <div class="final-box">
+        (finalThought && finalThought.unbiased_opinion) && <div class="final-box">
         <p class="final-title">
             {finalThought.title}
         </p>
@@ -81,12 +81,12 @@ const safeAuthorImage = authorImage || defaultAuthor;
     
 
     <!-- DISCOVERY -->
-    <section class="discovery">
+    {(nextBlog && nextBlog.title1) &&<section class="discovery">
         <h3 class="discovery-title">Continue exploring</h3>
 
         <div class="discovery-grid">
             <!-- CARD 1 -->
-            <a href="/blog/delhi-metro-guide" class="discovery-card">
+            {(nextBlog && nextBlog.title1) && nextBlog && <a href={nextBlog.link1} class="discovery-card">
                 <div class="discovery-img">
                     <Image src={nextBlog.image1} alt={nextBlog.title1} />
                 </div>
@@ -98,10 +98,11 @@ const safeAuthorImage = authorImage || defaultAuthor;
                         {nextBlog.description1}
                     </p>
                 </div>
-            </a>
+            </a>}
 
             <!-- CARD 2 -->
-            <a href="/blog/delhi-scams" class="discovery-card">
+             {console.log(nextBlog)}
+            {(nextBlog && nextBlog.title2) && <a href={nextBlog.link2} class="discovery-card">
                 <div class="discovery-img">
                     <Image src={nextBlog.image2} alt={nextBlog.title2} />
                 </div>
@@ -113,9 +114,9 @@ const safeAuthorImage = authorImage || defaultAuthor;
                         {nextBlog.description2}
                     </p>
                 </div>
-            </a>
+            </a>}
         </div>
-    </section>
+    </section>}
 </div>
 
 <style>
@@ -619,4 +620,13 @@ const safeAuthorImage = authorImage || defaultAuthor;
     html.dark .last-updated {
         color: rgba(255, 255, 255, 0.85);
     }
+    .author a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.author a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 </style>

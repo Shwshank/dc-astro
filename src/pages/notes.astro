@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Fetch all entries from the 'notes' collection
+const allNotes = await getCollection("notes");
+
+// Sort by date (newest first)
+const sortedNotes = allNotes.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout title="My Notes">
+    <section>
+        <h1>Notes & Insights</h1>
+        <ul>
+            {
+                sortedNotes.map((note) => (
+                    <li>
+                        <a
+                            href={`/notes/${note.id}`}
+                            class="text-blue-600 hover:underline"
+                        >
+                            <h2 class="text-2xl font-bold">
+                                {note.data.title}
+                            </h2>
+                        </a>
+                        <p>{note.data.pubDate.toDateString()}</p>
+                        <p>{note.data.description}</p>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</BaseLayout>
