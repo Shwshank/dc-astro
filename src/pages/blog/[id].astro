@@ -11,9 +11,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 const blogFallbackImageName = "delhi_hero";
 
 export async function getStaticPaths() {
-    const blogs = await getCollection("blogs");
-    return blogs.map((entry) => ({
-        params: { id: entry.id },
+    const blogEntries = await getCollection("blog");
+    console.log("Fetched blog entries for static paths:", blogEntries.map(e => e.id)); // Debug log
+    return blogEntries.map((entry) => ({
+        // Use entry.id explicitly
+        params: { id: entry.id }, 
         props: { entry },
     }));
 }

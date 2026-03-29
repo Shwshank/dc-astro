@@ -11,6 +11,7 @@
     "@astrojs/mdx": "^5.0.2",
     "@astrojs/sitemap": "^3.7.1",
     "astro": "^6.0.7",
+    "dayjs": "^1.11.20",
     "zod": "^4.3.6"
   },
   "devDependencies": {
