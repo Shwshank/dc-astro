@@ -62,15 +62,15 @@ const galleryImageResolved = await Promise.all(
     (entry.data.gallery ?? []).map((img: any) => resolveImage(img)),
 ).then((arr) => arr.filter(Boolean));
 
-const nextBlogImageResolved = entry.data.nextBlog?.image1
-    ? await resolveImage(entry.data.nextBlog.image1)
-    : undefined;
+// const nextBlogImageResolved = entry.data.nextBlog?.image1
+//     ? await resolveImage(entry.data.nextBlog.image1)
+//     : undefined;
 
-const nextBlogImage2Resolved = entry.data.nextBlog?.image2
-    ? await resolveImage(entry.data.nextBlog.image2)
-    : undefined;
+// const nextBlogImage2Resolved = entry.data.nextBlog?.image2
+//     ? await resolveImage(entry.data.nextBlog.image2)
+//     : undefined;
 
-const nextBlogData = entry.data.nextBlog;
+// const nextBlogData = entry.data.nextBlog;
 
 // Dynamic blog
 
