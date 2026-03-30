@@ -28,6 +28,24 @@ const colorMap: Record<string, string> = {
     food: "#5CCCFB",      
 };
 
+// Helper for dynamic colors
+const getStyles = (catName: string | undefined) => {
+    const colors: Record<string, string> = {
+        transport: "#AF9F1C",
+        safety: "#EE8E43",
+        culture: "#B9D417",
+        concierge: "#8E44AD",
+        food: "#5CCCFB",
+    };
+    const base = colors[catName?.toLowerCase() || ""] || "#808080";
+    return `background-color: ${base}1F; color: ${base}; border: 1px solid ${base}33;`;
+};
+
+// Pre-calculate styles for the two slots to keep the HTML clean
+const style1 = getStyles(nextBlog?.category1);
+const style2 = getStyles(nextBlog?.category2);
+
+
 const baseColor = colorMap[category?.toLowerCase()] || "#808080";
 
 const bgColor = `${baseColor}1F`;
@@ -119,7 +137,6 @@ const bgColor = `${baseColor}1F`;
             </a>}
 
             <!-- CARD 2 -->
-             {console.log(nextBlog)}
             {(nextBlog && nextBlog.title2) && <a href={nextBlog.link2} class="discovery-card">
                 <div class="discovery-img">
                     <Image src={nextBlog.image2} alt={nextBlog.title2} />

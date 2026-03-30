@@ -12,10 +12,10 @@ const blogFallbackImageName = "delhi_hero";
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection("blog");
-    
+
     return blogEntries.map((entry) => ({
         // Use entry.id explicitly
-        params: { id: entry.id }, 
+        params: { id: entry.id },
         props: { entry },
     }));
 }
@@ -71,12 +71,55 @@ const nextBlogImage2Resolved = entry.data.nextBlog?.image2
     : undefined;
 
 const nextBlogData = entry.data.nextBlog;
+
+// Dynamic blog
+
+// 1. Get all blog posts
+const allPosts = await getCollection("blog");
+
+// 2. Filter out the current post
+const otherPosts = allPosts.filter((p) => p.id !== entry.id);
+
+// --- SLOT 1: SAME CATEGORY (The "Deep Dive") ---
+const sameCategoryPosts = otherPosts
+    .filter((p) => p.data.category === entry.data.category)
+    .sort(() => Math.random() - 0.5); // Shuffle for variety
+
+const slot1 = sameCategoryPosts.length > 0 
+    ? sameCategoryPosts[0] 
+    : otherPosts[0]; // Fallback to any post if category is empty
+
+// --- SLOT 2: DIFFERENT CATEGORY (The "Discovery") ---
+const differentCategoryPosts = otherPosts
+    .filter((p) => p.data.category !== entry.data.category)
+    .sort(() => Math.random() - 0.5); // Shuffle for variety
+
+const slot2 = differentCategoryPosts.length > 0 
+    ? differentCategoryPosts[0] 
+    : sameCategoryPosts[1]; // Fallback to a 2nd same-category post if only 1 category exists
+
+// 3. Combine into the final array
+const relatedPosts = [slot1, slot2].filter(Boolean);
+
+const dynamicNextBlogs = await Promise.all(
+    relatedPosts.map(async (post) => {
+        return {
+            title: post.data.title,
+            description: post.data.seoDescription, // or a summary field
+            link: `/blog/${post.id}`,
+            image: await resolveImage(post.data.heroImage),
+            category: post.data.category,
+        };
+    }),
+);
+
+
 ---
 
-<BaseLayout 
-title={entry.data.title} 
-seoTitle = {entry.data.seoTitle}
-seoDescription = {entry.data.seoDescription}
+<BaseLayout
+    title={entry.data.title}
+    seoTitle={entry.data.seoTitle}
+    seoDescription={entry.data.seoDescription}
 >
     <BlogTemplate
         title={entry.data.title}
@@ -102,20 +145,19 @@ seoDescription = {entry.data.seoDescription}
             title: "Final Thought",
             unbiased_opinion: entry.data.finalThought_unbiased_opinion,
         }}
-        nextBlog={nextBlogData
-            ? {
-                  title1: nextBlogData.title1,
-                  description1: nextBlogData.description1,
-                  link1: nextBlogData.link1,
-                  image1: nextBlogImageResolved,
-                  category1: nextBlogData.category1,
-                  title2: nextBlogData.title2,
-                  description2: nextBlogData.description2,
-                  link2: nextBlogData.link2,
-                  image2: nextBlogImage2Resolved,
-                  category2: nextBlogData.category2,
-              }
-            : undefined}
+        nextBlog={{
+            title1: dynamicNextBlogs[0]?.title,
+            description1: dynamicNextBlogs[0]?.description,
+            link1: dynamicNextBlogs[0]?.link,
+            image1: dynamicNextBlogs[0]?.image,
+            category1: dynamicNextBlogs[0]?.category,
+
+            title2: dynamicNextBlogs[1]?.title,
+            description2: dynamicNextBlogs[1]?.description,
+            link2: dynamicNextBlogs[1]?.link,
+            image2: dynamicNextBlogs[1]?.image,
+            category2: dynamicNextBlogs[1]?.category,
+        }}
     >
         <!-- 🔥 THIS IS THE MAGIC -->
         <article class="blog-content">
