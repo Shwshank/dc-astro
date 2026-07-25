@@ -2,6 +2,7 @@
 export default new Map([
 ["src/content/blog/akshardham-story.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblog%2Fakshardham-story.mdx&astroContentModuleFlag=true")],
 ["src/content/blog/common-tourist-scams-delhi.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblog%2Fcommon-tourist-scams-delhi.mdx&astroContentModuleFlag=true")],
+["src/content/blog/delhi-in-the-monsoon.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblog%2Fdelhi-in-the-monsoon.mdx&astroContentModuleFlag=true")],
 ["src/content/blog/delhi-metro-vs-cab-vs-auto.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblog%2Fdelhi-metro-vs-cab-vs-auto.mdx&astroContentModuleFlag=true")],
 ["src/content/blog/delhi-night-safety-guide.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblog%2Fdelhi-night-safety-guide.mdx&astroContentModuleFlag=true")],
 ["src/content/blog/delhi-rain-emergency-safety-guide.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fblog%2Fdelhi-rain-emergency-safety-guide.mdx&astroContentModuleFlag=true")],
