@@ -5,7 +5,7 @@ seoTitle: "Which Delhi Neighbourhood Should You Visit First? A Calm Guide"
 seoDescription: "Old Delhi, Lodhi, Connaught Place or Hauz Khas? Choose the right Delhi neighbourhood for your first day based on your energy and interests."
 pubDate: 2026-08-03
 author: "Shaw"
-heroImage: "lodhi"
+heroImage: "lodhi-garden"
 category: "culture"
 readingTime: 7
 breadcrumbs:
@@ -21,7 +21,7 @@ import FAQ from "../../components/FAQ.astro";
 export const faqs = [
   {
     question: "Which Delhi neighbourhood is best for a first-time visitor?",
-    answer: "Lodhi–Humayun’s Tomb is the most balanced starting point because it combines greenery, history, faith, and everyday city life without immediately becoming overwhelming.",
+    answer: "Lodhi–Humayun’s Tomb is the most balanced starting point because it combines greenery, history, and everyday city life without immediately becoming overwhelming.",
   },
   {
     question: "Should I visit Old Delhi on my first day?",
@@ -41,20 +41,154 @@ export const faqs = [
 
 Delhi does not reveal itself as one continuous city. It arrives in layers: a Mughal-era lane, a colonial arcade, a quiet garden, a modern café district and a residential market can all feel like different cities.
 
-For most first-time visitors, **Lodhi–Humayun’s Tomb is the best place to begin**. It offers history, greenery, food and everyday city life without demanding that you process everything at once. But if you are seeking intensity, easy orientation or a more contemporary atmosphere, another neighbourhood may suit you better.
+For most first-time visitors, **Lodhi–Humayun’s Tomb is the best place to begin**. It offers history, greenery and everyday city life without demanding that you process everything at once. But if you are seeking intensity, easy orientation or a more contemporary atmosphere, another neighbourhood may suit you better.
 
 The question is not *“Which part of Delhi is best?”* It is *“Which version of Delhi can I appreciate today?”*
 
 ## The short answer
 
-| Begin here | Best for | What it feels like | Energy required |
-| --- | --- | --- | --- |
-| **Lodhi–Humayun’s Tomb** | A balanced first introduction | Green, historic, layered | Low to moderate |
-| **Old Delhi** | Food, faith, markets and intensity | Dense, vivid, immersive | High |
-| **Connaught Place–Janpath** | Easy navigation and a central starting point | Structured, busy, familiar | Moderate |
-| **Hauz Khas–Mehrauli** | Medieval history with a contemporary rhythm | Fragmented, creative, relaxed | Moderate |
+<div className="neighbourhood-cards" aria-label="Delhi neighbourhood comparison">
+  <article className="neighbourhood-card neighbourhood-card--featured">
+    <p className="neighbourhood-card__eyebrow">Best all-round start</p>
+    <h3>Lodhi–Humayun’s Tomb</h3>
+    <p className="neighbourhood-card__description">A balanced first introduction</p>
+    <div className="neighbourhood-card__tags">
+      <span>Green</span><span>Historic</span><span>Layered</span>
+    </div>
+    <p className="neighbourhood-card__energy"><span>Energy</span><strong>Low–moderate</strong></p>
+  </article>
 
-These are not rigid boundaries. Delhi’s neighbourhoods often blend into one another, and each contains more than a single mood. Think of this table as a way to choose your first doorway—not as a verdict on the city.
+  <article className="neighbourhood-card">
+    <p className="neighbourhood-card__eyebrow">For full immersion</p>
+    <h3>Old Delhi</h3>
+    <p className="neighbourhood-card__description">Food, faith and market life</p>
+    <div className="neighbourhood-card__tags">
+      <span>Dense</span><span>Vivid</span><span>Immersive</span>
+    </div>
+    <p className="neighbourhood-card__energy"><span>Energy</span><strong>High</strong></p>
+  </article>
+
+  <article className="neighbourhood-card">
+    <p className="neighbourhood-card__eyebrow">For easy orientation</p>
+    <h3>Connaught Place–Janpath</h3>
+    <p className="neighbourhood-card__description">A central, connected beginning</p>
+    <div className="neighbourhood-card__tags">
+      <span>Structured</span><span>Busy</span><span>Familiar</span>
+    </div>
+    <p className="neighbourhood-card__energy"><span>Energy</span><strong>Moderate</strong></p>
+  </article>
+
+  <article className="neighbourhood-card">
+    <p className="neighbourhood-card__eyebrow">For old-meets-new contrast</p>
+    <h3>Hauz Khas–Mehrauli</h3>
+    <p className="neighbourhood-card__description">Heritage with a contemporary rhythm</p>
+    <div className="neighbourhood-card__tags">
+      <span>Historic</span><span>Creative</span><span>Relaxed</span>
+    </div>
+    <p className="neighbourhood-card__energy"><span>Energy</span><strong>Moderate</strong></p>
+  </article>
+</div>
+
+<style>{`
+  .neighbourhood-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .neighbourhood-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, currentColor 5%, transparent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .neighbourhood-card--featured {
+    border-color: color-mix(in srgb, #82dffb 62%, transparent);
+    background: linear-gradient(
+      145deg,
+      color-mix(in srgb, #82dffb 15%, transparent),
+      color-mix(in srgb, currentColor 4%, transparent)
+    );
+  }
+
+  .neighbourhood-card__eyebrow {
+    margin: 0 0 0.4rem;
+    color: #82dffb;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .neighbourhood-card h3 {
+    margin: 0;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.25;
+  }
+
+  .neighbourhood-card__description {
+    margin: 0.6rem 0 0;
+    line-height: 1.55;
+    opacity: 0.82;
+  }
+
+  .neighbourhood-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+  }
+
+  .neighbourhood-card__tags span {
+    padding: 0.28rem 0.58rem;
+    border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 7%, transparent);
+    font-size: 0.76rem;
+    line-height: 1.2;
+  }
+
+  .neighbourhood-card__energy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin: auto 0 0;
+    padding-top: 1rem;
+    font-size: 0.82rem;
+  }
+
+  .neighbourhood-card__energy span {
+    opacity: 0.65;
+  }
+
+  .neighbourhood-card__energy strong {
+    padding: 0.3rem 0.62rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, #82dffb 18%, transparent);
+    color: inherit;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 700px) {
+    .neighbourhood-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .neighbourhood-card {
+      padding: 1rem;
+    }
+  }
+`}</style>
+
+These are not rigid boundaries. Delhi’s neighbourhoods often blend into one another, and each contains more than a single mood. Use these cards to choose your first doorway—not as a verdict on the city.
 
 ## Old Delhi or Central Delhi: two very different introductions
 
@@ -68,7 +202,7 @@ This is my default recommendation for someone arriving in Delhi for the first ti
 
 Begin around **Lodhi Garden**, where paths, trees and fifteenth-century tombs share the same landscape. Delhi is present here, but it does not rush you. Morning walkers, families, architecture students and visitors move through the garden at their own pace.
 
-From there, the neighbourhood opens into several different directions. You can see the ordered avenues and institutions of central Delhi, visit **Humayun’s Tomb**, spend time in **Sunder Nursery**, or enter the denser lanes around **Humayun’s Tomb**. Within a relatively compact part of the city, you encounter gardens, monumental history, living faith, residential streets and contemporary culture.
+From there, the neighbourhood opens into several different directions. You can see the ordered avenues and institutions of central Delhi, visit **Humayun’s Tomb**, spend time in **Sunder Nursery**, or enter the denser lanes around **Nizamuddin**. Within a relatively compact part of the city, you encounter gardens, monumental history, living faith, residential streets and contemporary culture.
 
 That variety is why the area works so well as an introduction. It teaches you an important lesson early: in Delhi, the past is not placed neatly behind glass. It exists beside traffic, homes, worship, food and ordinary routines.
 
@@ -144,6 +278,9 @@ Most Delhi itineraries are organised around importance: the biggest monument, th
 
 Ask yourself three questions before leaving:
 
+1. **How much stimulation can I comfortably absorb today?**
+2. **Do I want history, food, orientation, nature or contemporary culture?**
+3. **Would I rather understand one area or collect several landmarks?**
 
 Your answers may lead you away from the place you originally thought you *should* visit. That is not a compromise. It is good travel judgement.
 
@@ -153,6 +290,10 @@ If you arrived on an overnight flight, Lodhi Garden and one nearby site may be e
 
 Delhi becomes less overwhelming when you stop trying to understand all of it at once. Each neighbourhood can teach you one part of the city’s language:
 
+- **Lodhi–Humayun’s Tomb** teaches you to notice historical layers.
+- **Old Delhi** teaches you how density can still contain order.
+- **Connaught Place–Janpath** teaches you the city’s central connections.
+- **Hauz Khas–Mehrauli** teaches you how old and contemporary Delhi coexist.
 
 Begin with the lesson that feels most useful. Once you have one point of reference, the rest of the city starts to feel less like a blur and more like a collection of distinct, connected places.
 
