@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import CTA from "./CTA.astro";
 import Breadcrumbs from "./Breadcrumbs.astro";
 import defaultAuthor from "../assets/images/shaw_headshot_2.png";
+import instagramLogo from "../assets/images/instagram-logo.png";
 
 const {
     title,
@@ -101,16 +102,13 @@ const bgColor = `${baseColor}1F`;
                                 aria-label={`View the Instagram post for ${title}`}
                                 title="View this story on Instagram"
                             >
-                                <svg
-                                    aria-hidden="true"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8" />
-                                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
-                                    <circle cx="17.4" cy="6.7" r="1" fill="currentColor" />
-                                </svg>
+                                <Image
+                                    src={instagramLogo}
+                                    alt=""
+                                    class="instagram-icon"
+                                    width={17}
+                                    height={17}
+                                />
                             </a>
                         )
                     }
@@ -446,7 +444,7 @@ const bgColor = `${baseColor}1F`;
         transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
-    .instagram-link svg {
+    .instagram-icon {
         width: 17px;
         height: 17px;
         flex: 0 0 auto;
