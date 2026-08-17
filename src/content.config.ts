@@ -31,6 +31,7 @@ const blog = defineCollection({
 
         heroImage: z.string().optional(),
         gallery: z.array(z.string()).optional(),
+        instagramUrl: z.string().url().optional(),
         finalThought_unbiased_opinion: z.string().optional()
     })
 });
