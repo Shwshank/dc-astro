@@ -434,14 +434,10 @@ const bgColor = `${baseColor}1F`;
         width: 32px;
         height: 32px;
         padding: 0;
-        border: 1px solid rgba(142, 68, 173, 0.22);
-        border-radius: 999px;
-        background: rgba(142, 68, 173, 0.08);
-        color: #8e44ad;
-        font-weight: 600;
-        line-height: 1;
+        border: 0;
+        background: transparent;
         text-decoration: none;
-        transition: transform 0.2s ease, background-color 0.2s ease;
+        transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     .instagram-icon {
@@ -452,7 +448,7 @@ const bgColor = `${baseColor}1F`;
 
     .instagram-link:hover {
         transform: translateY(-1px);
-        background: rgba(142, 68, 173, 0.14);
+        opacity: 0.82;
     }
 
     .instagram-link:focus-visible {
@@ -640,8 +636,10 @@ const bgColor = `${baseColor}1F`;
         }
 
         .instagram-link {
-            margin-left: 0;
-            margin-top: 6px;
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            margin: 0;
         }
 
         .content-body {
