@@ -60,6 +60,23 @@ Output will be in:
 
 ## 🔥 Deployment (Firebase Hosting Only)
 
+### Automated GitHub deployment
+
+GitHub Actions runs an Astro production build for pull requests and pushes to
+`main`. Pull requests receive a temporary Firebase Hosting preview at a
+`pr-<number>` channel that expires after seven days. Pushes to `main` deploy to
+the live Firebase Hosting channel.
+
+Firebase authentication is provided through the repository secret
+`FIREBASE_SERVICE_ACCOUNT_BASE64`. The secret must contain the Firebase service
+account JSON encoded as a single-line Base64 value. Credentials are decoded only
+inside the temporary GitHub Actions runner and are never committed to the
+repository.
+
+The workflow can also be started manually from the GitHub Actions page.
+
+### Manual deployment
+
 ### 1. Install Firebase CLI
 
 ```bash
