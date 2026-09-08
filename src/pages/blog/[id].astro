@@ -131,7 +131,7 @@ const dynamicNextBlogs = await Promise.all(
             { label: entry.data.title },
         ]}
         category={entry.data.category}
-        date={entry.data.pubDate.toDateString()}
+        date={(entry.data.updatedDate ?? entry.data.pubDate).toDateString()}
         author={entry.data.author}
         readTimeInMinutes={5}
         instagramUrl={entry.data.instagramUrl}
