@@ -18,15 +18,9 @@ const {
     authorImage,
     readTimeInMinutes,
     instagramUrl,
-    instagramPosts = [],
     nextBlog,
 } = Astro.props as any;
 const safeAuthorImage = authorImage || defaultAuthor;
-const instagramPostLinks: { title: string; url: string }[] = instagramPosts.length
-    ? instagramPosts
-    : instagramUrl
-      ? [{ title: "View this story on Instagram", url: instagramUrl }]
-      : [];
 
 const colorMap: Record<string, string> = {
     transport: "#AF9F1C", 
@@ -99,41 +93,10 @@ const bgColor = `${baseColor}1F`;
                     </div>
 
                     {
-                        instagramPostLinks.length > 1 ? (
-                            <details class="instagram-post-menu">
-                                <summary
-                                    class="instagram-link"
-                                    aria-label={`Choose from ${instagramPostLinks.length} Instagram posts for ${title}`}
-                                    title="View related Instagram posts"
-                                >
-                                    <Image
-                                        src={instagramLogo}
-                                        alt=""
-                                        class="instagram-icon"
-                                        width={17}
-                                        height={17}
-                                    />
-                                    <span class="instagram-post-count" aria-hidden="true">
-                                        {instagramPostLinks.length}
-                                    </span>
-                                </summary>
-                                <div class="instagram-post-list">
-                                    {instagramPostLinks.map((post) => (
-                                        <a
-                                            href={post.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={`${post.title} on Instagram (opens in a new tab)`}
-                                        >
-                                            {post.title}
-                                        </a>
-                                    ))}
-                                </div>
-                            </details>
-                        ) : instagramPostLinks.length === 1 && (
+                        instagramUrl && (
                             <a
                                 class="instagram-link"
-                                href={instagramPostLinks[0].url}
+                                href={instagramUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`View the Instagram post for ${title}`}
@@ -493,59 +456,6 @@ const bgColor = `${baseColor}1F`;
         outline-offset: 2px;
     }
 
-    .instagram-post-menu {
-        position: relative;
-        margin-left: auto;
-        flex: 0 0 auto;
-    }
-
-    .instagram-post-menu summary {
-        position: relative;
-        margin: 0;
-        list-style: none;
-        cursor: pointer;
-    }
-
-    .instagram-post-menu summary::-webkit-details-marker {
-        display: none;
-    }
-
-    .instagram-post-count {
-        position: absolute;
-        top: -2px;
-        right: -3px;
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--text-primary);
-    }
-
-    .instagram-post-list {
-        position: absolute;
-        top: calc(100% + 8px);
-        right: 0;
-        z-index: 5;
-        width: min(260px, calc(100vw - 80px));
-        padding: 6px;
-        border: 1px solid rgba(92, 204, 251, 0.35);
-        border-radius: 12px;
-        background: var(--bg-surface);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-    }
-
-    .instagram-post-list a {
-        display: block;
-        padding: 12px;
-        border-radius: 8px;
-        color: var(--text-primary);
-        line-height: 1.4;
-        text-decoration: none;
-    }
-
-    .instagram-post-list a:hover,
-    .instagram-post-list a:focus-visible {
-        background: rgba(92, 204, 251, 0.15);
-    }
-
     /* ========================= */
     /* CONTENT (READING SURFACE) */
     /* ========================= */
@@ -734,8 +644,7 @@ const bgColor = `${baseColor}1F`;
             opacity: 0.8;
         }
 
-        .instagram-link,
-        .instagram-post-menu {
+        .instagram-link {
             position: static;
             grid-column: 2;
             grid-row: 1 / span 2;
