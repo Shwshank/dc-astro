@@ -8,6 +8,10 @@ import instagramLogo from "../assets/images/instagram-logo.png";
 const {
     title,
     heroImage,
+    heroImageAlt,
+    heroImageCaption,
+    heroImageCredit,
+    heroImageSource,
     breadcrumbs = [],
     category,
     gallery = [],
@@ -68,13 +72,21 @@ const bgColor = `${baseColor}1F`;
             heroImage && (
                 <Image
                     src={heroImage}
-                    alt={title}
+                    alt={heroImageAlt || title}
                     class="hero-img"
                     loading="eager"
                     format="webp"
                 />
             )
         }
+        {heroImage && heroImageCaption && (
+            <p class="hero-caption">
+                {heroImageCaption}
+                {heroImageSource && (
+                    <> Photo: <a href={heroImageSource} target="_blank" rel="noopener noreferrer">{heroImageCredit || "Source"}</a>.</>
+                )}
+            </p>
+        )}
         <div class="hero-card">
             <div class="hero-text">
                 <h1>{title}</h1>
@@ -321,6 +333,18 @@ const bgColor = `${baseColor}1F`;
         height: 360px;
         object-fit: cover;
         border-radius: 18px;
+    }
+
+    .hero-caption {
+        margin: 10px 0 0;
+        color: var(--text-secondary);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .hero-caption a {
+        color: inherit;
+        text-underline-offset: 3px;
     }
 
     /* ========================= */

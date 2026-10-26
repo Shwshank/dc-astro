@@ -31,6 +31,10 @@ const blog = defineCollection({
         featured: z.boolean().default(false),
 
         heroImage: z.string().optional(),
+        heroImageAlt: z.string().optional(),
+        heroImageCaption: z.string().optional(),
+        heroImageCredit: z.string().optional(),
+        heroImageSource: z.string().url().optional(),
         gallery: z.array(z.string()).optional(),
         instagramUrl: z.string().url().optional(),
         finalThought_unbiased_opinion: z.string().optional()

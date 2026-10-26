@@ -5,9 +5,8 @@ import Footer from "../components/Footer.astro";
 import SuccessModal from "../components/SuccessModal.astro";
 import heroImage from "../assets/images/delhi_hero.webp";
 
-const { title } = Astro.props;
-const { seoDescription } = Astro.props;
-const { seoTitle } = Astro.props;
+const { title, seoDescription, seoTitle } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -16,15 +15,11 @@ const { seoTitle } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>{title}</title>
-
-        <meta
-            name={seoTitle}
-            content={ seoDescription }
-        />
+        <title>{seoTitle || title}</title>
+        {seoDescription && <meta name="description" content={seoDescription} />}
 
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://delhiconcierge.in/" />
+        <link rel="canonical" href={canonicalUrl.href} />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
