@@ -124,6 +124,10 @@ const dynamicNextBlogs = await Promise.all(
     <BlogTemplate
         title={entry.data.title}
         heroImage={heroImageResolved}
+        heroImageAlt={entry.data.heroImageAlt}
+        heroImageCaption={entry.data.heroImageCaption}
+        heroImageCredit={entry.data.heroImageCredit}
+        heroImageSource={entry.data.heroImageSource}
         gallery={galleryImageResolved}
         breadcrumbs={[
             { label: "Home", href: "/" },
@@ -131,7 +135,13 @@ const dynamicNextBlogs = await Promise.all(
             { label: entry.data.title },
         ]}
         category={entry.data.category}
-        date={(entry.data.updatedDate ?? entry.data.pubDate).toDateString()}
+        date={(entry.data.updatedDate ?? entry.data.pubDate).toLocaleDateString("en-IN", {
+            timeZone: "Asia/Kolkata",
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+        })}
         author={entry.data.author}
         readTimeInMinutes={entry.data.readingTime ?? 5}
         instagramUrl={entry.data.instagramUrl}
